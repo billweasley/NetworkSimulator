@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ejml:dense64:0.27">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ejml/dense64/0.27/ea70271f286016777ac079a5b33941d4e2b56d00/dense64-0.27.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ejml/dense64/0.27/83d866e9e7f78f31e91c429d3b48b647e73a71c/dense64-0.27-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
