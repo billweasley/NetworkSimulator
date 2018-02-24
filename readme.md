@@ -7,8 +7,8 @@ journal = {Bulletin of the European Association for Theoretical Computer Science
 volume=93,
 pages={98--117},
 month=oct,
-year = 2007}
-
+year = 2007
+}
 
 
 @article{MS16a,
@@ -26,6 +26,8 @@ year = 2007}
 }
 
 
+
+
 @article{Mi17,
  author = {Michail, Othon},
  title = {Terminating distributed construction of shapes and patterns in a fair solution of automata},
@@ -39,6 +41,7 @@ year = 2007}
  url = {http://link.springer.com/article/10.1007/s00446-017-0309-z},
  publisher = {Springer Berlin Heidelberg}
 }
+
 
 
 
