@@ -1,19 +1,21 @@
-package population.networkConstruction
+package population.gridNetworkConstruction
 
 import population.LinkedPopulation
 import scheduler.Scheduler
-import utils.Node
+import utils.LocallyCoordinatedNode
 
-class NetworkConstructingPopulation constructor(scheduler: Scheduler) : LinkedPopulation {
-    override val nodes: List<Node>
-        get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+class GridNetworkConstructingPopulation(scheduler: Scheduler, nodes: List<LocallyCoordinatedNode>) : LinkedPopulation {
+    override val nodes: List<LocallyCoordinatedNode> = nodes
+
+    lateinit var groupOfNodes: List<Set<LocallyCoordinatedNode>>
+
 
     override fun numOfEdge(): Int {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun numOfNode(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return nodes.size
     }
 
     override fun interact(): Boolean {
