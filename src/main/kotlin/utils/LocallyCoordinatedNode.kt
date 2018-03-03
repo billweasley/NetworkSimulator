@@ -25,7 +25,7 @@ class Coordinate private constructor(val x: Int, val y: Int) {
             Port.UP -> Coordinate.of(x, y + 1)
             Port.DOWN -> Coordinate.of(x, y - 1)
             Port.LEFT -> Coordinate.of(x - 1, y)
-            Port.RIGHT -> Coordinate.of(x, y + 1)
+            Port.RIGHT -> Coordinate.of(x + 1, y)
         }
     }
 
