@@ -1,17 +1,20 @@
-## Refers
+```  
 
-@article{AspnesR2007,
-author = {James Aspnes and Eric Ruppert},
-title = {An introduction to population protocols},
-journal = {Bulletin of the European Association for Theoretical Computer Science},
-volume=93,
-pages={98--117},
-month=oct,
-year = 2007
+@article
+{
+ AspnesR2007,
+ author = {James Aspnes and Eric Ruppert},
+ title = {An introduction to population protocols},
+ journal = {Bulletin of the European Association for Theoretical Computer Science},
+ volume=93,
+ pages={98--117},
+ month=oct,
+ year = 2007
 }
 
 
-@article{MS16a,
+@article{
+ MS16a,
  author = {Michail, Othon and Spirakis, Paul G.},
  title = {Simple and efficient local codes for distributed stable network construction},
  journal = {Distributed Computing},
@@ -28,7 +31,8 @@ year = 2007
 
 
 
-@article{Mi17,
+@article{
+ Mi17,
  author = {Michail, Othon},
  title = {Terminating distributed construction of shapes and patterns in a fair solution of automata},
  journal = {Distributed Computing},
@@ -42,7 +46,4 @@ year = 2007
  publisher = {Springer Berlin Heidelberg}
 }
 
-
-
-
-
+```

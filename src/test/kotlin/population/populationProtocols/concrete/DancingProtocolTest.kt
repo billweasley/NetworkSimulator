@@ -1,5 +1,6 @@
 package population.populationProtocols.concrete
 
+import model.population.populationProtocols.concrete.DancingProtocol
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -8,7 +9,7 @@ import scheduler.RandomScheduler
 class DancingProtocolTest {
 
     val dancingProtocolInstance = DancingProtocol(
-            20, mapOf(Pair("L", 10), Pair("F", 10)), RandomScheduler()
+            mapOf(Pair("L", 10), Pair("F", 10)), RandomScheduler()
     )
 
     @Before

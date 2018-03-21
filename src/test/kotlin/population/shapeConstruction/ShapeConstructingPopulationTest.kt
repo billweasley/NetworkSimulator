@@ -1,19 +1,19 @@
 package population.shapeConstruction
 
+import model.population.shapeConstruction.ShapeConstructingPopulation
 import org.junit.Test
 import scheduler.RandomScheduler
 import utils.InteractionFunctions
-import utils.Node
+import utils.ModelNode
 
 class ShapeConstructingPopulationTest {
     val simpleGlobalLineConstructor = ShapeConstructingPopulation(
-            initialStates = mapOf(Pair("q0", 10)),
-            symbols = setOf("q0", "q1", "l", "w", "q2"),
             scheduler = RandomScheduler(),
             interactFunction = { nodeA, nodeB, map ->
                 InteractionFunctions.simpleGlobalLineFunc(nodeA, nodeB, map)
             },
-            numOfNodes = 10
+            symbols = setOf("q0", "q1", "l", "w", "q2"),
+            initialStates = mapOf(Pair("q0", 10))
     )
 
     @Test
@@ -27,7 +27,7 @@ class ShapeConstructingPopulationTest {
 
 
         var j = 0
-        val index = HashMap<Node, Int>()
+        val index = HashMap<ModelNode, Int>()
         val list = simpleGlobalLineConstructor.adjacencyList.toList()
         list.forEach({ pair -> index[pair.first] = j++ })
         list.forEach({ pair ->
