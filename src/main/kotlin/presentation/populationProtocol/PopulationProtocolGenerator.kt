@@ -98,7 +98,6 @@ class PopulationProtocolGenerator(val population: PopulationProtocol,
 
     override fun nextEvents(): Boolean {
         val (isInteracted, firstNode, secondNode) = population.interact()
-
         if (isInteracted){
             count ++
 

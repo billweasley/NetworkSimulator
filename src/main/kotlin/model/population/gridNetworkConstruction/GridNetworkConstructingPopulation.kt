@@ -35,7 +35,7 @@ class GridNetworkConstructingPopulation(scheduler: Scheduler, nodes: List<Locall
 
     private fun deactiveConnection(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB:LocallyCoordinatedModelNode, portB:Port): Boolean{
         if (nodeA == nodeB) return false
-        if (!LocallyCoordinatedModelNode.canDeactive(nodeA,portA,nodeB,portB)) return false
+        if (!LocallyCoordinatedModelNode.canInactive(nodeA,portA,nodeB,portB)) return false
         when (portA) {
             Port.UP -> nodeA.up = null
             Port.DOWN -> nodeA.down = null

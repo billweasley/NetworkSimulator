@@ -37,7 +37,7 @@ fun main(args: Array<String>) {
                 InteractionFunctions.globalStarFunc(nodeA, nodeB, map)
             },
             symbols = setOf("c", "p"),
-            initialStates = mapOf(Pair("c", 100))
+            initialStates = mapOf(Pair("c", 10))
     )
 
     val styleSheet = "node {" +
@@ -51,7 +51,7 @@ fun main(args: Array<String>) {
             "}"
 
     val populationProtocolGenerator = ShapeConstructorGenerator(
-            globalStarConstructor,
+            simpleGlobalLineConstructor,
             1000000,
             false,
             540000,
@@ -59,8 +59,21 @@ fun main(args: Array<String>) {
             styleSheet = styleSheet
     )
 
-    populationProtocolGenerator.display()
+   populationProtocolGenerator.display()
+   /* val graph2 = SingleGraph("Test")
+    val gridGenerator = GridGenerator()
+    gridGenerator.addSink(graph2)
+    graph2.display()
+    gridGenerator.begin()
+    for (i in 1..10){
+        gridGenerator.nextEvents()
+        Thread.sleep(1000)
+    }
+    gridGenerator.end()*/
 }
+
+
+
 
 
 class ShapeConstructorGenerator(val population: ShapeConstructingPopulation,

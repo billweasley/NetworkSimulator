@@ -89,7 +89,7 @@ class LocallyCoordinatedModelNode(x: Int,
 
         }
 
-        fun canDeactive(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean {
+        fun canInactive(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean {
             if (nodeA == nodeB) return false
             val toSeparateA = when (portA) {
                 Port.UP -> nodeA.up
