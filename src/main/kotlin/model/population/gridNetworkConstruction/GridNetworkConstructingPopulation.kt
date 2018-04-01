@@ -1,19 +1,21 @@
 package model.population.gridNetworkConstruction
 
 import model.population.LinkedPopulation
+import model.shared.LocallyCoordinatedModelNode
+import model.shared.ModelNode
+import model.shared.Port
 import scheduler.Scheduler
-import utils.LocallyCoordinatedModelNode
-import utils.ModelNode
-import utils.Port
 
-class GridNetworkConstructingPopulation(scheduler: Scheduler, nodes: List<LocallyCoordinatedModelNode>) : LinkedPopulation {
+class GridNetworkConstructingPopulation(private val scheduler: Scheduler, nodes: List<LocallyCoordinatedModelNode>) : LinkedPopulation {
     override val nodes: List<LocallyCoordinatedModelNode> = nodes
 
     private lateinit var groupOfNodes: List<Set<LocallyCoordinatedModelNode>>
     private var numOfActiveEdges = 0
+    // TO DO: REWRITE copy constructor
+    constructor(another: GridNetworkConstructingPopulation) :
+            this(scheduler = another.scheduler, nodes = another.nodes)
 
-
-    private fun activeConnection(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB:LocallyCoordinatedModelNode, portB:Port): Boolean{
+    private fun activeConnection(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean{
         if (nodeA == nodeB) return false
         if (!LocallyCoordinatedModelNode.canActive(nodeA,portA,nodeB,portB)) return false
         when (portA) {
@@ -33,7 +35,7 @@ class GridNetworkConstructingPopulation(scheduler: Scheduler, nodes: List<Locall
         return true
     }
 
-    private fun deactiveConnection(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB:LocallyCoordinatedModelNode, portB:Port): Boolean{
+    private fun deactiveConnection(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean{
         if (nodeA == nodeB) return false
         if (!LocallyCoordinatedModelNode.canInactive(nodeA,portA,nodeB,portB)) return false
         when (portA) {

@@ -1,5 +1,8 @@
 package utils
 
+import model.shared.LocallyCoordinatedModelNode
+import model.shared.State
+
 class LocallyCoordinatedNodeTest {
 
     @org.junit.Test

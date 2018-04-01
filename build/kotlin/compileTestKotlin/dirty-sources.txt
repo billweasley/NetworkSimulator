@@ -1,3 +1,0 @@
-C:\Users\billw\Desktop\org.net.simulator\src\test\kotlin\population\populationProtocols\concrete\DancingProtocolTest.kt
-C:\Users\billw\Desktop\org.net.simulator\src\test\kotlin\population\shapeConstruction\ShapeConstructingPopulationTest.kt
-C:\Users\billw\Desktop\org.net.simulator\src\test\kotlin\utils\LocallyCoordinatedNodeTest.kt

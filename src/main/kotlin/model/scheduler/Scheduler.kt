@@ -1,7 +1,7 @@
 package scheduler
 
 import model.population.Population
-import utils.ModelNode
+import model.shared.ModelNode
 
 interface Scheduler {
     fun select(population: Population): Pair<ModelNode, ModelNode>

@@ -78,6 +78,7 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-script-runtime:1.2.30" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.30" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-compiler-embeddable:1.2.30" level="project" />
+    <orderEntry type="library" name="Gradle: no.tornado:tornadofx:1.7.15" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.knowm.xchart:xchart:3.1.0" level="project" />
@@ -85,12 +86,16 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.30" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-daemon-client:1.2.30" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish:javax.json:1.1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Gradle: de.erichseifert.vectorgraphics2d:VectorGraphics2D:0.11" level="project" />
     <orderEntry type="library" name="Gradle: org.ejml:denseC64:0.27" level="project" />
     <orderEntry type="library" name="Gradle: org.ejml:equation:0.27" level="project" />
     <orderEntry type="library" name="Gradle: org.ejml:dense64:0.27" level="project" />
     <orderEntry type="library" name="Gradle: org.ejml:simple:0.27" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:core:0.27" level="project" />
+    <orderEntry type="library" name="Gradle: javax.json:javax.json-api:1.1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -136,8 +141,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Gradle: org.ejml:core:0.27" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="org.net.simulator_main" />
 </module>

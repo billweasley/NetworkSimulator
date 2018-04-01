@@ -3,7 +3,7 @@ package scheduler
 import model.population.Population
 import model.population.populationProtocols.PopulationProtocol
 import model.population.shapeConstruction.ShapeConstructingPopulation
-import utils.ModelNode
+import model.shared.ModelNode
 import java.util.*
 
 class RandomScheduler : Scheduler {

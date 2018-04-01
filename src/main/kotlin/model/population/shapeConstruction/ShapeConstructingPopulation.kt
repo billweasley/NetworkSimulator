@@ -1,18 +1,24 @@
 package model.population.shapeConstruction
 
 import model.population.LinkedPopulation
+import model.shared.ModelNode
+import scheduler.RandomScheduler
 import scheduler.Scheduler
-import utils.ModelNode
 import java.util.concurrent.ConcurrentHashMap
 
-class ShapeConstructingPopulation(private val scheduler: Scheduler,
-                                  private val interactFunction:
-                                  (ModelNode, ModelNode, Map<ModelNode, HashSet<ModelNode>>) -> Pair<Boolean, Boolean>,
-                                  symbols: Set<String>, //(isInteracted, ,New state for link)
-                                  initialStates: Map<String, Int>) : LinkedPopulation {
+class ShapeConstructingPopulation(private val scheduler: Scheduler = RandomScheduler(),
+                                  private val interactFunction: (ModelNode, ModelNode, Map<ModelNode, HashSet<ModelNode>>) -> Pair<Boolean, Boolean>,
+                                  private val symbols: Set<String>, //(isInteracted, ,New state for link)
+                                  private val initialStates: Map<String, Int>) : LinkedPopulation {
+
+    constructor(another: ShapeConstructingPopulation) :
+            this(scheduler = another.scheduler, interactFunction = another.interactFunction,
+                    symbols = another.symbols,
+                    initialStates = another.initialStates)
 
     override val nodes = ModelNode.createMultipleNodes(symbols, initialStates)
     val adjacencyList = ConcurrentHashMap<ModelNode, HashSet<ModelNode>>()
+
 
     init {
         nodes.forEach({ node -> adjacencyList[node] = HashSet() })

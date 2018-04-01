@@ -1,6 +1,6 @@
 package model.population
 
-import utils.ModelNode
+import model.shared.ModelNode
 
 interface Population {
     fun interact(): Triple<Boolean, ModelNode, ModelNode>

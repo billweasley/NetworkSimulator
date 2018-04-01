@@ -4,7 +4,7 @@ import model.population.shapeConstruction.ShapeConstructingPopulation
 import org.junit.Test
 import scheduler.RandomScheduler
 import utils.InteractionFunctions
-import utils.ModelNode
+import model.shared.ModelNode
 
 class ShapeConstructingPopulationTest {
     val simpleGlobalLineConstructor = ShapeConstructingPopulation(
