@@ -55,6 +55,7 @@ class LocallyCoordinatedModelNode(x: Int,
     var left: LocallyCoordinatedModelNode? = null
     var right: LocallyCoordinatedModelNode? = null
     var coordinate = Coordinate.of(x, y)
+    var belongtoSet = -1
 
     companion object {
         fun canActive(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean {
@@ -91,6 +92,7 @@ class LocallyCoordinatedModelNode(x: Int,
 
         fun canInactive(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean {
             if (nodeA == nodeB) return false
+            if (nodeA.belongtoSet == nodeB.belongtoSet) return false
             val toSeparateA = when (portA) {
                 Port.UP -> nodeA.up
                 Port.DOWN -> nodeA.down

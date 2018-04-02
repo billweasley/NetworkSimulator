@@ -13,6 +13,7 @@ import java.util.*
 
 
 fun main(args: Array<String>) {
+    System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer")
     val simpleGlobalLineConstructor = ShapeConstructingPopulation(
             scheduler = RandomScheduler(),
             interactFunction = { nodeA, nodeB, map ->

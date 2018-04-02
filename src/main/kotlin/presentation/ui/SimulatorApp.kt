@@ -32,6 +32,8 @@ fun main(args: Array<String>) {
 
 class SimulatorApp : App(SimulatorAppView::class)
 
+
+
 class SimulatorAppView : View() {
 
     private val generator = PopulationProtocolGenerator(
@@ -76,7 +78,6 @@ class SimulatorAppView : View() {
         startBtn.isDisable = false
         stopBtn.isDisable = true
     }
-
     private fun resetGraphStates() {
         generator.restart()
         generator.begin()
