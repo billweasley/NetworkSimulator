@@ -2,7 +2,9 @@ package model.population.gridNetworkConstruction
 
 import model.population.LinkedPopulation
 import model.shared.LocallyCoordinatedModelNode
+import model.shared.ModelNode
 import model.shared.Port
+import scheduler.RandomScheduler
 import scheduler.Scheduler
 import java.util.*
 import java.util.concurrent.ConcurrentHashMap
@@ -39,11 +41,19 @@ class MarkedSet<E>(val groupID: Int): HashSet<E>(){
 
 }
 
-class GridNetworkConstructingPopulation(private val scheduler: Scheduler, override val nodes: List<LocallyCoordinatedModelNode>) : LinkedPopulation {
+class GridNetworkConstructingPopulation(private val scheduler: Scheduler = RandomScheduler(),
+                                        private val interactFunction: (Pair<ModelNode,Port>, Pair<ModelNode, Port>) -> Pair<Boolean, Boolean>,
+                                        private val symbols: Set<String>,
+                                        private val initialStates: Map<String, Int>)
+                                       : LinkedPopulation {
 
     @Volatile var increasedIDAllocator = 0
-    private val groupOfNodes: ConcurrentHashMap<Int, MarkedSet<LocallyCoordinatedModelNode>> = ConcurrentHashMap()
-
+    override val nodes: List<LocallyCoordinatedModelNode> = LocallyCoordinatedModelNode.createMultipleNodes(symbols,initialStates)
+    val groupOfNodes: ConcurrentHashMap<Int, MarkedSet<LocallyCoordinatedModelNode>> = ConcurrentHashMap()
+    companion object {
+        val random = Random()
+        fun getRandomNumber(excusiveBoundery: Int) = random.nextInt()
+    }
     fun getIncreasedID(): Int{
         synchronized(this,{
             increasedIDAllocator++
@@ -53,6 +63,7 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler, overri
 
 
     init {
+
         nodes.forEach {it ->
             val id = getIncreasedID()
             groupOfNodes[id] = MarkedSet.of(it,id)
@@ -61,9 +72,13 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler, overri
 
 
     private var numOfActiveEdges = 0
-    // TO DO: REWRITE copy constructor
+
     constructor(another: GridNetworkConstructingPopulation) :
-            this(scheduler = another.scheduler, nodes = another.nodes)
+            this(scheduler = another.scheduler,
+                    interactFunction = another.interactFunction,
+                    symbols = another.symbols,
+                    initialStates = another.initialStates
+            )
 
     private fun activeConnection(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean{
         if (nodeA == nodeB) return false
@@ -140,8 +155,26 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler, overri
         return nodes.size
     }
 
-    override fun interact(): Triple<Boolean, LocallyCoordinatedModelNode, LocallyCoordinatedModelNode> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun interact(): Triple<Boolean, Pair<LocallyCoordinatedModelNode, Port>,  Pair<LocallyCoordinatedModelNode, Port>> {
+        val selected = scheduler.select(this)
+        val nodeA = selected.first as LocallyCoordinatedModelNode
+        val nodeB = selected.second as LocallyCoordinatedModelNode
+        val portA = Port.values()[getRandomNumber(Port.values().size)]
+        val portB = Port.values()[getRandomNumber(Port.values().size)]
+
+
+        val result = interactFunction.invoke(Pair(nodeA,portA),Pair(nodeB, portB))
+
+        val hasInteracted = result.first
+        val shouldBeActivated = result.second
+        if (hasInteracted) {
+            if (shouldBeActivated) {
+                activeConnection(nodeA,portA,nodeB,portB)
+            } else {
+                deactiveConnection(nodeA,portA,nodeB,portB)
+            }
+        }
+        return Triple(hasInteracted,Pair(nodeA,portA),Pair(nodeB,portB))
     }
 
 }

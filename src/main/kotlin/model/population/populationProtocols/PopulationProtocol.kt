@@ -23,7 +23,7 @@ open class PopulationProtocol(private val scheduler: Scheduler = RandomScheduler
 
     override fun interact(): Triple<Boolean, ModelNode, ModelNode> {
         val selected = scheduler.select(this)
-        return Triple(interactFunction.invoke(selected.first, selected.second),selected.first,selected.second);
+        return Triple(interactFunction.invoke(selected.first, selected.second),selected.first,selected.second)
 
     }
 }

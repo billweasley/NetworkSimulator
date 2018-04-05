@@ -105,16 +105,16 @@ class ShapeConstructorGenerator(var population: ShapeConstructingPopulation,
         }
         val positions = HashSet<String>()
         for(node in population.nodes ){
-            graph.addNode<Node>(node.index.toString())
-            graph.getNode<Node>(node.index.toString())?.addAttribute("ui.label",node.state.currentState)
-            var x = random.nextInt(Math.sqrt(population.nodes.size.toDouble()).toInt())
-            var y = random.nextInt(Math.sqrt(population.nodes.size.toDouble()).toInt())
-            while (positions.contains("$x | $y")){
-                x = random.nextInt(population.nodes.size)
-                y = random.nextInt(population.nodes.size)
-            }
-            positions.add("$x | $y")
-            graph.getNode<Node>(node.index.toString())?.addAttribute("xy",x,y)
+                val thisNodeOnRep = graph.addNode<Node>(node.index.toString())
+                var x = random.nextInt(Math.sqrt(population.nodes.size.toDouble()).toInt())
+                var y = random.nextInt(Math.sqrt(population.nodes.size.toDouble()).toInt())
+                while (positions.contains("$x | $y")){
+                    x = random.nextInt(population.nodes.size)
+                    y = random.nextInt(population.nodes.size)
+                }
+                positions.add("$x | $y")
+                thisNodeOnRep.addAttribute("ui.label",node.state.currentState)
+                thisNodeOnRep.addAttribute("xy",x,y)
         }
         for (node in population.nodes){
             val neighbors = population.adjacencyList[node]
@@ -172,6 +172,7 @@ class ShapeConstructorGenerator(var population: ShapeConstructingPopulation,
         }
         return isInteracted
     }
+
     @Synchronized
     override fun shouldTerminate(): Boolean{
         return countOfSelectWithoutInteraction > terminateTheshold
