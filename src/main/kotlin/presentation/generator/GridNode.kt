@@ -107,6 +107,7 @@ class GridNode(graph: AbstractGraph?, id: String?,
         return rotation
     }
 
+
     fun getOppositeConnectionCenterCoordinate(port: Port): Pair<Double,Double>{
         val pos = Toolkit.nodePosition(this)
         return when(port){

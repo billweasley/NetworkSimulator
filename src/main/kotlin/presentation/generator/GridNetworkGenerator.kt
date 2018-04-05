@@ -188,6 +188,7 @@ class GridNetworkGenerator(var population:GridNetworkConstructingPopulation,
                updateRotationInBatch(toMoveNode,degreeOfTransfer)
                val destinationPos =
                        toFixedNode.getOppositeConnectionCenterCoordinate(if (toFixedNode == rep) Port.RIGHT else anotherPort)
+
                movePosInBatch(toMoveNode,destinationPos)
            }
            if (modelNode.left != null){

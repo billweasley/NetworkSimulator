@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population">
+<<<<<<< HEAD
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedEdge.kt" afterPath="" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,7 +99,11 @@
       <file leaf-file-name="ShapeConstructorGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1890">
+=======
+            <state relative-caret-position="-2025">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <caret line="78" column="54" lean-forward="false" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
               <folding />
             </state>
@@ -98,18 +113,30 @@
       <file leaf-file-name="PopulationProtocolGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="27">
+=======
+            <state relative-caret-position="-1090">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="GridNode.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="490">
               <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
+=======
+      <file leaf-file-name="GridNode.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <folding>
                 <element signature="e#32#392#0" expanded="true" />
               </folding>
@@ -120,18 +147,30 @@
       <file leaf-file-name="GridNetworkConstructingPopulation.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1161">
+=======
+            <state relative-caret-position="274">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <caret line="50" column="97" lean-forward="false" selection-start-line="50" selection-start-column="97" selection-end-line="50" selection-end-column="97" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="GridNetworkGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="463">
               <caret line="113" column="18" lean-forward="false" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
+=======
+      <file leaf-file-name="GridNetworkGenerator.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3832">
+              <caret line="259" column="75" lean-forward="false" selection-start-line="259" selection-start-column="38" selection-end-line="259" selection-end-column="75" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <folding>
                 <element signature="e#32#517#0" expanded="true" />
               </folding>
@@ -142,7 +181,11 @@
       <file leaf-file-name="HashSet.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/HashSet.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="4482">
+=======
+            <state relative-caret-position="177">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <caret line="202" column="26" lean-forward="false" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
               <folding>
                 <element signature="e#7396#7397#0" expanded="true" />
@@ -155,7 +198,11 @@
       <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="14715">
+=======
+            <state relative-caret-position="258">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <caret line="586" column="49" lean-forward="false" selection-start-line="586" selection-start-column="41" selection-end-line="586" selection-end-column="49" />
               <folding>
                 <element signature="e#23597#23598#0" expanded="true" />
@@ -169,7 +216,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
+<<<<<<< HEAD
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+=======
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <folding />
             </state>
           </provider>
@@ -178,7 +229,11 @@
       <file leaf-file-name="LocallyCoordinatedModelNode.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1431">
+=======
+            <state relative-caret-position="274">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
               <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
               <folding />
             </state>
@@ -690,8 +745,13 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/population/LinkedPopulation.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
+=======
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
       </list>
     </option>
   </component>
@@ -701,7 +761,11 @@
       <select />
     </treeState>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
     <option name="x" value="-4" />
     <option name="y" value="537" />
     <option name="width" value="1815" />
@@ -725,6 +789,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -896,10 +966,12 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1258,22 +1330,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1162" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1162" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810867" sideWeight="0.24162163" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497388" sideWeight="0.14216216" order="8" side_tool="false" content_ui="tabs" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.070010446" sideWeight="0.52216214" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.070010446" sideWeight="0.47783783" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.070010446" sideWeight="0.47783783" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48918918" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49783784" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18648648" sideWeight="0.85960263" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18324324" sideWeight="0.85960263" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13621622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24918918" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08324324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1347,6 +1431,25 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/Controls.kt">
+<<<<<<< HEAD
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-271">
+          <caret line="335" column="49" lean-forward="false" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="408" column="20" lean-forward="false" selection-start-line="408" selection-start-column="20" selection-end-line="408" selection-end-column="20" />
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
@@ -1368,6 +1471,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#927#0" expanded="false" />
+            <element signature="e#2297#2329#2" expanded="false" />
+            <element signature="n#!!block;n#resetBtnStates#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
+            <element signature="n#!!block;n#resetGraphStates#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
+            <element signature="n#!!block;n#createAndSetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
+            <element signature="e#3316#3469#0" expanded="false" />
+            <element signature="e#3565#4692#2" expanded="false" />
+            <element signature="e#3595#3696#2" expanded="false" />
+            <element signature="e#3714#3903#2" expanded="false" />
+            <element signature="e#4706#16192#2" expanded="false" />
+            <element signature="e#4822#4982#2" expanded="false" />
+            <element signature="e#5302#5505#2" expanded="false" />
+            <element signature="e#5647#6376#2" expanded="false" />
+            <element signature="e#5700#5787#2" expanded="false" />
+            <element signature="e#5824#6358#2" expanded="false" />
+            <element signature="e#7015#7174#2" expanded="false" />
+            <element signature="e#7244#7323#2" expanded="false" />
+            <element signature="e#7532#9980#2" expanded="false" />
+            <element signature="e#10043#12498#2" expanded="false" />
+            <element signature="e#11502#12142#1" expanded="false" />
+            <element signature="e#12560#12614#2" expanded="false" />
+            <element signature="e#12675#12729#2" expanded="false" />
+            <element signature="e#12803#12933#2" expanded="false" />
+            <element signature="e#13007#13137#2" expanded="false" />
+            <element signature="e#13226#13318#2" expanded="false" />
+            <element signature="e#13404#13496#2" expanded="false" />
+            <element signature="e#13572#15203#2" expanded="false" />
+            <element signature="e#13645#15185#1" expanded="false" />
+            <element signature="e#15254#15413#2" expanded="false" />
+            <element signature="e#15772#16071#2" expanded="false" />
+            <element signature="n#!!block;n#InitialInputConfiguration#0" expanded="false" />
+            <element signature="n#RulesInput#0;n#RulesInput#0" expanded="false" />
+            <element signature="n#!!block;n#isSelfASatisiableRule#0;n#!!block;n#RulesInput#0" expanded="false" />
+            <element signature="n#!!block;n#isIllegalChar#0;n#!!block;n#RulesInput#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/Array.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
@@ -1437,12 +1593,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+=======
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29943">
+          <caret line="1109" column="19" lean-forward="false" selection-start-line="1109" selection-start-column="19" selection-end-line="1109" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/Sets.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2322">
+          <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedEdge.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/scheduler/Scheduler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="108">
           <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
@@ -1474,10 +1669,49 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/NetworkNode.kt" />
+=======
+        <state relative-caret-position="135">
+          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1152">
+          <caret line="327" column="15" lean-forward="false" selection-start-line="327" selection-start-column="15" selection-end-line="327" selection-end-column="15" />
+          <folding>
+            <element signature="e#11985#11986#0" expanded="false" />
+            <element signature="e#12016#12017#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/Node.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/NetworkNode.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
     <entry file="jar://$PROJECT_DIR$/lib/gs-ui-1.3.jar!/scala/beans/BeanDescription.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1485,6 +1719,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1492,6 +1730,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -1556,14 +1795,112 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+=======
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-algo-1.3.jar!/org/graphstream/algorithm/Toolkit.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="253" column="23" lean-forward="false" selection-start-line="253" selection-start-column="23" selection-end-line="253" selection-end-column="23" />
+          <folding>
+            <element signature="e#7773#7774#0" expanded="true" />
+            <element signature="e#7827#7828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/implementations/MultiGraph.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#903#904#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/NodeFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/implementations/AdjacencyListNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/implementations/AbstractNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-367">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/implementations/AbstractElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/implementations/AbstractGraph.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="39" column="55" lean-forward="false" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+          <folding>
+            <element signature="e#4633#4634#0" expanded="true" />
+            <element signature="e#4670#4671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/implementations/SingleNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="55" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
     <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/ui/view/Camera.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1571,6 +1908,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="280" column="43" lean-forward="false" selection-start-line="280" selection-start-column="43" selection-end-line="280" selection-end-column="43" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1578,6 +1919,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="108" column="19" lean-forward="false" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1585,6 +1930,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-48144">
           <caret line="132" column="20" lean-forward="true" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="20" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1599,6 +1948,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1606,6 +1959,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="130" column="35" lean-forward="false" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1613,6 +1970,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+          </folding>
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1620,6 +1984,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="379" column="0" lean-forward="false" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1635,6 +2003,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="68" column="85" lean-forward="false" selection-start-line="68" selection-start-column="85" selection-end-line="68" selection-end-column="85" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="n#!!block;n#dancingProtocolFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+            <element signature="n#!!block;n#sumModelFourFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+          </folding>
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
         </state>
       </provider>
     </entry>
@@ -1665,7 +2040,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
+<<<<<<< HEAD
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+=======
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           <folding />
         </state>
       </provider>
@@ -1680,7 +2059,11 @@
     </entry>
     <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/HashSet.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="4482">
+=======
+        <state relative-caret-position="177">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           <caret line="202" column="26" lean-forward="false" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
           <folding>
             <element signature="e#7396#7397#0" expanded="true" />
@@ -1691,7 +2074,11 @@
     </entry>
     <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="14715">
+=======
+        <state relative-caret-position="258">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           <caret line="586" column="49" lean-forward="false" selection-start-line="586" selection-start-column="41" selection-end-line="586" selection-end-column="49" />
           <folding>
             <element signature="e#23597#23598#0" expanded="true" />
@@ -1702,7 +2089,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1161">
+=======
+        <state relative-caret-position="274">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           <caret line="50" column="97" lean-forward="false" selection-start-line="50" selection-start-column="97" selection-end-line="50" selection-end-column="97" />
           <folding />
         </state>
@@ -1710,7 +2101,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1431">
+=======
+        <state relative-caret-position="274">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding />
         </state>
@@ -1718,7 +2113,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1890">
+=======
+        <state relative-caret-position="-2025">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           <caret line="78" column="54" lean-forward="false" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
           <folding />
         </state>
@@ -1726,28 +2125,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="27">
+=======
+        <state relative-caret-position="-1090">
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="96" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
           <caret line="113" column="18" lean-forward="false" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
           <folding>
             <element signature="e#32#517#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+          <folding>
+            <element signature="e#32#392#0" expanded="true" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
           <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
           <folding>
             <element signature="e#32#392#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3832">
+          <caret line="259" column="75" lean-forward="false" selection-start-line="259" selection-start-column="38" selection-end-line="259" selection-end-column="75" />
+          <folding>
+            <element signature="e#32#517#0" expanded="true" />
+>>>>>>> bfbcce979812bfd1a2f202ca5aa71b48b0d14d5a
           </folding>
         </state>
       </provider>
