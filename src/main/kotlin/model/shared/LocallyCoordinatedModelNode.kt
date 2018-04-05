@@ -47,8 +47,8 @@ class Coordinate private constructor(val x: Int, val y: Int) {
     }
 }
 
-class LocallyCoordinatedModelNode(x: Int,
-                                  y: Int,
+class LocallyCoordinatedModelNode(x: Int = 0,
+                                  y: Int = 0,
                                   state: State, index: Int) : ModelNode(state = state, index = index) {
     var up: LocallyCoordinatedModelNode? = null
     var down: LocallyCoordinatedModelNode? = null
@@ -58,8 +58,31 @@ class LocallyCoordinatedModelNode(x: Int,
     var belongtoSet = -1
 
     companion object {
+        private fun createNode(symbols: Set<String>, initialState: String, index: Int): LocallyCoordinatedModelNode {
+            if (symbols.isEmpty() || !symbols.contains(initialState))
+                throw IllegalArgumentException()
+            return LocallyCoordinatedModelNode(state = State.createState(symbols, initialState), index = index)
+        }
+
+        fun createMultipleNodes(symbols: Set<String>,
+                                initialStates: Map<String, Int>): MutableList<LocallyCoordinatedModelNode> {
+            if (symbols.isEmpty() || !symbols.containsAll(initialStates.keys))
+                throw IllegalArgumentException()
+            val result = ArrayList<LocallyCoordinatedModelNode>()
+            var index = 0
+            initialStates.entries.forEach({ entry ->
+                repeat(
+                        entry.value,
+                        { _ -> result.add(createNode(symbols, entry.key, index++)) }
+                )
+            })
+            return result
+        }
+
+
         fun canActive(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean {
             if (nodeA == nodeB) return false
+            if (nodeA.belongtoSet == nodeB.belongtoSet) return false
             val toInteractA = when (portA) {
                 Port.UP -> nodeA.up
                 Port.DOWN -> nodeA.down
@@ -92,7 +115,7 @@ class LocallyCoordinatedModelNode(x: Int,
 
         fun canInactive(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean {
             if (nodeA == nodeB) return false
-            if (nodeA.belongtoSet == nodeB.belongtoSet) return false
+            if (nodeA.belongtoSet != nodeB.belongtoSet) return false
             val toSeparateA = when (portA) {
                 Port.UP -> nodeA.up
                 Port.DOWN -> nodeA.down
@@ -150,7 +173,7 @@ class LocallyCoordinatedModelNode(x: Int,
             val transferMatM = mat[
                     Math.cos(rad), Math.sin(rad) end
                             0 - Math.sin(rad), Math.cos(rad)
-                    ]
+            ]
             val transferMatB = mat[
                     (1 - Math.cos(rad)) * origin.coordinate.x - origin.coordinate.y * Math.sin(rad),
                     (1 - Math.cos(rad)) * origin.coordinate.y + origin.coordinate.x * Math.sin(rad)]
@@ -169,7 +192,7 @@ class LocallyCoordinatedModelNode(x: Int,
             val transferMat = mat[
                     Math.cos(rad), Math.sin(rad) end
                             0 - Math.sin(rad), Math.cos(rad)
-                    ]
+            ]
             val centralCoordinateMat = mat[centralCoordinate.coordinate.x, centralCoordinate.coordinate.y]
             val originMat = mat[target.coordinate.x, target.coordinate]
             val transformed =
@@ -181,8 +204,5 @@ class LocallyCoordinatedModelNode(x: Int,
             return this.map { it -> if (it == -0.0) Math.abs(it) else it }
         }
     }
-
-
 }
-
 
