@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
-    </list>
+    <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -110,8 +106,8 @@
       <file leaf-file-name="GridNode.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+            <state relative-caret-position="490">
+              <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
               <folding>
                 <element signature="e#32#392#0" expanded="true" />
               </folding>
@@ -703,7 +699,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-4" />
     <option name="y" value="537" />
     <option name="width" value="1815" />
@@ -1260,7 +1256,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1162" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1162" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1746,8 +1742,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+        <state relative-caret-position="490">
+          <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
           <folding>
             <element signature="e#32#392#0" expanded="true" />
           </folding>
