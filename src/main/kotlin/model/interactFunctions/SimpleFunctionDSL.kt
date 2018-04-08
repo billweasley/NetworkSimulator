@@ -3,7 +3,7 @@ package model.interactFunctions
 import model.population.populationProtocols.PopulationProtocol
 import model.shared.ModelNode
 import org.jetbrains.kotlin.cli.common.environment.setIdeaIoUseFallback
-import presentation.generator.PopulationProtocolGenerator
+import presentation.generator.concrete.PopulationProtocolGenerator
 import scheduler.RandomScheduler
 import java.util.regex.Pattern
 import javax.script.ScriptEngineManager
@@ -37,9 +37,9 @@ fun main(arr: Array<String>) {
 
     val populationProtocolGenerator = PopulationProtocolGenerator(
             PopulationProtocol(
-                    initialStates = mapOf(Pair("L",15),Pair("F",5)),
+                    initialStates = mapOf(Pair("L", 15), Pair("F", 5)),
                     scheduler = RandomScheduler(),
-                    symbols = setOf("L","F","0","1"),
+                    symbols = setOf("L", "F", "0", "1"),
                     interactFunction =
                     SimpleFunctionDSL.getPopulationProtocolFunction(rules)
             ),

@@ -1,4 +1,4 @@
-package presentation.generator
+package presentation.generator.concrete
 
 import model.population.shapeConstruction.ShapeConstructingPopulation
 import org.graphstream.graph.Edge
@@ -6,6 +6,7 @@ import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.stream.SourceBase
+import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
 import utils.InteractionFunctions
 import java.util.*

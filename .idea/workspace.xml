@@ -2,15 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGenerator$addNodeOnGraph$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGenerator$addNodeOnGraph$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGeneratorKt$main$spanningSquarePopualtion$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGeneratorKt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/MySingleNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/PopulationProtocolGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/PopulationProtocolGeneratorKt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt$main$cycleCoverConstructor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt$main$globalStarConstructor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt$main$simpleGlobalLineConstructor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/META-INF/org.net.simulator_main.kotlin_module" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/org.net.simulator_main.kotlin_module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/interactFunctions/SimpleFunctionDSLKt.class" afterPath="$PROJECT_DIR$/out/production/classes/model/interactFunctions/SimpleFunctionDSLKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation$Companion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet$Companion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion$removeNegativeZeros$1.class" afterPath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion$removeNegativeZeros$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/RulesInput.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/RulesInput.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$6$10.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$6$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -89,8 +116,18 @@
       <file leaf-file-name="PopulationProtocol.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="567">
               <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopulationProtocolGenerator.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -99,21 +136,21 @@
       <file leaf-file-name="GridNetworkConstructingPopulation.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="205" column="45" lean-forward="true" selection-start-line="205" selection-start-column="45" selection-end-line="205" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="171" column="44" lean-forward="false" selection-start-line="171" selection-start-column="44" selection-end-line="171" selection-end-column="44" />
+              <folding>
+                <element signature="e#50#288#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InteractionFunctions.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt">
+      <file leaf-file-name="State.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!block;n#dancingProtocolFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="27">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,7 +158,7 @@
       <file leaf-file-name="SimpleFunctionDSL.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="486">
               <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding />
             </state>
@@ -129,56 +166,35 @@
         </entry>
       </file>
       <file leaf-file-name="ShapeConstructorGenerator.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
-              <caret line="19" column="70" lean-forward="false" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimulationGenerator.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="GridNetworkGenerator.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
-              <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+            <state relative-caret-position="486">
+              <caret line="318" column="63" lean-forward="false" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
               <folding>
-                <element signature="e#3648#4685#0" expanded="false" />
-                <element signature="n#!!block;n#initialConnectNodesInRepresentation#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-                <element signature="e#14064#16465#1" expanded="false" />
-                <element signature="e#16508#18899#1" expanded="false" />
-                <element signature="e#18944#21348#1" expanded="false" />
+                <element signature="e#4031#5068#0" expanded="false" />
+                <element signature="n#!!block;n#updateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+                <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+                <element signature="n#!!block;n#dfs#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocallyCoordinatedModelNode.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
+      <file leaf-file-name="ShapeConstructingPopulation.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1070">
-              <caret line="100" column="21" lean-forward="false" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Population.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="405">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -187,8 +203,18 @@
       <file leaf-file-name="GridNode.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2916">
-              <caret line="139" column="29" lean-forward="true" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
+            <state relative-caret-position="441">
+              <caret line="127" column="56" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocallyCoordinatedModelNode.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5859">
+              <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -650,10 +676,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Sundry-Java/LeetCode/668 Kth Smallest Number in Multiplication Table.java" />
-        <option value="$PROJECT_DIR$/../Sundry-Java/LeetCode/784  Letter Case Permutation.java" />
-        <option value="$PROJECT_DIR$/../Sundry-Java/LeetCode/106 Construct Binary Tree from Inorder and Postorder Traversal.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/utils/State.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/utils/Node.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/utils/LocallyCoordinatedEdge.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/utils/LocallyCoordinatedNode.kt" />
@@ -698,9 +720,13 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
       </list>
     </option>
   </component>
@@ -710,7 +736,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="1815" />
@@ -734,8 +760,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -815,6 +839,17 @@
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="population" type="462c0819:PsiDirectoryNode" />
+              <item name="populationProtocols" type="462c0819:PsiDirectoryNode" />
+              <item name="concrete" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="org.net.simulator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="org.net.simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="population" type="462c0819:PsiDirectoryNode" />
               <item name="shapeConstruction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -850,6 +885,16 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="concrete" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="org.net.simulator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="org.net.simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="presentation" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -875,8 +920,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -908,11 +955,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\billw\Desktop\org.net.simulator\src\main\kotlin\presentation\generator\concrete" />
       <recent name="C:\Users\billw\Desktop\org.net\src\main\kotlin\population\PopulationProtocols" />
       <recent name="C:\Users\billw\Desktop\org.net\src\main\kotlin\population" />
       <recent name="C:\Users\billw\Desktop\org.net\src\main\kotlin\population\concretion\populationProtocol" />
       <recent name="C:\Users\billw\Desktop\org.net\src\main\kotlin" />
-      <recent name="C:\Users\billw\Desktop\org.net\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -927,7 +974,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.presentation.generator.GridNetworkGeneratorKt">
+  <component name="RunManager" selected="Gradle.org.net.simulator [clean]">
     <configuration name="SimulatorApp" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="presentation.ui.SimulatorApp" />
@@ -1064,38 +1111,38 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
     </configuration>
-    <configuration name="presentation.generator.GridNetworkGeneratorKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="presentation.generator.concrete.GridNetworkGeneratorKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="presentation.generator.GridNetworkGeneratorKt" />
+      <option name="MAIN_CLASS_NAME" value="presentation.generator.concrete.GridNetworkGeneratorKt" />
       <option name="WORKING_DIRECTORY" />
       <module name="org.net.simulator_main" />
       <envs />
     </configuration>
-    <configuration name="presentation.generator.PopulationProtocolGeneratorKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="presentation.generator.concrete.PopulationProtocolGeneratorKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="presentation.generator.PopulationProtocolGeneratorKt" />
+      <option name="MAIN_CLASS_NAME" value="presentation.generator.concrete.PopulationProtocolGeneratorKt" />
       <option name="WORKING_DIRECTORY" />
       <module name="org.net.simulator_main" />
       <envs />
     </configuration>
-    <configuration name="presentation.generator.ShapeConstructorGeneratorKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="presentation.generator.concrete.ShapeConstructorGeneratorKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="presentation.generator.ShapeConstructorGeneratorKt" />
+      <option name="MAIN_CLASS_NAME" value="presentation.generator.concrete.ShapeConstructorGeneratorKt" />
       <option name="WORKING_DIRECTORY" />
       <module name="org.net.simulator_main" />
       <envs />
@@ -1116,18 +1163,18 @@
       <item index="0" class="java.lang.String" itemvalue="Application.SimulatorApp" />
       <item index="1" class="java.lang.String" itemvalue="Kotlin.main.kotlin.MainKt" />
       <item index="2" class="java.lang.String" itemvalue="Kotlin.presentation.ui.SimulatorAppKt" />
-      <item index="3" class="java.lang.String" itemvalue="Kotlin.presentation.generator.PopulationProtocolGeneratorKt" />
-      <item index="4" class="java.lang.String" itemvalue="Kotlin.presentation.generator.ShapeConstructorGeneratorKt" />
+      <item index="3" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.PopulationProtocolGeneratorKt" />
+      <item index="4" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.ShapeConstructorGeneratorKt" />
       <item index="5" class="java.lang.String" itemvalue="Gradle.org.net.simulator [clean]" />
-      <item index="6" class="java.lang.String" itemvalue="Kotlin.presentation.generator.GridNetworkGeneratorKt" />
+      <item index="6" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.GridNetworkGeneratorKt" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Kotlin.presentation.generator.GridNetworkGeneratorKt" />
-        <item index="1" class="java.lang.String" itemvalue="Kotlin.presentation.generator.ShapeConstructorGeneratorKt" />
+        <item index="0" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.GridNetworkGeneratorKt" />
+        <item index="1" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.ShapeConstructorGeneratorKt" />
         <item index="2" class="java.lang.String" itemvalue="Gradle.org.net.simulator [clean]" />
         <item index="3" class="java.lang.String" itemvalue="Kotlin.presentation.ui.SimulatorAppKt" />
-        <item index="4" class="java.lang.String" itemvalue="Kotlin.presentation.generator.PopulationProtocolGeneratorKt" />
+        <item index="4" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.PopulationProtocolGeneratorKt" />
       </list>
     </recent_temporary>
   </component>
@@ -1235,23 +1282,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1162" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1162" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810867" sideWeight="0.24162163" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497388" sideWeight="0.12486486" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497388" sideWeight="0.12" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36990595" sideWeight="0.4308108" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17659353" sideWeight="0.45027027" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36990595" sideWeight="0.5691892" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17659353" sideWeight="0.5497297" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48918918" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49783784" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21891892" sideWeight="0.85960263" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30216217" sideWeight="0.85960263" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48054054" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13621622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08324324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1264,7 +1312,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48486486" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -1516,7 +1563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1524,7 +1570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29943">
           <caret line="1109" column="19" lean-forward="false" selection-start-line="1109" selection-start-column="19" selection-end-line="1109" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1532,7 +1577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2322">
           <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,7 +1594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1558,7 +1601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,15 +1608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1582,7 +1615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1590,15 +1622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="126" column="39" lean-forward="false" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1610,48 +1633,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="60" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1330">
           <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
           <folding>
-            <element signature="e#2297#2329#2" expanded="false" />
+            <element signature="e#2315#2347#2" expanded="false" />
             <element signature="n#!!block;n#resetBtnStates#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
             <element signature="n#!!block;n#resetGraphStates#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
             <element signature="n#!!block;n#createAndSetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
-            <element signature="e#3316#3469#0" expanded="false" />
-            <element signature="e#3565#4692#2" expanded="false" />
-            <element signature="e#3595#3696#2" expanded="false" />
-            <element signature="e#3714#3903#2" expanded="false" />
-            <element signature="e#4706#16192#2" expanded="false" />
-            <element signature="e#4822#4982#2" expanded="false" />
-            <element signature="e#5302#5505#2" expanded="false" />
-            <element signature="e#5647#6376#2" expanded="false" />
-            <element signature="e#5700#5787#2" expanded="false" />
-            <element signature="e#5824#6358#2" expanded="false" />
-            <element signature="e#7015#7174#2" expanded="false" />
-            <element signature="e#7244#7323#2" expanded="false" />
-            <element signature="e#7532#9980#2" expanded="false" />
-            <element signature="e#10043#12498#2" expanded="false" />
-            <element signature="e#11502#12142#1" expanded="false" />
-            <element signature="e#12560#12614#2" expanded="false" />
-            <element signature="e#12675#12729#2" expanded="false" />
-            <element signature="e#12803#12933#2" expanded="false" />
-            <element signature="e#13007#13137#2" expanded="false" />
-            <element signature="e#13226#13318#2" expanded="false" />
-            <element signature="e#13404#13496#2" expanded="false" />
-            <element signature="e#13572#15203#2" expanded="false" />
-            <element signature="e#13645#15185#1" expanded="false" />
-            <element signature="e#15254#15413#2" expanded="false" />
-            <element signature="e#15772#16071#2" expanded="false" />
+            <element signature="e#3334#3487#0" expanded="false" />
+            <element signature="e#3583#4710#2" expanded="false" />
+            <element signature="e#3613#3714#2" expanded="false" />
+            <element signature="e#3732#3921#2" expanded="false" />
+            <element signature="e#4724#16210#2" expanded="false" />
+            <element signature="e#4840#5000#2" expanded="false" />
+            <element signature="e#5320#5523#2" expanded="false" />
+            <element signature="e#5665#6394#2" expanded="false" />
+            <element signature="e#5718#5805#2" expanded="false" />
+            <element signature="e#5842#6376#2" expanded="false" />
+            <element signature="e#7033#7192#2" expanded="false" />
+            <element signature="e#7262#7341#2" expanded="false" />
+            <element signature="e#7550#9998#2" expanded="false" />
+            <element signature="e#10061#12516#2" expanded="false" />
+            <element signature="e#11520#12160#1" expanded="false" />
+            <element signature="e#12578#12632#2" expanded="false" />
+            <element signature="e#12693#12747#2" expanded="false" />
+            <element signature="e#12821#12951#2" expanded="false" />
+            <element signature="e#13025#13155#2" expanded="false" />
+            <element signature="e#13244#13336#2" expanded="false" />
+            <element signature="e#13422#13514#2" expanded="false" />
+            <element signature="e#13590#15221#2" expanded="false" />
+            <element signature="e#13663#15203#1" expanded="false" />
+            <element signature="e#15272#15431#2" expanded="false" />
+            <element signature="e#15790#16089#2" expanded="false" />
             <element signature="n#!!block;n#InitialInputConfiguration#0" expanded="false" />
             <element signature="n#RulesInput#0;n#RulesInput#0" expanded="false" />
             <element signature="n#!!block;n#isSelfASatisiableRule#0;n#!!block;n#RulesInput#0" expanded="false" />
@@ -1664,14 +1679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2916">
-          <caret line="139" column="29" lean-forward="true" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1694,56 +1701,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="19" column="70" lean-forward="false" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+        <state relative-caret-position="486">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="567">
           <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1070">
-          <caret line="100" column="21" lean-forward="false" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="21" />
+        <state relative-caret-position="5859">
+          <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="460">
+          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="205" column="45" lean-forward="true" selection-start-line="205" selection-start-column="45" selection-end-line="205" selection-end-column="45" />
+        <state relative-caret-position="323">
+          <caret line="171" column="44" lean-forward="false" selection-start-line="171" selection-start-column="44" selection-end-line="171" selection-end-column="44" />
+          <folding>
+            <element signature="e#50#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        <state relative-caret-position="441">
+          <caret line="127" column="56" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="318" column="63" lean-forward="false" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
           <folding>
-            <element signature="e#3648#4685#0" expanded="false" />
-            <element signature="n#!!block;n#initialConnectNodesInRepresentation#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-            <element signature="e#14064#16465#1" expanded="false" />
-            <element signature="e#16508#18899#1" expanded="false" />
-            <element signature="e#18944#21348#1" expanded="false" />
+            <element signature="e#4031#5068#0" expanded="false" />
+            <element signature="n#!!block;n#updateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+            <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+            <element signature="n#!!block;n#dfs#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>

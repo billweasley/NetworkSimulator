@@ -5,13 +5,17 @@ import model.shared.LocallyCoordinatedModelNode
 import model.shared.Port
 import scheduler.RandomScheduler
 import scheduler.Scheduler
-import java.lang.Thread.sleep
 import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 
 class MarkedSet<E>(val groupID: Int): HashSet<E>(){
     companion object {
         fun <E> of(elements: Array<E>,groupID: Int): MarkedSet<E>{
+            val res = MarkedSet<E>(groupID)
+            res.addAll(elements)
+            return res
+        }
+        fun <E> of(elements: Set<E>,groupID: Int): MarkedSet<E>{
             val res = MarkedSet<E>(groupID)
             res.addAll(elements)
             return res
@@ -127,8 +131,8 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
         numOfActiveEdges--
 
 
-        val connectedNodeOfA = dfs(nodeA, mutableSetOf())
-        val oriConnectedNodeOfA = groupOfNodes[nodeA.belongtoSet]
+        val connectedNodeOfA = MarkedSet.of(dfs(nodeA, mutableSetOf()),nodeA.belongtoSet!!)
+        val oriConnectedNodeOfA = groupOfNodes[nodeA.belongtoSet!!]
         if (!connectedNodeOfA.contains(nodeB)){
             val connectedNodeOfB = MarkedSet<LocallyCoordinatedModelNode>(getIncreasedID())
             oriConnectedNodeOfA!!.forEach {
@@ -136,6 +140,7 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
                     connectedNodeOfB.add(it)
                 }
             }
+            groupOfNodes[oriConnectedNodeOfA.groupID] = connectedNodeOfA
             groupOfNodes[connectedNodeOfB.groupID] = connectedNodeOfB
         }
     }
@@ -168,16 +173,16 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
         val portA = Port.values()[getRandomNumber(Port.values().size)]
         val portB = Port.values()[getRandomNumber(Port.values().size)]
 
-        val firstATest = String(nodeA.state.currentState.toCharArray())
+        /*val firstATest = String(nodeA.state.currentState.toCharArray())
         val firstBTest = String(nodeB.state.currentState.toCharArray())
         val firstATestBl = nodeB.belongtoSet
-        val firstATestAl = nodeA.belongtoSet
+        val firstATestAl = nodeA.belongtoSet*/
 
         val result = interactFunction.invoke(Pair(nodeA,portA),Pair(nodeB, portB))
-        if (result.first){
+        /*if (result.first){
             println("From ${firstATest} $portA ${firstBTest} $portB")
             println("Before To (Interacted: ${result.first})  ${nodeA.state.currentState} $portA ${nodeB.state.currentState} Connection ${result.second}")
-        }
+        }*/
         var hasInteracted = result.first
         var shouldBeActivated = result.third
         var afterState = result.second
@@ -189,8 +194,7 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
                         nodeA.state.currentState = afterState.first
                         nodeB.state.currentState = afterState.second
                     }else{
-                        System.err.println("Interaction of connection REJECTED. A belongs to ${firstATestAl} with state ${firstATest}; B belongs to ${firstATestBl} with state ${firstBTest}")
-                        //sleep(10000)
+                       // System.err.println("Interaction of connection REJECTED. A belongs to ${firstATestAl} with state ${firstATest}; B belongs to ${firstATestBl} with state ${firstBTest}")
                         hasInteracted = false
                     }
                 }
@@ -201,14 +205,13 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
                         nodeA.state.currentState = afterState.first
                         nodeB.state.currentState = afterState.second
                     }else{
-                        System.err.println("Interaction of disconnection REJECTED")
-                        sleep(100000)
+                        //System.err.println("Interaction of disconnection REJECTED")
                         hasInteracted = false
                     }
                 }
             }
         }
-        if (result.first) println("(Interacted: ${hasInteracted}) To ${nodeA.state.currentState} $portA ${nodeB.state.currentState} Connection ${shouldBeActivated}")
+        //if (result.first) println("(Interacted: ${hasInteracted}) To ${nodeA.state.currentState} $portA ${nodeB.state.currentState} Connection ${shouldBeActivated}")
         return Triple(Pair(hasInteracted,shouldBeActivated),Pair(nodeA,portA),Pair(nodeB,portB))
     }
 

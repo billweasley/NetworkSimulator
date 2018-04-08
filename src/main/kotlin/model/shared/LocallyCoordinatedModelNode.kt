@@ -224,19 +224,6 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             return nodes
         }
 
-        // IN-CLOCK direction rotation
-        private fun rotateOneNode(target: LocallyCoordinatedModelNode, degree: Int, centralCoordinate: LocallyCoordinatedModelNode) {
-            val rad = degree * Math.PI / 180
-            val transferMat = mat[
-                    Math.cos(rad), Math.sin(rad) end
-                            0 - Math.sin(rad), Math.cos(rad)
-            ]
-            val centralCoordinateMat = mat[centralCoordinate.coordinate.x, centralCoordinate.coordinate.y]
-            val originMat = mat[target.coordinate.x, target.coordinate]
-            val transformed =
-                    (transferMat * (originMat - centralCoordinateMat).T).removeNegativeZeros() + centralCoordinateMat.T
-            target.coordinate = Coordinate.of(transformed[0, 0].roundToInt(), transformed[1, 0].roundToInt())
-        }
 
         private fun Matrix<Double>.removeNegativeZeros(): Matrix<Double> {
             return this.map { it -> if (it == -0.0) Math.abs(it) else it }

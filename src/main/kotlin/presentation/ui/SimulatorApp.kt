@@ -14,8 +14,8 @@ import model.shared.Port
 import org.graphstream.stream.Source
 import org.graphstream.ui.layout.Layouts
 import org.graphstream.ui.view.Viewer
-import presentation.generator.PopulationProtocolGenerator
-import presentation.generator.ShapeConstructorGenerator
+import presentation.generator.concrete.PopulationProtocolGenerator
+import presentation.generator.concrete.ShapeConstructorGenerator
 import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
 import tornadofx.*

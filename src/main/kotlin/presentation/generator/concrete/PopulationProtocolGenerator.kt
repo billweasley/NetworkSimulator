@@ -1,4 +1,4 @@
-package presentation.generator
+package presentation.generator.concrete
 
 import model.population.populationProtocols.PopulationProtocol
 import model.population.populationProtocols.concrete.DancingProtocol
@@ -8,6 +8,7 @@ import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.stream.SourceBase
 import org.graphstream.ui.view.Viewer
+import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
 import java.awt.Color
 import java.awt.Dimension
@@ -46,7 +47,7 @@ class PopulationProtocolGenerator(var population: PopulationProtocol,
                                   private val styleSheet: String =
                                           "node {fill-color: black; text-size: 30px;}" +
                                           "node.marked {fill-color: red; }" +
-                                          "edge.marked {fill-color: red;}"): SourceBase(),SimulationGenerator{
+                                          "edge.marked {fill-color: red;}"): SourceBase(), SimulationGenerator {
     @Volatile override var countOfSelectWithoutInteraction = 0
     override val terminateTheshold = 1000
     override val requireLayoutAlgorithm = false
@@ -64,7 +65,6 @@ class PopulationProtocolGenerator(var population: PopulationProtocol,
     override fun restart() {
         count = 0
         countOfSelectWithoutInteraction = 0
-        val ori = population
         population = PopulationProtocol(population)
         graph.clear()
         graph.addAttribute("ui.stylesheet", styleSheet)
