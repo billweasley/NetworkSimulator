@@ -5,6 +5,7 @@ import koma.extensions.get
 import koma.extensions.map
 import koma.mat
 import koma.matrix.Matrix
+import koma.pow
 import java.util.*
 import kotlin.collections.HashSet
 import kotlin.math.roundToInt
@@ -20,12 +21,12 @@ class Coordinate private constructor(val x: Int, val y: Int) {
         }
     }
 
-    fun coordinateShiftInCopy(direction: Port): Coordinate {
+    fun coordinateShiftInCopy(oriX: Int,oriY: Int,direction: Port): Coordinate {
         return when (direction) {
-            Port.UP -> of(x, y + 1)
-            Port.DOWN -> of(x, y - 1)
-            Port.LEFT -> of(x - 1, y)
-            Port.RIGHT -> of(x + 1, y)
+            Port.UP -> of(oriX, oriY + 1)
+            Port.DOWN -> of(oriX, oriY - 1)
+            Port.LEFT -> of(oriX - 1, oriY)
+            Port.RIGHT -> of(oriX + 1, oriY)
         }
     }
 
@@ -55,7 +56,16 @@ class LocallyCoordinatedModelNode(x: Int = 0,
     var left: LocallyCoordinatedModelNode? = null
     var right: LocallyCoordinatedModelNode? = null
     var coordinate = Coordinate.of(x, y)
-    var belongtoSet = -1
+    var belongtoSet: Int? = null
+    fun getPort(port: Port): LocallyCoordinatedModelNode? = when(port){
+        Port.UP -> this.up
+        Port.DOWN -> this.down
+        Port.LEFT -> this.left
+        Port.RIGHT -> this.right
+    }
+    fun hasConnectionWith(thisPort: Port, node: LocallyCoordinatedModelNode): Boolean{
+        return this.getPort(thisPort) == node
+    }
 
     companion object {
         private fun createNode(symbols: Set<String>, initialState: String, index: Int): LocallyCoordinatedModelNode {
@@ -79,10 +89,17 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             return result
         }
 
+        private fun relativeDistance(nodeA: LocallyCoordinatedModelNode,nodeB: LocallyCoordinatedModelNode): Double{
+            return ((nodeA.coordinate.x - nodeB.coordinate.x).pow(2) + (nodeA.coordinate.y - nodeB.coordinate.y).pow(2)).pow(0.5)
+        }
+
+        private fun hasConnectionWith(nodeA: LocallyCoordinatedModelNode,nodeB: LocallyCoordinatedModelNode): Boolean{
+            if (nodeA.left == nodeB || nodeA.right == nodeB || nodeA.down == nodeB || nodeA.up == nodeB ) return true
+            return false
+        }
 
         fun canActive(nodeA: LocallyCoordinatedModelNode, portA: Port, nodeB: LocallyCoordinatedModelNode, portB: Port): Boolean {
             if (nodeA == nodeB) return false
-            if (nodeA.belongtoSet == nodeB.belongtoSet) return false
             val toInteractA = when (portA) {
                 Port.UP -> nodeA.up
                 Port.DOWN -> nodeA.down
@@ -96,17 +113,39 @@ class LocallyCoordinatedModelNode(x: Int = 0,
                 Port.RIGHT -> nodeB.right
             }
             if (toInteractA != null || toInteractB != null) return false
+            if (hasConnectionWith(nodeA,nodeB)) return false
+            if (nodeA.belongtoSet!= null && nodeA.belongtoSet == nodeB.belongtoSet){
+                if (Math.abs(portA.degree - portB.degree) != 180){
+                    System.err.println("REJECTED BECAUSE DEGREE DIFFERENCE IS NOT 180, the portA has degree ${portA.degree},the portB has degree ${portB.degree}")
+                    return false
+                }
+                nodeA.coordinate = Coordinate.of(0, 0)
+                populateCoordinate(nodeA)
+                if(relativeDistance(nodeA,nodeB) != 1.0){
+                    System.err.println("REJECTED BECAUSE DISTANCE IS NOT 1, the nodeA has coordinate (${nodeA.coordinate.x}, ${nodeA.coordinate.y}) ,the nodeB has coordinate (${nodeB.coordinate.x}, ${nodeB.coordinate.y})")
+                    return false
+                }else{
+                    System.err.println("Accept distance because the nodeA has coordinate (${nodeA.coordinate.x}, ${nodeA.coordinate.y}) ,the nodeB has degree (${nodeB.coordinate.x}, ${nodeB.coordinate.y})")
 
-            nodeA.coordinate = Coordinate.of(0, 0)
-            nodeB.coordinate = nodeA.coordinate.coordinateShiftInCopy(portA)
-
-            val populationACoordinates = populateAndRotateNodes(nodeA, 0)
-                    .map { node -> node.coordinate }.toSet()
-            val populationBCoordinates =
-                    populateAndRotateNodes(nodeB, 180 - Math.abs(portA.degree - portB.degree))
-                            .map { node -> node.coordinate }.toSet()
-            return populationACoordinates.intersect(populationBCoordinates).isEmpty()
-
+                }
+                return true
+            }else{
+                nodeA.coordinate = Coordinate.of(0, 0)
+                nodeB.coordinate = nodeA.coordinate.coordinateShiftInCopy(0,0,portA)
+                val populationACoordinates = populateAndRotateNodes(nodeA, 0)
+                        .map { node -> Pair(node.coordinate,node)}.toMap()
+                nodeA.coordinate = Coordinate.of(0, 0)
+                nodeB.coordinate = nodeA.coordinate.coordinateShiftInCopy(0,0,portA)
+                val populationBCoordinates =
+                        populateAndRotateNodes(nodeB, 180 - Math.abs(portA.degree - portB.degree))
+                                .map { node -> Pair(node.coordinate,node)}.toMap()
+                for (key in populationACoordinates.keys){
+                    if(populationBCoordinates.containsKey(key) && populationBCoordinates[key] != populationACoordinates[key]){
+                        return false
+                    }
+                }
+                return true
+            }
 //       0
 //  270     90
 //      180
@@ -136,7 +175,6 @@ class LocallyCoordinatedModelNode(x: Int = 0,
         private fun populateAndRotateNodes(origin: LocallyCoordinatedModelNode, degree: Int): Set<LocallyCoordinatedModelNode> {
             return rotateAllNodes(origin, degree, populateCoordinate(origin))
         }
-
         private fun populateCoordinate(origin: LocallyCoordinatedModelNode):
                 Set<LocallyCoordinatedModelNode> {
             val queue = LinkedList<LocallyCoordinatedModelNode>()
@@ -145,19 +183,19 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             while (queue.isNotEmpty()) {
                 val current = queue.pop()
                 if (current.left != null && !hasVisitedIndexSet.contains(current.left!!)) {
-                    current.left!!.coordinate = current.coordinate.coordinateShiftInCopy(Port.LEFT)
+                    current.left!!.coordinate = current.coordinate.coordinateShiftInCopy(current.coordinate.x,current.coordinate.y,Port.LEFT)
                     queue.offer(current.left)
                 }
                 if (current.right != null && !hasVisitedIndexSet.contains(current.right!!)) {
-                    current.right!!.coordinate = current.coordinate.coordinateShiftInCopy(Port.RIGHT)
+                    current.right!!.coordinate = current.coordinate.coordinateShiftInCopy(current.coordinate.x,current.coordinate.y,Port.RIGHT)
                     queue.offer(current.right)
                 }
                 if (current.up != null && !hasVisitedIndexSet.contains(current.up!!)) {
-                    current.up!!.coordinate = current.coordinate.coordinateShiftInCopy(Port.UP)
+                    current.up!!.coordinate = current.coordinate.coordinateShiftInCopy(current.coordinate.x,current.coordinate.y,Port.UP)
                     queue.offer(current.up)
                 }
                 if (current.down != null && !hasVisitedIndexSet.contains(current.down!!)) {
-                    current.down!!.coordinate = current.coordinate.coordinateShiftInCopy(Port.DOWN)
+                    current.down!!.coordinate = current.coordinate.coordinateShiftInCopy(current.coordinate.x,current.coordinate.y,Port.DOWN)
                     queue.offer(current.down)
                 }
                 hasVisitedIndexSet.add(current)
@@ -203,6 +241,7 @@ class LocallyCoordinatedModelNode(x: Int = 0,
         private fun Matrix<Double>.removeNegativeZeros(): Matrix<Double> {
             return this.map { it -> if (it == -0.0) Math.abs(it) else it }
         }
+
     }
 }
 

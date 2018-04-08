@@ -117,6 +117,36 @@ class GridNode(graph: AbstractGraph?, id: String?,
             Port.LEFT -> centeredRotate(rotation,(pos[0] - portLength * 2 - edgeLength), pos[1])
         }
     }
+
+    fun getOppositeConnectionCenterNode(port: Port): GridNode?{
+        val interactNodeThisSide = getInteractPortNode(port) //self interact node
+        val neighbors = interactNodeThisSide.getNeighborNodeIterator<Node>().asSequence()
+        //this - interactNodeThisSide - interactNodeAnotherSide - another
+        for(neighbor in neighbors){
+            if (neighbor != this){
+                val anotherNeighbors = neighbor.getNeighborNodeIterator<Node>().asSequence()
+                for (neighborAnother in anotherNeighbors){
+                    if (neighborAnother != interactNodeThisSide && neighborAnother is GridNode) return neighborAnother
+                }
+            }
+        }
+        return null
+    }
+
+    fun getInteractPortNode(port: Port): Node = when(port){
+        Port.DOWN -> downPort
+        Port.RIGHT -> rightPort
+        Port.UP -> upPort
+        Port.LEFT -> leftPort
+    }
+
+    fun getInteractEdge(port: Port): Edge = when(port){
+        Port.DOWN -> graph.getEdge(this.id + " | d")
+        Port.RIGHT -> graph.getEdge(this.id + " | r")
+        Port.UP -> graph.getEdge(this.id + " | u")
+        Port.LEFT -> graph.getEdge(this.id + " | l")
+    }
+
     fun updateRotation(degree: Double){
         rotation = degree
         val pos = Toolkit.nodePosition(this)
@@ -142,6 +172,9 @@ class GridNode(graph: AbstractGraph?, id: String?,
         val rotatedLeft = centeredRotate(rotation,pos[0] - portLength, pos[1])
         leftPort.setAttribute("xy",rotatedLeft.first,rotatedLeft.second)
     }
+
+
+
     fun bindNodeToPort(node: Node, port: Port) {
         val pos = Toolkit.nodePosition(this)
         when(port){

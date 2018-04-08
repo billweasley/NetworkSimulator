@@ -1,8 +1,8 @@
 package scheduler
 
+import model.population.LinkedPopulation
 import model.population.Population
 import model.population.populationProtocols.PopulationProtocol
-import model.population.shapeConstruction.ShapeConstructingPopulation
 import model.shared.ModelNode
 import java.util.*
 
@@ -14,7 +14,7 @@ class RandomScheduler : Scheduler {
             is PopulationProtocol -> {
                 boundary = population.size()
             }
-            is ShapeConstructingPopulation -> {
+            is LinkedPopulation -> {
                 boundary = population.numOfNode()
             }
             else -> {
