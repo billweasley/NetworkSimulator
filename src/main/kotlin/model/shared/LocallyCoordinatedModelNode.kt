@@ -50,7 +50,7 @@ class Coordinate private constructor(val x: Int, val y: Int) {
 
 class LocallyCoordinatedModelNode(x: Int = 0,
                                   y: Int = 0,
-                                  state: State, index: Int) : ModelNode(state = state, index = index) {
+                                  state: State, index: Int,var rotationDegree: Double = 0.0) : ModelNode(state = state, index = index) {
     var up: LocallyCoordinatedModelNode? = null
     var down: LocallyCoordinatedModelNode? = null
     var left: LocallyCoordinatedModelNode? = null
@@ -68,10 +68,11 @@ class LocallyCoordinatedModelNode(x: Int = 0,
     }
 
     companion object {
+        val random = Random()
         private fun createNode(symbols: Set<String>, initialState: String, index: Int): LocallyCoordinatedModelNode {
             if (symbols.isEmpty() || !symbols.contains(initialState))
                 throw IllegalArgumentException()
-            return LocallyCoordinatedModelNode(state = State.createState(symbols, initialState), index = index)
+            return LocallyCoordinatedModelNode(state = State.createState(symbols, initialState),rotationDegree = random.nextInt(360).toDouble(),index = index)
         }
 
         fun createMultipleNodes(symbols: Set<String>,
@@ -115,7 +116,7 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             if (toInteractA != null || toInteractB != null) return false
             if (hasConnectionWith(nodeA,nodeB)) return false
             if (nodeA.belongtoSet!= null && nodeA.belongtoSet == nodeB.belongtoSet){
-                if (Math.abs(portA.degree - portB.degree) != 180){
+                if (Math.abs(portA.degree - nodeA.rotationDegree - (portB.degree - nodeB.rotationDegree)).toInt() % 360 != 180){
                     System.err.println("REJECTED BECAUSE DEGREE DIFFERENCE IS NOT 180, the portA has degree ${portA.degree},the portB has degree ${portB.degree}")
                     return false
                 }
@@ -132,12 +133,12 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             }else{
                 nodeA.coordinate = Coordinate.of(0, 0)
                 nodeB.coordinate = nodeA.coordinate.coordinateShiftInCopy(0,0,portA)
-                val populationACoordinates = populateAndRotateNodes(nodeA, 0)
+                val populationACoordinates = populateAndRotateNodes(nodeA, 0.0)
                         .map { node -> Pair(node.coordinate,node)}.toMap()
                 nodeA.coordinate = Coordinate.of(0, 0)
                 nodeB.coordinate = nodeA.coordinate.coordinateShiftInCopy(0,0,portA)
                 val populationBCoordinates =
-                        populateAndRotateNodes(nodeB, 180 - Math.abs(portA.degree - portB.degree))
+                        populateAndRotateNodes(nodeB, 180 - Math.abs(portA.degree - portB.degree).toDouble())
                                 .map { node -> Pair(node.coordinate,node)}.toMap()
                 for (key in populationACoordinates.keys){
                     if(populationBCoordinates.containsKey(key) && populationBCoordinates[key] != populationACoordinates[key]){
@@ -172,7 +173,7 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             return true
         }
 
-        private fun populateAndRotateNodes(origin: LocallyCoordinatedModelNode, degree: Int): Set<LocallyCoordinatedModelNode> {
+        private fun populateAndRotateNodes(origin: LocallyCoordinatedModelNode, degree: Double): Set<LocallyCoordinatedModelNode> {
             return rotateAllNodes(origin, degree, populateCoordinate(origin))
         }
         private fun populateCoordinate(origin: LocallyCoordinatedModelNode):
@@ -203,8 +204,10 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             return hasVisitedIndexSet
         }
 
-        private fun rotateAllNodes(origin: LocallyCoordinatedModelNode, degree: Int,
+        private fun rotateAllNodes(origin: LocallyCoordinatedModelNode, degree: Double,
                                    nodes: Set<LocallyCoordinatedModelNode>): Set<LocallyCoordinatedModelNode> {
+            origin.rotationDegree += degree
+            origin.rotationDegree %= 360
             val rad = degree * Math.PI / 180
             // Ref: https://www.zhihu.com/question/52027040
             // IN-CLOCK direction rotation

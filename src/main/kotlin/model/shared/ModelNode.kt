@@ -1,6 +1,6 @@
 package model.shared
 
-open class ModelNode protected constructor(open val state: State, val index: Int) {
+open class ModelNode protected constructor(open var state: State, val index: Int) {
 
     companion object {
 

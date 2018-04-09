@@ -2,6 +2,7 @@ package presentation.generator.concrete
 
 import model.population.populationProtocols.PopulationProtocol
 import model.population.populationProtocols.concrete.DancingProtocol
+import model.shared.ModelNode
 import org.graphstream.algorithm.Toolkit
 import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
@@ -10,6 +11,7 @@ import org.graphstream.stream.SourceBase
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
+import utils.InteractionFunctions
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridLayout
@@ -25,15 +27,18 @@ fun main(args: Array<String>) {
     val protocol = DancingProtocol(
             initialStates = mapOf(Pair("L", 9), Pair("F", 6)), scheduler = RandomScheduler()
     )
-
+    val sumModelFourProtocol = PopulationProtocol(
+            initialStates = mapOf(Pair("0",1),Pair("1",2),Pair("2",1),Pair("3",1)),
+            interactFunction = {initializer: ModelNode, receiver:ModelNode -> InteractionFunctions.sumModelFourFunc(initializer = initializer,receiver = receiver)},
+            symbols = setOf("0", "1", "2", "3","N1","N2","N0","N3")
+    )
     val populationProtocolGenerator = PopulationProtocolGenerator(
             protocol,
             1000000,
             true,
-            300,
+            300000,
             "Test"
     )
-
     populationProtocolGenerator.display()
 }
 

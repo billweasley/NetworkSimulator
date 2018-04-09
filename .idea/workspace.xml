@@ -2,41 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGenerator$addNodeOnGraph$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGenerator$addNodeOnGraph$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGenerator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGeneratorKt$main$spanningSquarePopualtion$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/GridNetworkGeneratorKt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/MySingleNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/PopulationProtocolGenerator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/PopulationProtocolGeneratorKt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGenerator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt$main$cycleCoverConstructor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt$main$globalStarConstructor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt$main$simpleGlobalLineConstructor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/ShapeConstructorGeneratorKt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/META-INF/org.net.simulator_main.kotlin_module" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/org.net.simulator_main.kotlin_module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/interactFunctions/SimpleFunctionDSLKt.class" afterPath="$PROJECT_DIR$/out/production/classes/model/interactFunctions/SimpleFunctionDSLKt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/MarkedSet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion$removeNegativeZeros$1.class" afterPath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion$removeNegativeZeros$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/RulesInput.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/RulesInput.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$6$10.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$6$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -113,11 +88,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="PopulationProtocol.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt">
+      <file leaf-file-name="ShapeConstructorGenerator.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="351">
+              <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinklessPopulation.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/LinklessPopulation.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -126,8 +111,8 @@
       <file leaf-file-name="PopulationProtocolGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+            <state relative-caret-position="-5700">
+              <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -136,75 +121,8 @@
       <file leaf-file-name="GridNetworkConstructingPopulation.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="171" column="44" lean-forward="false" selection-start-line="171" selection-start-column="44" selection-end-line="171" selection-end-column="44" />
-              <folding>
-                <element signature="e#50#288#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="State.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleFunctionDSL.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShapeConstructorGenerator.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GridNetworkGenerator.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="318" column="63" lean-forward="false" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
-              <folding>
-                <element signature="e#4031#5068#0" expanded="false" />
-                <element signature="n#!!block;n#updateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-                <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-                <element signature="n#!!block;n#dfs#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShapeConstructingPopulation.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GridNode.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="127" column="56" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="56" />
+            <state relative-caret-position="236">
+              <caret line="54" column="94" lean-forward="false" selection-start-line="54" selection-start-column="94" selection-end-line="54" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -213,9 +131,76 @@
       <file leaf-file-name="LocallyCoordinatedModelNode.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5859">
-              <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+            <state relative-caret-position="156">
+              <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InteractionFunctions.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1283">
+              <caret line="194" column="56" lean-forward="true" selection-start-line="194" selection-start-column="56" selection-end-line="194" selection-end-column="56" />
+              <folding>
+                <element signature="e#15#95#0" expanded="true" />
+                <element signature="n#!!block;n#dancingProtocolFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+                <element signature="n#!!block;n#simpleGlobalLineFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+                <element signature="n#!!block;n#cycleCoverFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleFunctionDSL.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GridNode.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6183">
+              <caret line="229" column="13" lean-forward="false" selection-start-line="229" selection-start-column="13" selection-end-line="229" selection-end-column="13" />
+              <folding>
+                <element signature="e#19619#19964#1" expanded="false" />
+                <element signature="e#20021#21571#1" expanded="false" />
+                <element signature="e#21605#22966#1" expanded="false" />
+                <element signature="e#23003#24376#1" expanded="false" />
+                <element signature="e#24411#25776#1" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GridNetworkGenerator.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3645">
+              <caret line="211" column="4" lean-forward="false" selection-start-line="211" selection-start-column="4" selection-end-line="211" selection-end-column="4" />
+              <folding>
+                <element signature="e#3001#4038#0" expanded="false" />
+                <element signature="n#!!block;n#begin#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+                <element signature="n#!!block;n#updateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+                <element signature="n#!!block;n#dfsForUpdateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+                <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,16 +221,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dis</find>
-      <find>resetGraphStates</find>
-      <find>current</find>
-      <find>swingNode</find>
-      <find>MySingleNode</find>
-      <find>addN</find>
-      <find>Lu UP Q</find>
-      <find>Lu UP Q0 D</find>
-      <find>Lu UP q0 DOWN false</find>
-      <find>addNodeOnGraph</find>
       <find>q1</find>
       <find>Ll Left</find>
       <find>Ll LEFT Q1 RIGHT false</find>
@@ -260,12 +235,22 @@
       <find>Ll left q1 right</find>
       <find>Ll left q1 ri</find>
       <find>fixed</find>
-      <find>q1</find>
       <find>q1 right l</find>
       <find>q1 right</find>
       <find>ll left q1 right</find>
       <find>Ll LEFT Q1 RIGHT</find>
       <find>print</find>
+      <find>err.p</find>
+      <find>addN</find>
+      <find>move</find>
+      <find>mov</find>
+      <find>sleep</find>
+      <find>movePosInBatch</find>
+      <find>MovePosInBatch</find>
+      <find>sleepWith</find>
+      <find>degree</find>
+      <find>updateRotationInBatch</find>
+      <find>upda</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -676,7 +661,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/utils/Node.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/utils/LocallyCoordinatedEdge.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/utils/LocallyCoordinatedNode.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
@@ -702,7 +686,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/model/utils/ModelNode.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/InteractFunctions/SimpleFunctionDSL.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/populationProtocol/PopulationProtocolGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedEdge.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
@@ -713,20 +696,22 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generators/PopulationProtocolGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generators/ShapeConstructorGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/ui/Temp" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
       </list>
     </option>
   </component>
@@ -736,10 +721,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="303" />
     <option name="y" value="-11" />
-    <option name="width" value="1815" />
+    <option name="width" value="1390" />
     <option name="height" value="1150" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -920,10 +905,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -974,7 +959,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.org.net.simulator [clean]">
+  <component name="RunManager" selected="Kotlin.presentation.generator.concrete.GridNetworkGeneratorKt">
     <configuration name="SimulatorApp" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="presentation.ui.SimulatorApp" />
@@ -1172,9 +1157,9 @@
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.GridNetworkGeneratorKt" />
         <item index="1" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.ShapeConstructorGeneratorKt" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.org.net.simulator [clean]" />
+        <item index="2" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.PopulationProtocolGeneratorKt" />
         <item index="3" class="java.lang.String" itemvalue="Kotlin.presentation.ui.SimulatorAppKt" />
-        <item index="4" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.PopulationProtocolGeneratorKt" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.org.net.simulator [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -1282,27 +1267,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1162" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1162" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810867" sideWeight="0.24162163" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497388" sideWeight="0.12" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497388" sideWeight="0.11891892" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17659353" sideWeight="0.45027027" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17883597" sideWeight="0.4550203" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17659353" sideWeight="0.5497297" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48918918" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49783784" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23510972" sideWeight="0.5449797" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48918918" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49783784" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30216217" sideWeight="0.85960263" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48054054" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13621622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30486485" sideWeight="0.85960263" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14625654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08324324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08324324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5423198" sideWeight="0.4783784" order="3" side_tool="false" content_ui="tabs" />
@@ -1312,7 +1296,37 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48054054" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17883597" sideWeight="0.4550203" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08324324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5423198" sideWeight="0.4783784" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810867" sideWeight="0.24162163" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497388" sideWeight="0.11891892" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17883597" sideWeight="0.5449797" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48918918" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49783784" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21938479" sideWeight="0.85960263" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48054054" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14625654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3108108" sideWeight="0.14039735" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
@@ -1370,27 +1384,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/Async.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1647">
-          <caret line="79" column="4" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3-sources.jar!/org/graphstream/ui/layout/LayoutRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="70" column="25" lean-forward="false" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3-sources.jar!/org/graphstream/ui/view/Viewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15930">
-          <caret line="655" column="31" lean-forward="false" selection-start-line="655" selection-start-column="31" selection-end-line="655" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/SelectionModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1539">
@@ -1604,13 +1597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/LinkedPopulation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/graph/implementations/AbstractGraph.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1625,18 +1611,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="162">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.30/9b3f10d4717b9ac238b287e9b6eb2b4eadd8e870/kotlin-compiler-embeddable-1.2.30.jar!/kotlin/kotlin.kotlin_builtins">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="1068" column="30" lean-forward="false" selection-start-line="1068" selection-start-column="30" selection-end-line="1068" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1330">
-          <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+        <state relative-caret-position="378">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="e#2315#2347#2" expanded="false" />
             <element signature="n#!!block;n#resetBtnStates#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
@@ -1675,116 +1676,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!block;n#dancingProtocolFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="-297">
+          <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="135">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/concrete/DancingProtocol.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="648">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/LinkedPopulation.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5859">
-          <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/LinklessPopulation.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+        <state relative-caret-position="54">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="171" column="44" lean-forward="false" selection-start-line="171" selection-start-column="44" selection-end-line="171" selection-end-column="44" />
-          <folding>
-            <element signature="e#50#288#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="6183">
+          <caret line="229" column="13" lean-forward="false" selection-start-line="229" selection-start-column="13" selection-end-line="229" selection-end-column="13" />
+          <folding>
+            <element signature="e#19619#19964#1" expanded="false" />
+            <element signature="e#20021#21571#1" expanded="false" />
+            <element signature="e#21605#22966#1" expanded="false" />
+            <element signature="e#23003#24376#1" expanded="false" />
+            <element signature="e#24411#25776#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="127" column="56" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="56" />
+        <state relative-caret-position="162">
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1283">
+          <caret line="194" column="56" lean-forward="true" selection-start-line="194" selection-start-column="56" selection-end-line="194" selection-end-column="56" />
+          <folding>
+            <element signature="e#15#95#0" expanded="true" />
+            <element signature="n#!!block;n#dancingProtocolFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+            <element signature="n#!!block;n#simpleGlobalLineFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+            <element signature="n#!!block;n#cycleCoverFunc#0;n#!!block;n#Companion#0;n#!!block;n#InteractionFunctions#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="54" column="94" lean-forward="false" selection-start-line="54" selection-start-column="94" selection-end-line="54" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="318" column="63" lean-forward="false" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
+        <state relative-caret-position="3645">
+          <caret line="211" column="4" lean-forward="false" selection-start-line="211" selection-start-column="4" selection-end-line="211" selection-end-column="4" />
           <folding>
-            <element signature="e#4031#5068#0" expanded="false" />
+            <element signature="e#3001#4038#0" expanded="false" />
+            <element signature="n#!!block;n#begin#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
             <element signature="n#!!block;n#updateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+            <element signature="n#!!block;n#dfsForUpdateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
             <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-            <element signature="n#!!block;n#dfs#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5700">
+          <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

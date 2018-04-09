@@ -14,9 +14,9 @@ import model.shared.Port
 import org.graphstream.stream.Source
 import org.graphstream.ui.layout.Layouts
 import org.graphstream.ui.view.Viewer
+import presentation.generator.SimulationGenerator
 import presentation.generator.concrete.PopulationProtocolGenerator
 import presentation.generator.concrete.ShapeConstructorGenerator
-import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
 import tornadofx.*
 import java.awt.Color
@@ -427,7 +427,6 @@ class RulesInput(abefore: String = "", aafter: String = "", bbefore: String = ""
     companion object {
         private fun getAllSymbols(rulesInputs: List<RulesInput>,clazz: KClass<out Source>?): Set<String>{
             val filtered = rulesInputs.filter { it -> it.isSelfASatisiableRule(clazz) }
-
             val res = HashSet<String>()
             filtered.forEach{ rule ->
                 res.add(rule.aafter)

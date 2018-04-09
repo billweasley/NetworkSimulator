@@ -67,7 +67,6 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
 
 
     init {
-
         nodes.forEach {it ->
             val id = getIncreasedID()
             groupOfNodes[id] = MarkedSet.of(it,id)

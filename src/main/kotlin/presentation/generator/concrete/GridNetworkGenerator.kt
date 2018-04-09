@@ -4,7 +4,6 @@ import model.population.gridNetworkConstruction.GridNetworkConstructingPopulatio
 import model.population.gridNetworkConstruction.MarkedSet
 import model.shared.LocallyCoordinatedModelNode
 import model.shared.Port
-import model.shared.State
 import org.graphstream.algorithm.Toolkit
 import org.graphstream.graph.Edge
 import org.graphstream.graph.Node
@@ -15,24 +14,6 @@ import org.graphstream.stream.SourceBase
 import presentation.generator.GridNode
 import presentation.generator.SimulationGenerator
 import java.util.*
-
-
-
-fun isThePattern(str: String, pattern: String): Boolean = pattern.toRegex().matches(str)
-
-fun isThePatternPair(pair: Pair<String, String>, patternPair: Pair<String, String>): Boolean {
-    return isThePattern(pair.first, patternPair.first) && isThePattern(pair.second, patternPair.second)
-}
-
-fun isTheTriple(triple: Triple<Pair<State, Port>, Pair<State, Port>, Boolean>, patternTriple: Triple<Pair<String, Port>, Pair<String, Port>, Boolean>): Boolean {
-    return isThePatternPair(Pair(triple.first.first.currentState, triple.second.first.currentState),
-            Pair(patternTriple.first.first, patternTriple.second.first))
-            && triple.first.second == patternTriple.first.second
-            && triple.second.second == patternTriple.second.second
-            && triple.third == patternTriple.third
-}
-
-infix fun Triple<Pair<State, Port>, Pair<State, Port>, Boolean>.match(patternTriple: Triple<Pair<String, Port>, Pair<String, Port>, Boolean>): Boolean = isTheTriple(this, patternTriple)
 
 class MySingleNode(graph: AbstractGraph, id: String) : SingleNode(graph, id)
 
@@ -74,7 +55,7 @@ fun main(args: Array<String>) {
         }
 
     }, symbols = setOf("Lu", "q0", "q1", "Lr", "Ld", "Ll", "Lu"),
-            initialStates = mapOf(Pair("q0", 35), Pair("Lu", 1))
+            initialStates = mapOf(Pair("q0", 8), Pair("Lu", 1))
     )
     GridNetworkGenerator(spanningSquarePopulation).display()
 }
@@ -126,9 +107,6 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
             throw IllegalArgumentException("The fast forwarding requires a non-negative value.")
         addSink(graph)
         graph.addAttribute("ui.stylesheet", styleSheet)
-        graph.addAttribute("layout.stabilization-limit",0.01)
-        graph.addAttribute("layout.force",0.0)
-        graph.addAttribute("layout.weight",0.0)
     }
 
     private fun addNodeOnGraph(id: String, x: Double, y: Double, degreeOfRotation: Double = 0.0, state: String) {
@@ -195,45 +173,77 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
             while (setOfCoordinate.contains(pair))
                 pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
             val theNode = population.nodes[i]
-            addNodeOnGraph(theNode.index.toString(), pair.first.toDouble(), pair.second.toDouble(),state = theNode.state.currentState)
+            addNodeOnGraph(theNode.index.toString(), pair.first.toDouble(), pair.second.toDouble(),theNode.rotationDegree,state = theNode.state.currentState)
         }
         for (group in population.groupOfNodes.values) {
             initialConnectNodesInRepresentation(group)
         }
     }
 
-    private fun updateRotationInBatch(toMoveNode: GridNode, degreeOfTransfer: Double) {
-        val set = dfs(toMoveNode, mutableSetOf())
-        for(node in set){
-            node.updateRotation(degreeOfTransfer)
-        }
-    }
-
-    private fun movePosInBatch(toMoveNode: GridNode, newPos: Pair<Double, Double>) {
+    private fun updateRotationInBatch(toMoveNode: GridNode, destinationDegree: Double) {
+        val set = dfsForUpdateRotationInBatch(toMoveNode, mutableSetOf())
+        toMoveNode.updateRotation(destinationDegree - toMoveNode.getRotation())
+        population.nodes[toMoveNode.id.toInt()].rotationDegree = toMoveNode.getRotation()
         val ori = Pair(Toolkit.nodePosition(toMoveNode)[0], Toolkit.nodePosition(toMoveNode)[1])
-        val diffVector = Pair(newPos.first - ori.first, newPos.second - ori.second)
-        val set = dfs(toMoveNode, mutableSetOf())
-        for (node in set){
-            val oriEach = Pair(Toolkit.nodePosition(node)[0], Toolkit.nodePosition(node)[1])
-            node.setPos(oriEach.first + diffVector.first, oriEach.second + diffVector.second)
+        for(node in set){
+            if (node != toMoveNode){
+                node.updateRotation( destinationDegree - node.getRotation())
+                population.nodes[node.id.toInt()].rotationDegree = node.getRotation()
+
+            }
         }
     }
-
-    private fun dfs(node: GridNode, visited: MutableSet<GridNode>): MutableSet<GridNode> {
+    private fun dfsForUpdateRotationInBatch(node: GridNode, visited: MutableSet<GridNode>): MutableSet<GridNode> {
         if(!visited.contains(node)){
             visited.add(node)
             val rightCentre = node.getOppositeConnectionCenterNode(Port.RIGHT)
-            if (rightCentre != null) visited.addAll(dfs(rightCentre,visited))
+            if (rightCentre != null) visited.addAll(dfsForUpdateRotationInBatch(rightCentre,visited))
             val leftCentre = node.getOppositeConnectionCenterNode(Port.LEFT)
-            if (leftCentre != null) visited.addAll(dfs(leftCentre,visited))
+            if (leftCentre != null) visited.addAll(dfsForUpdateRotationInBatch(leftCentre,visited))
             val upCentre = node.getOppositeConnectionCenterNode(Port.UP)
-            if (upCentre != null) visited.addAll(dfs(upCentre,visited))
+            if (upCentre != null) visited.addAll(dfsForUpdateRotationInBatch(upCentre,visited))
             val downCentre = node.getOppositeConnectionCenterNode(Port.DOWN)
-            if (downCentre != null) visited.addAll(dfs(downCentre,visited))
+            if (downCentre != null) visited.addAll(dfsForUpdateRotationInBatch(downCentre,visited))
         }
         return visited
     }
 
+
+    //Have to be used after updateRotationInBatch
+    private fun movePosInBatch(toMoveNode: GridNode, newPos: Pair<Double, Double>){
+        toMoveNode.setPos(newPos.first,newPos.second)
+        dfsForMovePosInBatch(toMoveNode, mutableSetOf())
+    }
+    private fun dfsForMovePosInBatch(node: GridNode, visited: MutableSet<GridNode>): MutableSet<GridNode> {
+        if(!visited.contains(node)){
+            visited.add(node)
+            val rightCentre = node.getOppositeConnectionCenterNode(Port.RIGHT)
+            if (rightCentre != null){
+                val rightNewPos =node.getOppositeConnectionCenterCoordinate(Port.RIGHT)
+                rightCentre.setPos(rightNewPos.first,rightNewPos.second)
+                visited.addAll(dfsForMovePosInBatch(rightCentre,visited))
+            }
+            val leftCentre = node.getOppositeConnectionCenterNode(Port.LEFT)
+            if (leftCentre != null){
+                val leftNewPos =node.getOppositeConnectionCenterCoordinate(Port.LEFT)
+                leftCentre.setPos(leftNewPos.first,leftNewPos.second)
+                visited.addAll(dfsForMovePosInBatch(leftCentre,visited))
+            }
+            val upCentre = node.getOppositeConnectionCenterNode(Port.UP)
+            if (upCentre != null){
+                val upNewPos = node.getOppositeConnectionCenterCoordinate(Port.UP)
+                upCentre.setPos(upNewPos.first,upNewPos.second)
+                visited.addAll(dfsForMovePosInBatch(upCentre,visited))
+            }
+            val downCentre = node.getOppositeConnectionCenterNode(Port.DOWN)
+            if (downCentre != null){
+                val downNewPos = node.getOppositeConnectionCenterCoordinate(Port.DOWN)
+                downCentre.setPos(downNewPos.first,downNewPos.second)
+                visited.addAll(dfsForMovePosInBatch(downCentre,visited))
+            }
+        }
+        return visited
+    }
 
     private fun initialConnectNodesInRepresentation(set: MarkedSet<LocallyCoordinatedModelNode>) {
         val isVisited = mutableSetOf<LocallyCoordinatedModelNode>()
@@ -254,8 +264,8 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
                     anotherRep.setAttribute("ui.label",anotherModelNode.state.currentState)
                     val thisInteractNodeRep = thisRep.getInteractPortNode(thisPort)
                     val anotherInteractNodeRep = anotherRep.getInteractPortNode(anotherPort!!)
-                    val anotherNewPos = thisRep.getOppositeConnectionCenterCoordinate(thisPort)
-                    movePosInBatch(anotherRep, anotherNewPos)
+                    updateRotationInBatch(anotherRep,thisRep.getRotation())
+                    movePosInBatch(anotherRep, thisRep.getOppositeConnectionCenterCoordinate(thisPort))
                     graph.addEdge<Edge>(
                             if (thisInteractNodeRep.id < anotherInteractNodeRep.id) thisInteractNodeRep.id + anotherInteractNodeRep.id else thisInteractNodeRep.id + anotherInteractNodeRep.id,
                             thisInteractNodeRep, anotherInteractNodeRep
@@ -299,13 +309,17 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
 
             if (shouldActivate) {
                 val secondNewPos = firstRep.getOppositeConnectionCenterCoordinate(firstModelPort)
+                println("Rotating. Before: ${secondRep.getRotation()}")
+                println("Rotating. Before refer: ${firstRep.getRotation()}")
+                updateRotationInBatch(secondRep,firstRep.getRotation())
                 movePosInBatch(secondRep, secondNewPos)
-                sleepWith(500)
+                sleepWith(1000)
+
                 graph.addEdge<Edge>(
                         if (getFirstInteractNodeRep.id < getSecondInteractNodeRep.id) getFirstInteractNodeRep.id + getSecondInteractNodeRep.id else getSecondInteractNodeRep.id + getFirstInteractNodeRep.id,
                         getFirstInteractNodeRep, getSecondInteractNodeRep
                 )
-                sleepWith(500)
+                sleepWith(1000)
                 firstInteractEdge.removeAttribute("ui.class")
                 secondInteractEdge.removeAttribute("ui.class")
                 firstRep.setAttribute("ui.class", "important")

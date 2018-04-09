@@ -18,9 +18,11 @@ class GridNode(graph: AbstractGraph?, id: String?,
                var upPort: Node,
                var downPort: Node,
                var leftPort: Node,
-               var rightPort: Node, private var rotation: Double = 0.0 ) : SingleNode(graph, id) {
+               var rightPort: Node, initialRotation: Double = 0.0) : SingleNode(graph, id) {
     private val portLength = 0.3
     private val edgeLength = 1
+    private var rotation = initialRotation
+
     init {
         this.setAttribute("xy",initialX,initialY)
         graph?.addEdge<Edge>(this.id + " | u", this,upPort)
@@ -33,7 +35,7 @@ class GridNode(graph: AbstractGraph?, id: String?,
         bindNodeToPort(rightPort,Port.RIGHT)
     }
 
-    private fun centeredRotate(degree: Double, x: Double,y: Double): Pair<Double,Double> {
+     fun centeredRotate(degree: Double, x: Double, y: Double): Pair<Double,Double> {
         val rad = degree * Math.PI / 180
         // Ref: https://www.zhihu.com/question/52027040
         // IN-CLOCK direction rotation
@@ -148,7 +150,8 @@ class GridNode(graph: AbstractGraph?, id: String?,
     }
 
     fun updateRotation(degree: Double){
-        rotation = degree
+        rotation += degree
+        rotation %= 360
         val pos = Toolkit.nodePosition(this)
         val rotatedUp = centeredRotate(rotation,pos[0], pos[1] + portLength)
         upPort.setAttribute("xy",rotatedUp.first,rotatedUp.second)

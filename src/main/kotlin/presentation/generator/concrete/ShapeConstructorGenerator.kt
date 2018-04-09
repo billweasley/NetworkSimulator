@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
 
 
     val populationProtocolGenerator = ShapeConstructorGenerator(
-            globalStarConstructor,
+            simpleGlobalLineConstructor,
             1000000,
             false,
             540000,
