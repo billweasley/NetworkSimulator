@@ -216,7 +216,6 @@ class GridNode(graph: AbstractGraph?, id: String?,
                 leftPort.setAttribute("xy",rotated.first,rotated.second)
                 graph.addEdge<Edge>(this.id + " | l", this,leftPort)
                 leftPort.addAttribute("ui.label","L")
-
             }
         }
 

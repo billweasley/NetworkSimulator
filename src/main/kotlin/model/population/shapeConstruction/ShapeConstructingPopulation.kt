@@ -18,6 +18,7 @@ class ShapeConstructingPopulation(private val scheduler: Scheduler = RandomSched
 
     override val nodes = ModelNode.createMultipleNodes(symbols, initialStates)
     val adjacencyList = ConcurrentHashMap<ModelNode, HashSet<ModelNode>>()
+    val statictisMap = symbols.map { it -> Pair(it, if (initialStates.containsKey(it)) initialStates[it]!! else 0) }.toMap(ConcurrentHashMap())
 
 
     init {
@@ -64,12 +65,15 @@ class ShapeConstructingPopulation(private val scheduler: Scheduler = RandomSched
         return nodes.count()
     }
 
-    override fun interact(): Triple<Boolean, ModelNode, ModelNode> {
+    @Synchronized override fun interact(): Triple<Boolean, ModelNode, ModelNode> {
         val selected = scheduler.select(this)
         val nodeA = selected.first
         val nodeB = selected.second
+        val oriFirst = String(selected.first.state.currentState.toCharArray())
+        val oriSecond = String(selected.second.state.currentState.toCharArray())
         val result = interactFunction.invoke(nodeA, nodeB, adjacencyList)
-
+        val afterFirst = String(selected.first.state.currentState.toCharArray())
+        val afterSecond = String(selected.second.state.currentState.toCharArray())
         val hasInteracted = result.first
         val shouldBeActivated = result.second
         if (hasInteracted) {
@@ -80,6 +84,10 @@ class ShapeConstructingPopulation(private val scheduler: Scheduler = RandomSched
                 if (isEdgeActivated(nodeA, nodeB))
                     deactivateEdge(nodeA, nodeB)
             }
+            statictisMap[oriFirst] = statictisMap[oriFirst]!! - 1
+            statictisMap[oriSecond] = statictisMap[oriSecond]!! - 1
+            statictisMap[afterFirst] = statictisMap[afterFirst]!! + 1
+            statictisMap[afterSecond] = statictisMap[afterSecond]!! + 1
         }
         return Triple(hasInteracted,nodeA,nodeB)
     }

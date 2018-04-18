@@ -56,7 +56,7 @@ class PopulationProtocolGenerator(var population: PopulationProtocol,
     @Volatile override var countOfSelectWithoutInteraction = 0
     override val terminateTheshold = 1000
     override val requireLayoutAlgorithm = false
-    private var count = 0
+    @Volatile var count = 0
     private val random = Random()
     init {
         if(fastRes && preExecutedSteps < 0)

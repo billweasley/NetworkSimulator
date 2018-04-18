@@ -6,11 +6,17 @@ import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.stream.SourceBase
+import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
 import utils.InteractionFunctions
+import java.awt.Color
+import java.awt.Dimension
+import java.awt.GridLayout
 import java.util.*
-
+import javax.swing.BorderFactory
+import javax.swing.JFrame
+import javax.swing.JPanel
 
 
 fun main(args: Array<String>) {
@@ -44,7 +50,7 @@ fun main(args: Array<String>) {
 
 
     val populationProtocolGenerator = ShapeConstructorGenerator(
-            simpleGlobalLineConstructor,
+            globalStarConstructor,
             1000000,
             false,
             540000,
@@ -69,7 +75,7 @@ class ShapeConstructorGenerator(var population: ShapeConstructingPopulation,
                                         "node.marked {fill-color: red;}" +
                                         "edge.marked {fill-color: red;}"): SourceBase(), SimulationGenerator {
     override val requireLayoutAlgorithm = true
-    @Volatile private var count = 0
+    @Volatile var count = 0
     @Volatile override var countOfSelectWithoutInteraction = 0
     override val terminateTheshold = 1000
 
@@ -82,7 +88,21 @@ class ShapeConstructorGenerator(var population: ShapeConstructingPopulation,
     }
 
     fun display(){
-        graph.display()
+        val frame = JFrame("Network Simulator")
+        frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+
+        val panel = JPanel(GridLayout())
+        panel.preferredSize = Dimension(640,480)
+        panel.border = BorderFactory.createLineBorder(Color.BLUE,5)
+
+        val viewer = Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD)
+        val viewPanel = viewer.addDefaultView(false)
+
+        panel.add(viewPanel)
+        frame.add(panel)
+        frame.pack()
+        frame.setLocationRelativeTo(null)
+        frame.isVisible = true
         this.begin()
         while (count < maxTimes){
             this.nextEvents()

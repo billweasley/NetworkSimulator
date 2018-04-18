@@ -4,11 +4,14 @@ import model.population.LinklessPopulation
 import model.shared.ModelNode
 import scheduler.RandomScheduler
 import scheduler.Scheduler
+import java.util.concurrent.ConcurrentHashMap
 
 open class PopulationProtocol(private val scheduler: Scheduler = RandomScheduler(),
                               private val interactFunction: (ModelNode, ModelNode) -> Boolean,
                               private val symbols: Set<String>,
                               private val initialStates: Map<String, Int>) : LinklessPopulation {
+
+    val statictisMap = symbols.map { it -> Pair(it, if (initialStates.containsKey(it)) initialStates[it]!! else 0) }.toMap(ConcurrentHashMap())
 
     constructor(another: PopulationProtocol) :
             this(scheduler = another.scheduler, interactFunction = another.interactFunction,
@@ -21,10 +24,18 @@ open class PopulationProtocol(private val scheduler: Scheduler = RandomScheduler
         return nodes.size
     }
 
-    override fun interact(): Triple<Boolean, ModelNode, ModelNode> {
+    @Synchronized override fun interact(): Triple<Boolean, ModelNode, ModelNode> {
         val selected = scheduler.select(this)
-        return Triple(interactFunction.invoke(selected.first, selected.second),selected.first,selected.second)
-
+        val oriFirst = String(selected.first.state.currentState.toCharArray())
+        val oriSecond = String(selected.second.state.currentState.toCharArray())
+        val res = Triple(interactFunction.invoke(selected.first, selected.second),selected.first,selected.second)
+        if (res.first){
+            statictisMap[oriFirst] = statictisMap[oriFirst]!! - 1
+            statictisMap[oriSecond] = statictisMap[oriSecond]!! - 1
+            statictisMap[res.second.state.currentState] = statictisMap[res.second.state.currentState]!! + 1
+            statictisMap[res.third.state.currentState] = statictisMap[res.third.state.currentState]!! + 1
+        }
+        return res
     }
 }
 

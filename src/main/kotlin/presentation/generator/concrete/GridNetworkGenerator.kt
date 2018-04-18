@@ -55,7 +55,7 @@ fun main(args: Array<String>) {
         }
 
     }, symbols = setOf("Lu", "q0", "q1", "Lr", "Ld", "Ll", "Lu"),
-            initialStates = mapOf(Pair("q0", 8), Pair("Lu", 1))
+            initialStates = mapOf(Pair("q0", 25), Pair("Lu", 1))
     )
     GridNetworkGenerator(spanningSquarePopulation).display()
 }
@@ -88,7 +88,7 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
                            val fastRes: Boolean = false,
                            val preExecutedSteps: Int = 1000000,
                            nameOfPopulation: String = "",
-                           private val graph: SingleGraph = SingleGraph(nameOfPopulation),
+                           val graph: SingleGraph = SingleGraph(nameOfPopulation),
                            private val styleSheet: String = "" +
                                    "node {fill-mode: none; fill-color: rgba(255,0,0,0);text-background-mode:plain;text-alignment:right;text-size: 10px;size: 5px;}" +
                                    "node.important {fill-mode: plain; fill-color: black;text-size: 20px; size: 10px;}" +
@@ -97,16 +97,25 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
                                    "edge.marked {fill-color: red;}") : SourceBase(), SimulationGenerator {
 
     override var countOfSelectWithoutInteraction: Int = 0
-    override val terminateTheshold: Int = 1000
-    override val requireLayoutAlgorithm = true
+    override val terminateTheshold: Int = 100000
+    override val requireLayoutAlgorithm = false
     private val random = Random()
-    private var count = 0
+    var count = 0
 
     init {
         if (fastRes && preExecutedSteps < 0)
             throw IllegalArgumentException("The fast forwarding requires a non-negative value.")
         addSink(graph)
         graph.addAttribute("ui.stylesheet", styleSheet)
+        val numOfNode = population.numOfNode()
+        val setOfCoordinate = mutableSetOf<Pair<Int, Int>>()
+        for (i in 0..(numOfNode - 1)) {
+            var pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
+            while (setOfCoordinate.contains(pair))
+                pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
+            val theNode = population.nodes[i]
+            addNodeOnGraph(theNode.index.toString(), pair.first.toDouble(), pair.second.toDouble(),theNode.rotationDegree,state = theNode.state.currentState)
+        }
     }
 
     private fun addNodeOnGraph(id: String, x: Double, y: Double, degreeOfRotation: Double = 0.0, state: String) {
@@ -134,8 +143,9 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
     }
 
     fun display() {
-        this.begin()
         graph.display(false)
+
+        this.begin()
         while (count < maxTimes) {
             this.nextEvents()
         }
@@ -166,15 +176,7 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
                 population.interact()
             }
         }
-        val numOfNode = population.numOfNode()
-        val setOfCoordinate = mutableSetOf<Pair<Int, Int>>()
-        for (i in 0..(numOfNode - 1)) {
-            var pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
-            while (setOfCoordinate.contains(pair))
-                pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
-            val theNode = population.nodes[i]
-            addNodeOnGraph(theNode.index.toString(), pair.first.toDouble(), pair.second.toDouble(),theNode.rotationDegree,state = theNode.state.currentState)
-        }
+
         for (group in population.groupOfNodes.values) {
             initialConnectNodesInRepresentation(group)
         }

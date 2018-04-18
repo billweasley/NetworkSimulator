@@ -9,15 +9,16 @@ import javafx.geometry.Insets
 import javafx.scene.control.ComboBox
 import javafx.scene.control.TableView
 import javafx.scene.text.Font
-import model.population.populationProtocols.concrete.DancingProtocol
+import model.population.gridNetworkConstruction.GridNetworkConstructingPopulation
+import model.shared.LocallyCoordinatedModelNode
 import model.shared.Port
 import org.graphstream.stream.Source
 import org.graphstream.ui.layout.Layouts
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
+import presentation.generator.concrete.GridNetworkGenerator
 import presentation.generator.concrete.PopulationProtocolGenerator
 import presentation.generator.concrete.ShapeConstructorGenerator
-import scheduler.RandomScheduler
 import tornadofx.*
 import java.awt.Color
 import java.awt.Dimension
@@ -32,65 +33,94 @@ fun main(args: Array<String>) {
 
 class SimulatorApp : App(SimulatorAppView::class)
 
-
+object TextFieldUpdateEvent: FXEvent(EventBus.RunOn.ApplicationThread)
+object TerminateEvent: FXEvent(EventBus.RunOn.ApplicationThread)
 
 class SimulatorAppView : View() {
 
-    private val generator = PopulationProtocolGenerator(
+    /*private val generator = PopulationProtocolGenerator(
             DancingProtocol(
                     initialStates = mapOf(Pair("L", 6), Pair("F", 9)), scheduler = RandomScheduler()
             ),
             1000000,
             false,
             300
-    )
+    )*/
 
-    /* private val generator = ShapeConstructorGenerator(
+   /* private val generator = ShapeConstructorGenerator(
              population = ShapeConstructingPopulation(
              scheduler = RandomScheduler(), interactFunction = { nodeA, nodeB, map ->
                  InteractionFunctions.globalStarFunc(nodeA, nodeB, map)
-             }, symbols = setOf("c", "p"), initialStates = mapOf(Pair("c", 10))
+             }, symbols = setOf("c", "p"), initialStates = mapOf(Pair("c", 12))
      ),maxTimes = 100000)*/
 
-    private var shouldStop = false
 
-    private fun runProcess(generator: SimulationGenerator) {
+    val generator = GridNetworkGenerator(GridNetworkConstructingPopulation(interactFunction = { firstPair: Pair<LocallyCoordinatedModelNode, Port>, secondPair: Pair<LocallyCoordinatedModelNode, Port> ->
+        val firstModelNode = firstPair.first
+        val secondModelNode = secondPair.first
+        val isConnected = firstModelNode.getPort(firstPair.second) == secondModelNode
+        val givenState =
+                Triple(
+                        Pair(firstModelNode.state.currentState, firstPair.second),
+                        Pair(secondModelNode.state.currentState, secondPair.second),
+                        isConnected
+                )
+        val transferredState =
+                when(givenState) {
+                    Triple(Pair("Ll", Port.LEFT), Pair("q1", Port.RIGHT), false)
+                    -> Triple("Ld", "q1", true)
+                    Triple(Pair("Lu", Port.UP), Pair("q0", Port.DOWN), false)
+                    -> Triple("q1", "Lr", true)
+                    Triple(Pair("Lr", Port.RIGHT), Pair("q0", Port.LEFT), false)
+                    -> Triple("q1", "Ld", true)
+                    Triple(Pair("Ld", Port.DOWN), Pair("q0", Port.UP), false)
+                    -> Triple("q1", "Ll", true)
+                    Triple(Pair("Ll", Port.LEFT), Pair("q0", Port.RIGHT), false)
+                    -> Triple("q1", "Lu", true)
+                    Triple(Pair("Lu", Port.UP), Pair("q1", Port.DOWN), false)
+                    -> Triple("Ll", "q1", true)
+                    Triple(Pair("Lr", Port.RIGHT), Pair("q1", Port.LEFT), false)
+                    -> Triple("Lu", "q1", true)
+                    Triple(Pair("Ld", Port.DOWN), Pair("q1", Port.UP), false)
+                    -> Triple("Lr", "q1", true)
+                    else -> null
+                }
+
+        if (transferredState == null) Triple(false, Pair("",""),isConnected) else{
+            Triple(true, Pair(transferredState.first,transferredState.second), transferredState.third)
+        }
+
+    }, symbols = setOf("Lu", "q0", "q1", "Lr", "Ld", "Ll", "Lu"),
+            initialStates = mapOf(Pair("q0", 25), Pair("Lu", 1))
+    ))
+
+
+    private var shouldStop = false
+    @Volatile private var effectiveInteractionCount = 0
+    @Synchronized private fun runProcess(generator: SimulationGenerator) {
         tornadofx.runAsync {
             while (!shouldStop && !generator.shouldTerminate()) {
                 generator.nextEvents()
+                effectiveInteractionCount++
+                fire(TextFieldUpdateEvent)
             }
         }.ui {
             if (generator.shouldTerminate()) {
                 println("Terminating in UI...")
-                resetBtnStates()
+                fire(TerminateEvent)
             }
         }
     }
 
     private val swingNode = SwingNode()
-    private val startBtn = button("Start")
-    private val stopBtn = button("Stop") {
-        isDisable = true
-    }
-
-    private fun resetBtnStates() {
-        shouldStop = false
-        startBtn.isDisable = false
-        stopBtn.isDisable = true
-    }
-    private fun resetGraphStates() {
-        generator.restart()
-        generator.begin()
-    }
-
-    private fun createAndSetSwingContent(swingNode: SwingNode) {
+    private var viewer = Viewer(generator.graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD)
+    private fun createAndSetSwingContent() {
 
         SwingUtilities.invokeLater {
-            val viewer = Viewer(
-                    generator.graph,
-                    Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD
-            )
-            primaryStage.setOnCloseRequest { viewer.close() }
+            primaryStage.setOnCloseRequest {
+                    viewer.disableAutoLayout()
+                    viewer.close()
+            }
 
             val viewPanel = viewer.addDefaultView(false)
             if (generator.requireLayoutAlgorithm) {
@@ -104,6 +134,39 @@ class SimulatorAppView : View() {
         }
 
     }
+    private fun resetSwingContent(){
+        SwingUtilities.invokeLater {
+            viewer.disableAutoLayout()
+            viewer.close()
+            swingNode.content = null
+            primaryStage.setOnCloseRequest { }
+            viewer = Viewer(
+                    generator.graph,
+                    Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD
+            )
+            primaryStage.setOnCloseRequest {
+                viewer.disableAutoLayout()
+                viewer.close()
+            }
+            val viewPanel = viewer.addDefaultView(false)
+
+            if (generator.requireLayoutAlgorithm) {
+                val layout = Layouts.newLayoutAlgorithm()
+                viewer.enableAutoLayout(layout)
+            }
+
+            viewPanel.border = BorderFactory.createLineBorder(Color.BLUE, 5)
+            viewPanel.preferredSize = Dimension(1000, 720)
+            swingNode.content = viewPanel
+        }
+    }
+    private fun resetGraphStates() {
+        generator.restart()
+        generator.begin()
+        effectiveInteractionCount = 0
+        resetSwingContent()
+    }
+
 
     init {
         generator.begin()
@@ -121,31 +184,57 @@ class SimulatorAppView : View() {
             }
             pane {
                 this += swingNode
-                createAndSetSwingContent(swingNode)
-                //prefWidthProperty().bind(primaryStage.widthProperty().multiply(0.50))
+                createAndSetSwingContent()
             }
             borderpane {
-                left {
-                    this += startBtn
-                    startBtn.action {
-                        startBtn.isDisable = true
-                        stopBtn.isDisable = false
-                        shouldStop = false
-                        if (generator.shouldTerminate()) {
-                            resetGraphStates()
-                        }
-                        runProcess(generator)
-                    }
-                }
                 center {
-                    this += stopBtn
-                    stopBtn.action {
-                        startBtn.isDisable = false
-                        stopBtn.isDisable = true
-                        shouldStop = true
+                    this += button("Start") {
+                        subscribe<TerminateEvent>{
+                            text = "Restart"
+                            shouldStop = true
+                        }
+                        action {
+                            if(text == "Start" || text == "Restart"){
+                                text = "Pause"
+                                shouldStop = false
+                            }else if(text == "Pause"){
+                                text = "Start"
+                                shouldStop = true
+                            }
+                            if (generator.shouldTerminate()) {
+                                resetGraphStates()
+                                fire(TextFieldUpdateEvent)
+                            }
+                            runProcess(generator)
+                        }
                     }
 
                 }
+            }
+            vbox(10){
+                text {
+                    vboxConstraints {
+                        margin = Insets(20.0, 20.0, 10.0, 20.0)
+                    }
+                    text = "Total number of Node: ${generator.population.nodes.size} \n"
+                    text += "Effective interaction times:  ${generator.count} \n"
+                    text += "Scheduler selection times: ${effectiveInteractionCount}\n"
+                    subscribe<TextFieldUpdateEvent> {
+                            text = "Total number of Node: ${generator.population.nodes.size} \n"
+                            text += "Effective interaction times:  ${generator.count} \n"
+                            text += "Scheduler selection times: ${effectiveInteractionCount}\n"
+                  }
+                }
+                text{
+                    vboxConstraints {
+                        margin = Insets(0.0, 20.0, 20.0, 20.0)
+                    }
+                    text = "Number of States distributed on nodes: " + generator.population.statictisMap.map{ it -> " ${it.key}: ${it.value}; " }.reduce(String::plus).removeSuffix("; ")
+                    subscribe<TextFieldUpdateEvent> {
+                        text = "Number of Node in " + generator.population.statictisMap.map{ its -> " ${its.key}: ${its.value} " }.reduce(String::plus).removeSuffix("; ")
+                    }
+                }
+
             }
         }
         vbox {
@@ -386,9 +475,7 @@ class InitialInputConfiguration(state: String, count: Int = 0) {
     fun countProperty() = getProperty(InitialInputConfiguration::count)
 }
 
-class RulesInput(abefore: String = "", aafter: String = "", bbefore: String = "", bafter: String = "",
-                 linkBefore: Boolean? = false, linkAfter: Boolean? = false,
-                 aport: Port? = null, bport: Port? = null) {
+class RulesInput(abefore: String = "", aafter: String = "", bbefore: String = "", bafter: String = "", linkBefore: Boolean? = false, linkAfter: Boolean? = false, aport: Port? = null, bport: Port? = null) {
     var abefore by property(abefore)
     fun abeforeProperty() = getProperty(RulesInput::abefore)
     var aafter by property(aafter)
