@@ -7,11 +7,10 @@ import org.graphstream.algorithm.Toolkit
 import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
-import org.graphstream.stream.SourceBase
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
-import utils.InteractionFunctions
+import shared.PopulationProtocolFunctions
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridLayout
@@ -29,7 +28,7 @@ fun main(args: Array<String>) {
     )
     val sumModelFourProtocol = PopulationProtocol(
             initialStates = mapOf(Pair("0",1),Pair("1",2),Pair("2",1),Pair("3",1)),
-            interactFunction = {initializer: ModelNode, receiver:ModelNode -> InteractionFunctions.sumModelFourFunc(initializer = initializer,receiver = receiver)},
+            interactFunction = {initializer: ModelNode, receiver:ModelNode -> PopulationProtocolFunctions.sumModeFourFunc(initializer = initializer,receiver = receiver)},
             symbols = setOf("0", "1", "2", "3","N1","N2","N0","N3")
     )
     val populationProtocolGenerator = PopulationProtocolGenerator(
@@ -43,21 +42,20 @@ fun main(args: Array<String>) {
 }
 
 
-class PopulationProtocolGenerator(var population: PopulationProtocol,
+class PopulationProtocolGenerator(override var population: PopulationProtocol,
                                   val maxTimes: Long = -1,
                                   val fastRes: Boolean= false,
                                   val preExecutedSteps: Int = 0,
                                   nameOfPopulation: String = "",
-                                  val graph: Graph = SingleGraph(nameOfPopulation),
+                                  override val graph: Graph = SingleGraph(nameOfPopulation),
                                   private val styleSheet: String =
                                           "node {fill-color: black; text-size: 30px;}" +
                                           "node.marked {fill-color: red; }" +
-                                          "edge.marked {fill-color: red;}"): SourceBase(), SimulationGenerator {
-    @Volatile override var countOfSelectWithoutInteraction = 0
-    override val terminateTheshold = 1000
+                                          "edge.marked {fill-color: red;}"): SimulationGenerator() {
+
+    override val terminateThreshold = 1000
     override val requireLayoutAlgorithm = false
-    @Volatile var count = 0
-    private val random = Random()
+
     init {
         if(fastRes && preExecutedSteps < 0)
             throw IllegalArgumentException("The fast forwarding requires a non-negative value.")
@@ -77,7 +75,7 @@ class PopulationProtocolGenerator(var population: PopulationProtocol,
         graph.addAttribute("layout.force",0.0)
         graph.addAttribute("layout.weight",0.0)
     }
-    fun display(){
+    override fun display(){
         val frame = JFrame("Network Simulator")
         frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 
@@ -101,8 +99,6 @@ class PopulationProtocolGenerator(var population: PopulationProtocol,
         this.end()
     }
 
-
-    override fun end() {}
     override fun begin() {
         if (fastRes){
             for(i in 0..preExecutedSteps){
@@ -229,7 +225,7 @@ class PopulationProtocolGenerator(var population: PopulationProtocol,
 
     @Synchronized
     override fun shouldTerminate(): Boolean{
-        return countOfSelectWithoutInteraction > this.terminateTheshold
+        return countOfSelectWithoutInteraction > this.terminateThreshold
     }
 
     private fun calculateUnitMove(origin: Pair<Double, Double>, destination: Pair<Double, Double>, unit: Double)
@@ -258,14 +254,6 @@ class PopulationProtocolGenerator(var population: PopulationProtocol,
         }
         return Pair(x, x * k + b)
 
-    }
-
-    private fun sleepWith(millisecond: Long){
-        try {
-            Thread.sleep(millisecond)
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        }
     }
 
 }

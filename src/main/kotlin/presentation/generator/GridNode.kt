@@ -53,62 +53,13 @@ class GridNode(graph: AbstractGraph?, id: String?,
         val transferred = (transferMatM * mat[x,y].T).removeNegativeZeros() + transferMatB.T
         return Pair(transferred[0,0],transferred[1,0])
     }
-    private fun centeredRotate(degree: Double, node: Node) {
-        val rad = degree * Math.PI / 180
-        // Ref: https://www.zhihu.com/question/52027040
-        // IN-CLOCK direction rotation
-        val transferMatM = mat[
-                Math.cos(rad), Math.sin(rad) end
-                        0 - Math.sin(rad), Math.cos(rad)
-        ]
-        val ori = Toolkit.nodePosition(this)
-        val oriX = ori[0]
-        val oriY = ori[1]
-        val transferMatB = mat[
-                (1 - Math.cos(rad)) * oriX - oriY * Math.sin(rad),
-                (1 - Math.cos(rad)) * oriY + oriX * Math.sin(rad)
-        ]
-        val nodeCoordinate = Toolkit.nodePosition(node)
-        val transferred = (transferMatM * mat[nodeCoordinate[0],nodeCoordinate[1]].T).removeNegativeZeros() + transferMatB.T
-        node.setAttribute("xy", transferred[0,0], transferred[1,0])
-    }
 
-    private fun centeredRotate(degree: Double) {
-        val rad = degree * Math.PI / 180
-        // Ref: https://www.zhihu.com/question/52027040
-        // IN-CLOCK direction rotation
-        val transferMatM = mat[
-                Math.cos(rad), Math.sin(rad) end
-                        0 - Math.sin(rad), Math.cos(rad)
-        ]
-        val ori = Toolkit.nodePosition(this)
-        val oriX = ori[0]
-        val oriY = ori[1]
-        val transferMatB = mat[
-                (1 - Math.cos(rad)) * oriX - oriY * Math.sin(rad),
-                (1 - Math.cos(rad)) * oriY + oriX * Math.sin(rad)]
-        val upPortCoordinate = Toolkit.nodePosition(upPort)
-        val downPortCoordinate = Toolkit.nodePosition(downPort)
-        val leftPortCoordinate = Toolkit.nodePosition(leftPort)
-        val rightPortCoordinate = Toolkit.nodePosition(rightPort)
-
-        val upTransfered = (transferMatM * mat[upPortCoordinate[0],upPortCoordinate[1]].T).removeNegativeZeros() + transferMatB.T
-        val downTransfered = (transferMatM * mat[downPortCoordinate[0],downPortCoordinate[1]].T).removeNegativeZeros() + transferMatB.T
-        val leftTransfered = (transferMatM * mat[leftPortCoordinate[0],leftPortCoordinate[1]].T).removeNegativeZeros() + transferMatB.T
-        val rightTransfered = (transferMatM * mat[rightPortCoordinate[0],rightPortCoordinate[1]].T).removeNegativeZeros() + transferMatB.T
-
-        upPort.setAttribute("xy",upTransfered[0,0], upTransfered[1,0])
-        downPort.setAttribute("xy",downTransfered[0,0], downTransfered[1,0])
-        leftPort.setAttribute("xy",leftTransfered[0,0], leftTransfered[1,0])
-        rightPort.setAttribute("xy",rightTransfered[0,0], rightTransfered[1,0])
-    }
     private fun Matrix<Double>.removeNegativeZeros(): Matrix<Double> {
         return this.map { it -> if (it == -0.0) Math.abs(it) else it }
     }
     fun getRotation(): Double{
         return rotation
     }
-
 
     fun getOppositeConnectionCenterCoordinate(port: Port): Pair<Double,Double>{
         val pos = Toolkit.nodePosition(this)

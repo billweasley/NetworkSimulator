@@ -18,7 +18,7 @@ class ShapeConstructingPopulation(private val scheduler: Scheduler = RandomSched
 
     override val nodes = ModelNode.createMultipleNodes(symbols, initialStates)
     val adjacencyList = ConcurrentHashMap<ModelNode, HashSet<ModelNode>>()
-    val statictisMap = symbols.map { it -> Pair(it, if (initialStates.containsKey(it)) initialStates[it]!! else 0) }.toMap(ConcurrentHashMap())
+    override val statisticsMap = symbols.map { it -> Pair(it, if (initialStates.containsKey(it)) initialStates[it]!! else 0) }.toMap(ConcurrentHashMap())
 
 
     init {
@@ -84,10 +84,10 @@ class ShapeConstructingPopulation(private val scheduler: Scheduler = RandomSched
                 if (isEdgeActivated(nodeA, nodeB))
                     deactivateEdge(nodeA, nodeB)
             }
-            statictisMap[oriFirst] = statictisMap[oriFirst]!! - 1
-            statictisMap[oriSecond] = statictisMap[oriSecond]!! - 1
-            statictisMap[afterFirst] = statictisMap[afterFirst]!! + 1
-            statictisMap[afterSecond] = statictisMap[afterSecond]!! + 1
+            statisticsMap[oriFirst] = statisticsMap[oriFirst]!! - 1
+            statisticsMap[oriSecond] = statisticsMap[oriSecond]!! - 1
+            statisticsMap[afterFirst] = statisticsMap[afterFirst]!! + 1
+            statisticsMap[afterSecond] = statisticsMap[afterSecond]!! + 1
         }
         return Triple(hasInteracted,nodeA,nodeB)
     }

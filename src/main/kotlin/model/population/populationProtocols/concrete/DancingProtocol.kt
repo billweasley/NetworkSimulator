@@ -2,12 +2,12 @@ package model.population.populationProtocols.concrete
 
 import model.population.populationProtocols.PopulationProtocol
 import scheduler.Scheduler
-import utils.InteractionFunctions
+import shared.PopulationProtocolFunctions
 
 class DancingProtocol(initialStates: Map<String, Int>, scheduler: Scheduler) : PopulationProtocol(
         scheduler = scheduler,
         interactFunction =
-        { initializer, receiver -> InteractionFunctions.dancingProtocolFunc(initializer, receiver) },
+        { initializer, receiver -> PopulationProtocolFunctions.dancingProtocolFunc(initializer, receiver) },
         symbols = setOf("L", "F", "0", "1"),
         initialStates = initialStates
 )

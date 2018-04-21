@@ -5,11 +5,10 @@ import org.graphstream.graph.Edge
 import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
-import org.graphstream.stream.SourceBase
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
 import scheduler.RandomScheduler
-import utils.InteractionFunctions
+import shared.ShapeConstructionFunctions
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridLayout
@@ -24,7 +23,7 @@ fun main(args: Array<String>) {
     val simpleGlobalLineConstructor = ShapeConstructingPopulation(
             scheduler = RandomScheduler(),
             interactFunction = { nodeA, nodeB, map ->
-                InteractionFunctions.simpleGlobalLineFunc(nodeA, nodeB, map)
+                ShapeConstructionFunctions.simpleGlobalLineFunc(nodeA, nodeB, map)
             },
             symbols = setOf("q0", "q1", "l", "w", "q2"),
             initialStates = mapOf(Pair("q0", 10))
@@ -33,7 +32,7 @@ fun main(args: Array<String>) {
     val cycleCoverConstructor = ShapeConstructingPopulation(
             scheduler = RandomScheduler(),
             interactFunction = { nodeA, nodeB, map ->
-                InteractionFunctions.cycleCoverFunc(nodeA, nodeB, map)
+                ShapeConstructionFunctions.cycleCoverFunc(nodeA, nodeB, map)
             },
             symbols = setOf("q0", "q1", "q2"),
             initialStates = mapOf(Pair("q0", 10))
@@ -41,7 +40,7 @@ fun main(args: Array<String>) {
     val globalStarConstructor = ShapeConstructingPopulation(
             scheduler = RandomScheduler(),
             interactFunction = { nodeA, nodeB, map ->
-                InteractionFunctions.globalStarFunc(nodeA, nodeB, map)
+                ShapeConstructionFunctions.globalStarFunc(nodeA, nodeB, map)
             },
             symbols = setOf("c", "p"),
             initialStates = mapOf(Pair("c", 10))
@@ -61,33 +60,26 @@ fun main(args: Array<String>) {
 
 }
 
-
-
-
-
-class ShapeConstructorGenerator(var population: ShapeConstructingPopulation,
+class ShapeConstructorGenerator(override var population: ShapeConstructingPopulation,
                                 val maxTimes: Long,
                                 val fastRes: Boolean= false,
                                 val preExecutedSteps: Int = 0,
                                 nameOfPopulation: String = "",
-                                val graph: Graph = SingleGraph(nameOfPopulation),
+                                override val graph: Graph = SingleGraph(nameOfPopulation),
                                 private val styleSheet: String = "node {fill-color: black;text-size: 30px;}" +
                                         "node.marked {fill-color: red;}" +
-                                        "edge.marked {fill-color: red;}"): SourceBase(), SimulationGenerator {
+                                        "edge.marked {fill-color: red;}"): SimulationGenerator() {
     override val requireLayoutAlgorithm = true
-    @Volatile var count = 0
-    @Volatile override var countOfSelectWithoutInteraction = 0
-    override val terminateTheshold = 1000
+    override val terminateThreshold = 1000
 
-    private val random = Random()
-     init {
+    init {
         if(fastRes && preExecutedSteps < 0)
             throw IllegalArgumentException("The fast forwarding requires a non-negative value.")
          graph.addAttribute("ui.stylesheet", styleSheet)
          addSink(graph)
     }
 
-    fun display(){
+    override fun display(){
         val frame = JFrame("Network Simulator")
         frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 
@@ -117,7 +109,7 @@ class ShapeConstructorGenerator(var population: ShapeConstructingPopulation,
         graph.addAttribute("ui.stylesheet", styleSheet)
     }
 
-    override fun end() {}
+
     override fun begin() {
         if (fastRes){
             for(i in 0..preExecutedSteps){
@@ -196,16 +188,10 @@ class ShapeConstructorGenerator(var population: ShapeConstructingPopulation,
 
     @Synchronized
     override fun shouldTerminate(): Boolean{
-        return countOfSelectWithoutInteraction > terminateTheshold
+        return countOfSelectWithoutInteraction > terminateThreshold
     }
 
-    private fun sleepWith(millisecond: Long){
-        try {
-            Thread.sleep(millisecond)
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        }
-    }
+
 
 
 }

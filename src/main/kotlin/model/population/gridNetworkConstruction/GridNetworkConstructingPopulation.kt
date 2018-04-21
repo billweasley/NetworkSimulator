@@ -53,8 +53,9 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
 
     @Volatile var increasedIDAllocator = 0
     override val nodes: List<LocallyCoordinatedModelNode> = LocallyCoordinatedModelNode.createMultipleNodes(symbols,initialStates)
-    val statictisMap = symbols.map { it -> Pair(it, if (initialStates.containsKey(it)) initialStates[it]!! else 0) }.toMap(ConcurrentHashMap())
-    val groupOfNodes: ConcurrentHashMap<Int, MarkedSet<LocallyCoordinatedModelNode>> = ConcurrentHashMap()
+    override val statisticsMap = symbols.map { it -> Pair(it, if (initialStates.containsKey(it)) initialStates[it]!! else 0) }.toMap(ConcurrentHashMap())
+    var groupOfNodes: ConcurrentHashMap<Int, MarkedSet<LocallyCoordinatedModelNode>> = ConcurrentHashMap()
+
     companion object {
         val random = Random()
         fun getRandomNumber(exclusiveBoundary: Int) = random.nextInt(exclusiveBoundary)
@@ -191,12 +192,12 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
                 if(!nodeA.hasConnectionWith(portA,nodeB)){
                     if(canActiveConnection(nodeA,portA,nodeB,portB)){
                         activeConnection(nodeA,portA,nodeB,portB)
-                        statictisMap[nodeA.state.currentState] = statictisMap[nodeA.state.currentState]!! - 1
-                        statictisMap[nodeB.state.currentState] = statictisMap[nodeB.state.currentState]!! - 1
+                        statisticsMap[nodeA.state.currentState] = statisticsMap[nodeA.state.currentState]!! - 1
+                        statisticsMap[nodeB.state.currentState] = statisticsMap[nodeB.state.currentState]!! - 1
                         nodeA.state.currentState = afterState.first
                         nodeB.state.currentState = afterState.second
-                        statictisMap[nodeA.state.currentState] = statictisMap[nodeA.state.currentState]!! + 1
-                        statictisMap[nodeB.state.currentState] = statictisMap[nodeB.state.currentState]!! + 1
+                        statisticsMap[nodeA.state.currentState] = statisticsMap[nodeA.state.currentState]!! + 1
+                        statisticsMap[nodeB.state.currentState] = statisticsMap[nodeB.state.currentState]!! + 1
                     }else{
                        // System.err.println("Interaction of connection REJECTED. A belongs to ${firstATestAl} with state ${firstATest}; B belongs to ${firstATestBl} with state ${firstBTest}")
                         hasInteracted = false
@@ -206,12 +207,12 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
                 if(nodeA.hasConnectionWith(portA,nodeB)){
                     if (canDeactiveConnection(nodeA,portA,nodeB,portB)){
                         deactiveConnection(nodeA,portA,nodeB,portB)
-                        statictisMap[nodeA.state.currentState] = statictisMap[nodeA.state.currentState]!! - 1
-                        statictisMap[nodeB.state.currentState] = statictisMap[nodeB.state.currentState]!! - 1
+                        statisticsMap[nodeA.state.currentState] = statisticsMap[nodeA.state.currentState]!! - 1
+                        statisticsMap[nodeB.state.currentState] = statisticsMap[nodeB.state.currentState]!! - 1
                         nodeA.state.currentState = afterState.first
                         nodeB.state.currentState = afterState.second
-                        statictisMap[nodeA.state.currentState] = statictisMap[nodeA.state.currentState]!! + 1
-                        statictisMap[nodeB.state.currentState] = statictisMap[nodeB.state.currentState]!! + 1
+                        statisticsMap[nodeA.state.currentState] = statisticsMap[nodeA.state.currentState]!! + 1
+                        statisticsMap[nodeB.state.currentState] = statisticsMap[nodeB.state.currentState]!! + 1
                     }else{
                         //System.err.println("Interaction of disconnection REJECTED")
                         hasInteracted = false

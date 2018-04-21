@@ -10,97 +10,38 @@ import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.AbstractGraph
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.graph.implementations.SingleNode
-import org.graphstream.stream.SourceBase
 import presentation.generator.GridNode
 import presentation.generator.SimulationGenerator
-import java.util.*
+import shared.GridNetworkConstructingFunctions
 
 class MySingleNode(graph: AbstractGraph, id: String) : SingleNode(graph, id)
 
 fun main(args: Array<String>) {
 
-    val spanningSquarePopulation = GridNetworkConstructingPopulation(interactFunction = { firstPair: Pair<LocallyCoordinatedModelNode, Port>, secondPair: Pair<LocallyCoordinatedModelNode, Port> ->
-        val firstModelNode = firstPair.first
-        val secondModelNode = secondPair.first
-        val isConnected = firstModelNode.getPort(firstPair.second) == secondModelNode
-        val givenState =
-                Triple(
-                        Pair(firstModelNode.state.currentState, firstPair.second),
-                        Pair(secondModelNode.state.currentState, secondPair.second),
-                        isConnected
-                )
-        val transferredState =
-                when(givenState) {
-                    Triple(Pair("Ll", Port.LEFT), Pair("q1", Port.RIGHT), false)
-                        -> Triple("Ld", "q1", true)
-                    Triple(Pair("Lu", Port.UP), Pair("q0", Port.DOWN), false)
-                        -> Triple("q1", "Lr", true)
-                    Triple(Pair("Lr", Port.RIGHT), Pair("q0", Port.LEFT), false)
-                        -> Triple("q1", "Ld", true)
-                    Triple(Pair("Ld", Port.DOWN), Pair("q0", Port.UP), false)
-                        -> Triple("q1", "Ll", true)
-                    Triple(Pair("Ll", Port.LEFT), Pair("q0", Port.RIGHT), false)
-                        -> Triple("q1", "Lu", true)
-                    Triple(Pair("Lu", Port.UP), Pair("q1", Port.DOWN), false)
-                        -> Triple("Ll", "q1", true)
-                    Triple(Pair("Lr", Port.RIGHT), Pair("q1", Port.LEFT), false)
-                        -> Triple("Lu", "q1", true)
-                    Triple(Pair("Ld", Port.DOWN), Pair("q1", Port.UP), false)
-                        -> Triple("Lr", "q1", true)
-                    else -> null
-        }
+    val spanningSquarePopulation = GridNetworkConstructingPopulation(interactFunction = {firstPair, secondPair -> GridNetworkConstructingFunctions.squareGridNetworkFunc(firstPair,secondPair)}
 
-        if (transferredState == null) Triple(false, Pair("",""),isConnected) else{
-            Triple(true, Pair(transferredState.first,transferredState.second), transferredState.third)
-        }
-
-    }, symbols = setOf("Lu", "q0", "q1", "Lr", "Ld", "Ll", "Lu"),
+    , symbols = setOf("Lu", "q0", "q1", "Lr", "Ld", "Ll", "Lu"),
             initialStates = mapOf(Pair("q0", 25), Pair("Lu", 1))
     )
     GridNetworkGenerator(spanningSquarePopulation).display()
 }
 
-/*val transferredState = when {
-givenState == Triple(Pair("i", Port.DOWN), Pair("q0", Port.UP), false)
--> Triple("i1", "q0", true)
-givenState == Triple(Pair("e", Port.DOWN), Pair("q0", Port.UP), false)
--> Triple("e1", "e1", true)
-givenState match Triple(Pair("i[12]", Port.RIGHT), Pair("i[12]", Port.LEFT), false)
--> Triple((givenState.first.first + 1).toString(), (givenState.second.first + 1).toString(), true)
-givenState == Triple(Pair("i1", Port.RIGHT), Pair("e1", Port.LEFT), false)
--> Triple("i2", "e2", true)
-givenState == Triple(Pair("i2", Port.RIGHT), Pair("e1", Port.LEFT), false)
--> Triple("i3", "e2", true)
-givenState == Triple(Pair("e1", Port.RIGHT), Pair("i1", Port.LEFT), false)
--> Triple("e2", "i2", true)
-givenState == Triple(Pair("e1", Port.RIGHT), Pair("i2", Port.LEFT), false)
--> Triple("e2", "i3", true)
-givenState == Triple(Pair("i3", Port.UP), Pair("i1", Port.DOWN), true)
--> Triple("i", "i", false)
-givenState == Triple(Pair("e2", Port.UP), Pair("e1", Port.DOWN), true)
--> Triple("e", "e", false)
-else -> null
-}*/
 
-
-class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
+class GridNetworkGenerator(override var population: GridNetworkConstructingPopulation,
                            val maxTimes: Long = 10000000,
                            val fastRes: Boolean = false,
                            val preExecutedSteps: Int = 1000000,
                            nameOfPopulation: String = "",
-                           val graph: SingleGraph = SingleGraph(nameOfPopulation),
+                           override val graph: SingleGraph = SingleGraph(nameOfPopulation),
                            private val styleSheet: String = "" +
                                    "node {fill-mode: none; fill-color: rgba(255,0,0,0);text-background-mode:plain;text-alignment:right;text-size: 10px;size: 5px;}" +
                                    "node.important {fill-mode: plain; fill-color: black;text-size: 20px; size: 10px;}" +
                                    "node.importantMarked {fill-mode: plain; fill-color: red;text-size: 20px; size: 10px;}" +
                                    "node.marked {fill-color: red;}" +
-                                   "edge.marked {fill-color: red;}") : SourceBase(), SimulationGenerator {
+                                   "edge.marked {fill-color: red;}") : SimulationGenerator() {
 
-    override var countOfSelectWithoutInteraction: Int = 0
-    override val terminateTheshold: Int = 100000
+    override val terminateThreshold: Int = 1000 * population.numOfNode()
     override val requireLayoutAlgorithm = false
-    private val random = Random()
-    var count = 0
 
     init {
         if (fastRes && preExecutedSteps < 0)
@@ -126,11 +67,13 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
         val down = graph.addNode<SingleNode>("$id | d")
         val left = graph.addNode<SingleNode>("$id | l")
         val right = graph.addNode<SingleNode>("$id | r")
+        println("addNode1")
         graph.setNodeFactory({ str, graph ->
             val res = GridNode(graph as AbstractGraph, str, x, y, up, down, left, right, degreeOfRotation)
             res.setAttribute("ui.class", "important")
             res
         })
+        println("addNode2")
         graph.addNode<GridNode>(id)
         graph.getNode<GridNode>(id)?.addAttribute("ui.label",state)
 
@@ -139,23 +82,15 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
 
     @Synchronized
     override fun shouldTerminate(): Boolean {
-        return countOfSelectWithoutInteraction > terminateTheshold
+        return countOfSelectWithoutInteraction > terminateThreshold
     }
 
-    fun display() {
+    override fun display() {
         graph.display(false)
 
         this.begin()
         while (count < maxTimes) {
             this.nextEvents()
-        }
-    }
-
-    private fun sleepWith(millisecond: Long) {
-        try {
-            Thread.sleep(millisecond)
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
         }
     }
 
@@ -165,10 +100,19 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
         population = GridNetworkConstructingPopulation(population)
         graph.clear()
         graph.addAttribute("ui.stylesheet", styleSheet)
+        val numOfNode = population.numOfNode()
+        val setOfCoordinate = mutableSetOf<Pair<Int, Int>>()
+        for (i in 0..(numOfNode - 1)) {
+            var pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
+            while (setOfCoordinate.contains(pair))
+                pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
+            val theNode = population.nodes[i]
+            println("r1")
+            addNodeOnGraph(theNode.index.toString(), pair.first.toDouble(), pair.second.toDouble(),theNode.rotationDegree,state = theNode.state.currentState)
+            println("r2")
+        }
 
     }
-
-    override fun end() {}
 
     override fun begin() {
         if (fastRes) {
@@ -209,7 +153,6 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
         }
         return visited
     }
-
 
     //Have to be used after updateRotationInBatch
     private fun movePosInBatch(toMoveNode: GridNode, newPos: Pair<Double, Double>){
@@ -278,7 +221,7 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
             isVisited.add(modelNode)
         }
     }
-
+    @Synchronized
     override fun nextEvents(): Boolean {
         val (res, firstPairOfNode, secondPairOfNode) = population.interact()
         val isInteracted = res.first
@@ -286,25 +229,27 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
         if (isInteracted) {
             count++
             countOfSelectWithoutInteraction = 0
+            println("n1")
             val firstModelNode = firstPairOfNode.first
             val firstModelPort = firstPairOfNode.second
 
             val secondModelNode = secondPairOfNode.first
             val secondModelPort = secondPairOfNode.second
-
+            println("n2")
             val firstRep = graph.getNode<Node>("${firstModelNode.index}") as GridNode
             val secondRep = graph.getNode<Node>("${secondModelNode.index}") as GridNode
-
+            println("n3")
             firstRep.setAttribute("ui.class", "importantMarked")
             secondRep.setAttribute("ui.class", "importantMarked")
             firstRep.setAttribute("ui.label",firstModelNode.state.currentState)
             secondRep.setAttribute("ui.label",secondModelNode.state.currentState)
-
+            println("n4")
             val getFirstInteractNodeRep = firstRep.getInteractPortNode(firstModelPort)
             val getSecondInteractNodeRep = secondRep.getInteractPortNode(secondModelPort)
-
+            println("n5")
             val firstInteractEdge = firstRep.getInteractEdge(firstModelPort)
             val secondInteractEdge = secondRep.getInteractEdge(secondModelPort)
+            println("n6")
             firstInteractEdge.setAttribute("ui.class", "marked")
             secondInteractEdge.setAttribute("ui.class", "marked")
             sleepWith(500)
@@ -316,11 +261,12 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
                 updateRotationInBatch(secondRep,firstRep.getRotation())
                 movePosInBatch(secondRep, secondNewPos)
                 sleepWith(1000)
-
+                println("n7")
                 graph.addEdge<Edge>(
                         if (getFirstInteractNodeRep.id < getSecondInteractNodeRep.id) getFirstInteractNodeRep.id + getSecondInteractNodeRep.id else getSecondInteractNodeRep.id + getFirstInteractNodeRep.id,
                         getFirstInteractNodeRep, getSecondInteractNodeRep
                 )
+                println("n8")
                 sleepWith(1000)
                 firstInteractEdge.removeAttribute("ui.class")
                 secondInteractEdge.removeAttribute("ui.class")
@@ -328,6 +274,7 @@ class GridNetworkGenerator(var population: GridNetworkConstructingPopulation,
                 secondRep.setAttribute("ui.class", "important")
             } else {
                 graph.removeEdge<Edge>(getFirstInteractNodeRep, getSecondInteractNodeRep)
+                println("n9")
                 sleepWith(1000)
                 firstInteractEdge.removeAttribute("ui.class")
                 secondInteractEdge.removeAttribute("ui.class")
