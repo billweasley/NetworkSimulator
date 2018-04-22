@@ -4,7 +4,7 @@ import model.population.populationProtocols.concrete.DancingProtocol
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import scheduler.RandomScheduler
+import model.scheduler.RandomScheduler
 
 class DancingProtocolTest {
 

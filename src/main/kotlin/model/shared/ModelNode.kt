@@ -14,7 +14,14 @@ open class ModelNode protected constructor(open var state: State, val index: Int
                                 initialStates: Map<String, Int>): MutableList<ModelNode> {
 
             if (symbols.isEmpty() || !symbols.containsAll(initialStates.keys))
-                throw IllegalArgumentException()
+                throw IllegalArgumentException(
+                        if(symbols.isEmpty())
+                            "Symbol cannot be empty"
+                        else "Symbols does not contains "
+                                + symbols
+                                .filter { it -> !initialStates.containsKey(it) }
+                                .reduce { acc, s -> acc.plus(";$s") }
+                )
 
             val result = ArrayList<ModelNode>()
             var index = 0

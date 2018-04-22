@@ -2,19 +2,113 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ModelModifiedEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$2$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$$special$$inlined$apply$lambda$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$1$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$2$timesOfPreRunning$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$2$timesOfPreRunning$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$2$timesOfPreRunning$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5$$special$$inlined$apply$lambda$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5$$special$$inlined$apply$lambda$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$7$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$7$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$7$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$7$6$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$7$6$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/scheduler/RandomScheduler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/scheduler/Scheduler.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/interactFunctions/SimpleFunctionDSLKt.class" afterPath="$PROJECT_DIR$/out/production/classes/model/interactFunctions/SimpleFunctionDSLKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/populationProtocols/PopulationProtocol.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/populationProtocols/PopulationProtocol.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/populationProtocols/concrete/DancingProtocol$1.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/populationProtocols/concrete/DancingProtocol$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/populationProtocols/concrete/DancingProtocol.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/populationProtocols/concrete/DancingProtocol.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/shapeConstruction/ShapeConstructingPopulation.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/shapeConstruction/ShapeConstructingPopulation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/shared/ModelNode$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/shared/ModelNode$Companion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/shared/ModelNode.class" afterPath="$PROJECT_DIR$/out/production/classes/model/shared/ModelNode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/SimulationGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/SimulationGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGeneratorKt.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGeneratorKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGeneratorKt.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGeneratorKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGeneratorKt.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGeneratorKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$4.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/FunctionSelectionChangeEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/FunctionSelectionChangeEvent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$countProperty$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$countProperty$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$stateProperty$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$stateProperty$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ModelSelectionChangeEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ModelSelectionChangeEvent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorApp.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorApp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppKt.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$column$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$column$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$column$4.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$column$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/TerminateEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/TerminateEvent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/TextFieldUpdateEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/TextFieldUpdateEvent.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/concrete/DancingProtocol.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/concrete/DancingProtocol.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/scheduler/Scheduler.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/scheduler/Scheduler.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/population/populationProtocols/concrete/DancingProtocolTest.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/population/populationProtocols/concrete/DancingProtocolTest.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/population/shapeConstruction/ShapeConstructingPopulationTest.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/population/shapeConstruction/ShapeConstructingPopulationTest.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -90,18 +184,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="InteractionFunctions.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt">
+      <file leaf-file-name="ShapeConstructorGenerator.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="165" column="47" lean-forward="false" selection-start-line="165" selection-start-column="47" selection-end-line="165" selection-end-column="47" />
+            <state relative-caret-position="227">
+              <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
               <folding>
-                <element signature="n#!!block;n#squareGridNetworkFunc#0;n#!!block;n#Companion#0;n#!!block;n#GridNetworkConstructingFunctions#0" expanded="false" />
-                <element signature="n#!!block;n#simpleGlobalLineFunc#0;n#!!block;n#Companion#0;n#!!block;n#ShapeConstructionFunctions#0" expanded="false" />
-                <element signature="n#!!block;n#cycleCoverFunc#0;n#!!block;n#Companion#0;n#!!block;n#ShapeConstructionFunctions#0" expanded="false" />
-                <element signature="n#!!block;n#globalStarFunc#0;n#!!block;n#Companion#0;n#!!block;n#ShapeConstructionFunctions#0" expanded="false" />
-                <element signature="n#!!block;n#dancingProtocolFunc#0;n#!!block;n#Companion#0;n#!!block;n#PopulationProtocolFunctions#0" expanded="false" />
-                <element signature="n#!!block;n#sumModeFourFunc#0;n#!!block;n#Companion#0;n#!!block;n#PopulationProtocolFunctions#0" expanded="false" />
+                <element signature="n#!!block;n#main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -110,21 +199,23 @@
       <file leaf-file-name="PopulationProtocolGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state relative-caret-position="349">
+              <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="24" />
               <folding>
-                <element signature="e#41#734#0" expanded="true" />
+                <element signature="e#41#740#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FutureTask.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/concurrent/FutureTask.java">
+      <file leaf-file-name="GridNetworkConstructingPopulation.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="835">
+              <caret line="220" column="13" lean-forward="false" selection-start-line="220" selection-start-column="13" selection-end-line="220" selection-end-column="13" />
+              <folding>
+                <element signature="e#50#300#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,61 +223,53 @@
       <file leaf-file-name="SimulatorApp.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="792" column="45" lean-forward="false" selection-start-line="792" selection-start-column="42" selection-end-line="792" selection-end-column="45" />
+            <state relative-caret-position="474">
+              <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
               <folding>
-                <element signature="e#25#1499#0" expanded="true" />
-                <element signature="n#!!block;n#getInteractionMethodAndName#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
+                <element signature="n#!!block;n#getInitialStateMapTemplateInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
+                <element signature="n#!!block;n#getSymbolInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
+                <element signature="n#!!block;n#getSymbol#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
                 <element signature="n#!!block;n#convertFunctionNameToDisplayName#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
-                <element signature="n#!!block;n#createAndSetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
-                <element signature="n#!!block;n#resetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
-                <element signature="e#18569#18670#2" expanded="false" />
-                <element signature="e#18688#18780#2" expanded="false" />
-                <element signature="e#22934#23094#2" expanded="false" />
-                <element signature="e#25378#27261#2" expanded="false" />
-                <element signature="e#28168#28327#2" expanded="false" />
-                <element signature="e#31935#40368#0" expanded="false" />
-                <element signature="e#40404#40563#2" expanded="false" />
+                <element signature="e#18503#18604#2" expanded="false" />
+                <element signature="e#18622#18714#2" expanded="false" />
+                <element signature="e#18798#20443#2" expanded="false" />
+                <element signature="e#22088#23740#2" expanded="false" />
+                <element signature="e#23762#26184#2" expanded="false" />
+                <element signature="e#26206#29827#2" expanded="false" />
+                <element signature="e#29905#31948#2" expanded="false" />
+                <element signature="e#31970#33129#2" expanded="false" />
+                <element signature="e#33166#33325#2" expanded="false" />
+                <element signature="e#33375#35846#2" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomScheduler.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt">
+      <file leaf-file-name="Labeled.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/Labeled.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="145" column="24" lean-forward="false" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PopulationProtocol.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt">
+      <file leaf-file-name="Maps.kt" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/Maps.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="139">
+              <caret line="530" column="72" lean-forward="false" selection-start-line="530" selection-start-column="72" selection-end-line="530" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KCallable.kt" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/reflect/KCallable.kt">
+      <file leaf-file-name="TypeAliases.kt" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/TypeAliases.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="60" column="67" lean-forward="false" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Method.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/lang/reflect/Method.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
+            <state relative-caret-position="149">
+              <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -195,8 +278,8 @@
       <file leaf-file-name="SimulationGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="211">
+              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
                 <element signature="e#32#214#0" expanded="true" />
                 <element signature="n#!!block;n#sleepWith#0;n#!!block;n#SimulationGenerator#0" expanded="false" />
@@ -205,12 +288,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MethodAccessor.class" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/MethodAccessor.class">
+      <file leaf-file-name="LinkedHashMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/LinkedHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="-4711">
+              <caret line="162" column="13" lean-forward="false" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GridNetworkGenerator.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="84" column="71" lean-forward="false" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="71" />
+              <folding>
+                <element signature="n#!!block;n#main#0" expanded="false" />
+                <element signature="n#!!block;n#dfsForUpdateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+                <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -231,13 +328,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Ll left q1 right</find>
-      <find>Ll left q1 ri</find>
-      <find>fixed</find>
-      <find>q1 right l</find>
-      <find>q1 right</find>
-      <find>ll left q1 right</find>
-      <find>Ll LEFT Q1 RIGHT</find>
       <find>print</find>
       <find>err.p</find>
       <find>addN</find>
@@ -260,6 +350,13 @@
       <find>Event</find>
       <find>ModelSelectionChangeEvent</find>
       <find>FunctionSelectionChangeEvent</find>
+      <find>call</find>
+      <find>SuppressWarnings</find>
+      <find>Suppress</find>
+      <find>ModelModifiedEvent</find>
+      <find>build()</find>
+      <find>text</find>
+      <find>terminateThreshold</find>
       <find>build</find>
     </findStrings>
   </component>
@@ -671,7 +768,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/PopulationProtocol/PopulationProtocolGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/populationProtocol/ModelNodelView.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/populationProtocol/NodeModelView.kt" />
         <option value="$PROJECT_DIR$/../Sundry-Java/LeetCode/188 Best Time to Buy and Sell Stock IV.java" />
@@ -700,10 +796,8 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/model/interactFunctions/SimpleFunctionDSL.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/ui/Temp" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/ShapeConstructorGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/PopulationProtocolGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNetworkGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/State.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -712,15 +806,18 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/ui/GeneraterBuilder.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/concrete/DancingProtocol.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/scheduler/Scheduler.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/Population.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
       </list>
     </option>
@@ -731,9 +828,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-66" />
-    <option name="y" value="263" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
     <option name="width" value="1934" />
     <option name="height" value="1162" />
   </component>
@@ -904,21 +1001,6 @@
             </path>
             <path>
               <item name="org.net.simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="org.net.simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="org.net.simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="org.net.simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="org.net.simulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -939,7 +1021,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sol" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="last.edited.regexp" value="( a ,b2f) -&gt; ( c , da ) " />
+    <property name="last.edited.regexp" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -1281,7 +1363,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1162" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1162" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1292,12 +1374,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17883597" sideWeight="0.4550203" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47439915" sideWeight="0.5449797" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3260188" sideWeight="0.5449797" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48918918" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49783784" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18594594" sideWeight="0.85960263" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30054054" sideWeight="0.85960263" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.055135135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24918918" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05837838" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1360,7 +1442,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1369,93 +1451,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/text/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="1114" column="0" lean-forward="false" selection-start-line="1114" selection-start-column="0" selection-end-line="1114" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/EventBus.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/FX.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="416" column="0" lean-forward="false" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/com/sun/javafx/binding/ExpressionHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19872">
-          <caret line="926" column="0" lean-forward="false" selection-start-line="926" selection-start-column="0" selection-end-line="926" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2808">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/Component.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15228">
-          <caret line="606" column="0" lean-forward="false" selection-start-line="606" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/App.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/GeneratorBuilder.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/gs-algo-1.3.jar!/org/graphstream/algorithm/generator/Generator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gs-core-1.3.jar!/org/graphstream/ui/view/Viewer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -1504,14 +1499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="853" column="19" lean-forward="false" selection-start-line="853" selection-start-column="19" selection-end-line="853" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/Maps.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="153" column="76" lean-forward="false" selection-start-line="153" selection-start-column="68" selection-end-line="153" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -1574,14 +1561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="92" column="29" lean-forward="true" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/LinklessPopulation.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1598,26 +1577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#dfsForUpdateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-            <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="70" column="78" lean-forward="false" selection-start-line="70" selection-start-column="78" selection-end-line="70" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/concrete/DancingProtocol.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1630,22 +1589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1714,10 +1657,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/Controls.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="287" column="16" lean-forward="false" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/Component.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/scheduler/Scheduler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/InteractionFunctions.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="165" column="47" lean-forward="false" selection-start-line="165" selection-start-column="47" selection-end-line="165" selection-end-column="47" />
+        <state relative-caret-position="327">
+          <caret line="165" column="80" lean-forward="false" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="80" />
           <folding>
             <element signature="n#!!block;n#squareGridNetworkFunc#0;n#!!block;n#Companion#0;n#!!block;n#GridNetworkConstructingFunctions#0" expanded="false" />
             <element signature="n#!!block;n#simpleGlobalLineFunc#0;n#!!block;n#Companion#0;n#!!block;n#ShapeConstructionFunctions#0" expanded="false" />
@@ -1729,10 +1712,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/GridNode.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="92" column="29" lean-forward="false" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/TableColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="492" column="22" lean-forward="false" selection-start-line="492" selection-start-column="22" selection-end-line="492" selection-end-column="22" />
+          <folding>
+            <element signature="e#20821#20822#0" expanded="false" />
+            <element signature="e#20870#20871#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/TypeAliases.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.15/7a1a9c0e64471e83ca0943aec716dfe2dd1a9754/tornadofx-1.7.15-sources.jar!/tornadofx/ItemControls.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="615" column="34" lean-forward="false" selection-start-line="615" selection-start-column="34" selection-end-line="615" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/TableColumnBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="190" column="22" lean-forward="false" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gs-algo-1.3.jar!/org/graphstream/algorithm/generator/Generator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/shared/ModelNode.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/shapeConstruction/ShapeConstructingPopulation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/Maps.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="530" column="72" lean-forward="false" selection-start-line="530" selection-start-column="72" selection-end-line="530" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.30/50878770fd010106bd91f2f5c3b7904a56883ec3/kotlin-stdlib-1.2.30-sources.jar!/kotlin/collections/TypeAliases.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/jdk1.8.0_131/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4711">
+          <caret line="162" column="13" lean-forward="false" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="220" column="13" lean-forward="false" selection-start-line="220" selection-start-column="13" selection-end-line="220" selection-end-column="13" />
+          <folding>
+            <element signature="e#50#300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!block;n#main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="84" column="71" lean-forward="false" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="71" />
+          <folding>
+            <element signature="n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#dfsForUpdateRotationInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+            <element signature="n#!!block;n#movePosInBatch#0;n#!!block;n#GridNetworkGenerator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="211">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
           <folding>
             <element signature="e#32#214#0" expanded="true" />
             <element signature="n#!!block;n#sleepWith#0;n#!!block;n#SimulationGenerator#0" expanded="false" />
@@ -1740,49 +1854,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/scheduler/RandomScheduler.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/model/population/populationProtocols/PopulationProtocol.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        <state relative-caret-position="349">
+          <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="24" />
           <folding>
-            <element signature="e#41#734#0" expanded="true" />
+            <element signature="e#41#740#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/control/Labeled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="145" column="24" lean-forward="false" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="792" column="45" lean-forward="false" selection-start-line="792" selection-start-column="42" selection-end-line="792" selection-end-column="45" />
+        <state relative-caret-position="474">
+          <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
           <folding>
-            <element signature="e#25#1499#0" expanded="true" />
-            <element signature="n#!!block;n#getInteractionMethodAndName#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
+            <element signature="n#!!block;n#getInitialStateMapTemplateInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
+            <element signature="n#!!block;n#getSymbolInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
+            <element signature="n#!!block;n#getSymbol#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
             <element signature="n#!!block;n#convertFunctionNameToDisplayName#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
-            <element signature="n#!!block;n#createAndSetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
-            <element signature="n#!!block;n#resetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
-            <element signature="e#18569#18670#2" expanded="false" />
-            <element signature="e#18688#18780#2" expanded="false" />
-            <element signature="e#22934#23094#2" expanded="false" />
-            <element signature="e#25378#27261#2" expanded="false" />
-            <element signature="e#28168#28327#2" expanded="false" />
-            <element signature="e#31935#40368#0" expanded="false" />
-            <element signature="e#40404#40563#2" expanded="false" />
+            <element signature="e#18503#18604#2" expanded="false" />
+            <element signature="e#18622#18714#2" expanded="false" />
+            <element signature="e#18798#20443#2" expanded="false" />
+            <element signature="e#22088#23740#2" expanded="false" />
+            <element signature="e#23762#26184#2" expanded="false" />
+            <element signature="e#26206#29827#2" expanded="false" />
+            <element signature="e#29905#31948#2" expanded="false" />
+            <element signature="e#31970#33129#2" expanded="false" />
+            <element signature="e#33166#33325#2" expanded="false" />
+            <element signature="e#33375#35846#2" expanded="false" />
           </folding>
         </state>
       </provider>

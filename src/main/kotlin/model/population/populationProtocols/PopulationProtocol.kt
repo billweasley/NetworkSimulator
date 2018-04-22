@@ -2,8 +2,8 @@ package model.population.populationProtocols
 
 import model.population.LinklessPopulation
 import model.shared.ModelNode
-import scheduler.RandomScheduler
-import scheduler.Scheduler
+import model.scheduler.RandomScheduler
+import model.scheduler.Scheduler
 import java.util.concurrent.ConcurrentHashMap
 
 open class PopulationProtocol(private val scheduler: Scheduler = RandomScheduler(),

@@ -1,7 +1,7 @@
 package model.population.populationProtocols.concrete
 
 import model.population.populationProtocols.PopulationProtocol
-import scheduler.Scheduler
+import model.scheduler.Scheduler
 import shared.PopulationProtocolFunctions
 
 class DancingProtocol(initialStates: Map<String, Int>, scheduler: Scheduler) : PopulationProtocol(

@@ -1,4 +1,4 @@
-package scheduler
+package model.scheduler
 
 import model.population.LinkedPopulation
 import model.population.Population

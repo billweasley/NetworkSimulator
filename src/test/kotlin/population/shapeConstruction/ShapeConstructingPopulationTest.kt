@@ -2,7 +2,7 @@ package population.shapeConstruction
 
 import model.population.shapeConstruction.ShapeConstructingPopulation
 import org.junit.Test
-import scheduler.RandomScheduler
+import model.scheduler.RandomScheduler
 import utils.InteractionFunctions
 import model.shared.ModelNode
 

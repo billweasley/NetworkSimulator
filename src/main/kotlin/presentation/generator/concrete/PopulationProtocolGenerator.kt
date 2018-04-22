@@ -2,6 +2,7 @@ package presentation.generator.concrete
 
 import model.population.populationProtocols.PopulationProtocol
 import model.population.populationProtocols.concrete.DancingProtocol
+import model.scheduler.RandomScheduler
 import model.shared.ModelNode
 import org.graphstream.algorithm.Toolkit
 import org.graphstream.graph.Graph
@@ -9,7 +10,6 @@ import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
-import scheduler.RandomScheduler
 import shared.PopulationProtocolFunctions
 import java.awt.Color
 import java.awt.Dimension
@@ -43,17 +43,17 @@ fun main(args: Array<String>) {
 
 
 class PopulationProtocolGenerator(override var population: PopulationProtocol,
-                                  val maxTimes: Long = -1,
-                                  val fastRes: Boolean= false,
-                                  val preExecutedSteps: Int = 0,
-                                  nameOfPopulation: String = "",
+                                  override val maxTimes: Long = -1,
+                                  override val fastRes: Boolean= false,
+                                  override val preExecutedSteps: Long = 0,
+                                  override val nameOfPopulation: String = "",
                                   override val graph: Graph = SingleGraph(nameOfPopulation),
                                   private val styleSheet: String =
                                           "node {fill-color: black; text-size: 30px;}" +
                                           "node.marked {fill-color: red; }" +
                                           "edge.marked {fill-color: red;}"): SimulationGenerator() {
 
-    override val terminateThreshold = 1000
+    override val terminateThreshold = 10000
     override val requireLayoutAlgorithm = false
 
     init {
@@ -225,7 +225,7 @@ class PopulationProtocolGenerator(override var population: PopulationProtocol,
 
     @Synchronized
     override fun shouldTerminate(): Boolean{
-        return countOfSelectWithoutInteraction > this.terminateThreshold
+        return countOfSelectWithoutInteraction > this.terminateThreshold || count >= maxTimes
     }
 
     private fun calculateUnitMove(origin: Pair<Double, Double>, destination: Pair<Double, Double>, unit: Double)

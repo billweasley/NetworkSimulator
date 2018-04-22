@@ -1,10 +1,10 @@
 package model.population.gridNetworkConstruction
 
 import model.population.LinkedPopulation
+import model.scheduler.RandomScheduler
+import model.scheduler.Scheduler
 import model.shared.LocallyCoordinatedModelNode
 import model.shared.Port
-import scheduler.RandomScheduler
-import scheduler.Scheduler
 import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 

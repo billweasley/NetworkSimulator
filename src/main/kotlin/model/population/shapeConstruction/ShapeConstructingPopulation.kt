@@ -1,9 +1,9 @@
 package model.population.shapeConstruction
 
 import model.population.LinkedPopulation
+import model.scheduler.RandomScheduler
+import model.scheduler.Scheduler
 import model.shared.ModelNode
-import scheduler.RandomScheduler
-import scheduler.Scheduler
 import java.util.concurrent.ConcurrentHashMap
 
 class ShapeConstructingPopulation(private val scheduler: Scheduler = RandomScheduler(),

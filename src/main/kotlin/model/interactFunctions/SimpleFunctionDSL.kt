@@ -4,7 +4,7 @@ import model.population.populationProtocols.PopulationProtocol
 import model.shared.ModelNode
 import org.jetbrains.kotlin.cli.common.environment.setIdeaIoUseFallback
 import presentation.generator.concrete.PopulationProtocolGenerator
-import scheduler.RandomScheduler
+import model.scheduler.RandomScheduler
 import java.util.regex.Pattern
 import javax.script.ScriptEngineManager
 

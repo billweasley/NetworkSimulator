@@ -1,13 +1,13 @@
 package presentation.generator.concrete
 
 import model.population.shapeConstruction.ShapeConstructingPopulation
+import model.scheduler.RandomScheduler
 import org.graphstream.graph.Edge
 import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
-import scheduler.RandomScheduler
 import shared.ShapeConstructionFunctions
 import java.awt.Color
 import java.awt.Dimension
@@ -61,16 +61,16 @@ fun main(args: Array<String>) {
 }
 
 class ShapeConstructorGenerator(override var population: ShapeConstructingPopulation,
-                                val maxTimes: Long,
-                                val fastRes: Boolean= false,
-                                val preExecutedSteps: Int = 0,
-                                nameOfPopulation: String = "",
+                                override val maxTimes: Long,
+                                override val fastRes: Boolean= false,
+                                override val preExecutedSteps: Long = 0,
+                                override val nameOfPopulation: String = "",
                                 override val graph: Graph = SingleGraph(nameOfPopulation),
                                 private val styleSheet: String = "node {fill-color: black;text-size: 30px;}" +
                                         "node.marked {fill-color: red;}" +
                                         "edge.marked {fill-color: red;}"): SimulationGenerator() {
     override val requireLayoutAlgorithm = true
-    override val terminateThreshold = 1000
+    override val terminateThreshold = 10000
 
     init {
         if(fastRes && preExecutedSteps < 0)
@@ -188,7 +188,7 @@ class ShapeConstructorGenerator(override var population: ShapeConstructingPopula
 
     @Synchronized
     override fun shouldTerminate(): Boolean{
-        return countOfSelectWithoutInteraction > terminateThreshold
+        return countOfSelectWithoutInteraction > terminateThreshold || count >= maxTimes
     }
 
 

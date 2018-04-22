@@ -28,10 +28,10 @@ fun main(args: Array<String>) {
 
 
 class GridNetworkGenerator(override var population: GridNetworkConstructingPopulation,
-                           val maxTimes: Long = 10000000,
-                           val fastRes: Boolean = false,
-                           val preExecutedSteps: Int = 1000000,
-                           nameOfPopulation: String = "",
+                           override val maxTimes: Long = 10000000,
+                           override val fastRes: Boolean = false,
+                           override val preExecutedSteps: Long = 1000000,
+                           override val nameOfPopulation: String = "",
                            override val graph: SingleGraph = SingleGraph(nameOfPopulation),
                            private val styleSheet: String = "" +
                                    "node {fill-mode: none; fill-color: rgba(255,0,0,0);text-background-mode:plain;text-alignment:right;text-size: 10px;size: 5px;}" +
@@ -82,7 +82,7 @@ class GridNetworkGenerator(override var population: GridNetworkConstructingPopul
 
     @Synchronized
     override fun shouldTerminate(): Boolean {
-        return countOfSelectWithoutInteraction > terminateThreshold
+        return countOfSelectWithoutInteraction > terminateThreshold ||  count >= maxTimes
     }
 
     override fun display() {
