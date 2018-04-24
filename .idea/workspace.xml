@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -160,19 +161,19 @@
       <file leaf-file-name="SimulatorApp.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7604">
-              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="44">
+              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
               <folding>
+                <element signature="e#25#1430#0" expanded="true" />
                 <element signature="n#!!block;n#getInitialStateMapTemplateInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
                 <element signature="n#!!block;n#getSymbolInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
                 <element signature="n#!!block;n#getSymbol#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
                 <element signature="n#!!block;n#convertFunctionNameToDisplayName#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
                 <element signature="n#!!block;n#resetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
-                <element signature="e#18038#37439#2" expanded="false" />
-                <element signature="e#18161#18262#2" expanded="false" />
-                <element signature="e#18415#20060#2" expanded="false" />
-                <element signature="e#34743#34902#2" expanded="false" />
-                <element signature="e#34952#37423#2" expanded="false" />
+                <element signature="e#18195#18296#2" expanded="false" />
+                <element signature="e#18449#20094#2" expanded="false" />
+                <element signature="e#34911#35070#2" expanded="false" />
+                <element signature="e#35120#37591#2" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -203,8 +204,8 @@
       <file leaf-file-name="GridNetworkGenerator.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1695">
-              <caret line="123" column="34" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="34" />
+            <state relative-caret-position="185">
+              <caret line="307" column="21" lean-forward="false" selection-start-line="307" selection-start-column="16" selection-end-line="307" selection-end-column="21" />
               <folding>
                 <element signature="e#41#629#0" expanded="true" />
                 <element signature="e#746#926#0" expanded="false" />
@@ -234,7 +235,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subscribe</find>
       <find>onCl</find>
       <find>shouldTerminate</find>
       <find>reset</find>
@@ -264,6 +264,7 @@
       <find>tooltip(items[selectionModel.selectedIndex])</find>
       <find>REJECTED BECAUSE DEGREE DIFFERENCE I</find>
       <find>Restart</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -764,9 +765,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="600" />
-    <option name="y" value="63" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-143" />
+    <option name="y" value="202" />
     <option name="width" value="1934" />
     <option name="height" value="1150" />
   </component>
@@ -938,7 +939,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.org.net.simulator [jar]">
+  <component name="RunManager" selected="Gradle.org.net.simulator [clean]">
     <configuration name="SimulatorApp" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="presentation.ui.SimulatorApp" />
@@ -1162,9 +1163,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.GridNetworkGeneratorKt" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.org.net.simulator [run]" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.org.net.simulator [jar]" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.org.net.simulator [jar]" />
+        <item index="1" class="java.lang.String" itemvalue="Kotlin.presentation.generator.concrete.GridNetworkGeneratorKt" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.org.net.simulator [run]" />
         <item index="3" class="java.lang.String" itemvalue="Gradle.org.net.simulator [testClasses]" />
         <item index="4" class="java.lang.String" itemvalue="Gradle.org.net.simulator [clean]" />
       </list>
@@ -1274,8 +1275,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1162" extended-state="7" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1162" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810867" sideWeight="0.24162163" order="6" side_tool="false" content_ui="tabs" />
@@ -1283,16 +1283,16 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26486486" sideWeight="0.2596154" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26054054" sideWeight="0.2533532" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5653083" sideWeight="0.5449797" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29885057" sideWeight="0.5449797" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.48918918" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49783784" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30054054" sideWeight="0.85960263" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53709507" sideWeight="0.48054054" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26486486" sideWeight="0.74038464" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26054054" sideWeight="0.7466468" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24918918" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05837838" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1740,10 +1740,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!block;n#sleepWith#0;n#!!block;n#SimulationGenerator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1695">
-          <caret line="123" column="34" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="34" />
+        <state relative-caret-position="185">
+          <caret line="307" column="21" lean-forward="false" selection-start-line="307" selection-start-column="16" selection-end-line="307" selection-end-column="21" />
           <folding>
             <element signature="e#41#629#0" expanded="true" />
             <element signature="e#746#926#0" expanded="false" />
@@ -1756,31 +1766,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!block;n#sleepWith#0;n#!!block;n#SimulationGenerator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7604">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="44">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
+            <element signature="e#25#1430#0" expanded="true" />
             <element signature="n#!!block;n#getInitialStateMapTemplateInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
             <element signature="n#!!block;n#getSymbolInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
             <element signature="n#!!block;n#getSymbol#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
             <element signature="n#!!block;n#convertFunctionNameToDisplayName#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
             <element signature="n#!!block;n#resetSwingContent#0;n#!!block;n#SimulatorAppView#0" expanded="false" />
-            <element signature="e#18038#37439#2" expanded="false" />
-            <element signature="e#18161#18262#2" expanded="false" />
-            <element signature="e#18415#20060#2" expanded="false" />
-            <element signature="e#34743#34902#2" expanded="false" />
-            <element signature="e#34952#37423#2" expanded="false" />
+            <element signature="e#18195#18296#2" expanded="false" />
+            <element signature="e#18449#20094#2" expanded="false" />
+            <element signature="e#34911#35070#2" expanded="false" />
+            <element signature="e#35120#37591#2" expanded="false" />
           </folding>
         </state>
       </provider>

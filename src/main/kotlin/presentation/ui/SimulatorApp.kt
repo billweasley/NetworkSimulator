@@ -6,6 +6,7 @@ import javafx.embed.swing.SwingNode
 import javafx.event.EventHandler
 import javafx.geometry.Insets
 import javafx.geometry.Pos
+import javafx.scene.control.Alert
 import javafx.scene.control.Button
 import javafx.scene.control.ComboBox
 import javafx.scene.control.TableView
@@ -513,6 +514,7 @@ class SimulatorAppView : View() {
                                 if (isFirstRun && startBtn.isDisabled) startBtn.isDisable = false
                                 if (startBtn.text == "Restart"|| startBtn.text == "Continue") startBtn.text = "Start"
                             } else {
+                                Alert(Alert.AlertType.WARNING,"The given setting is invalid. Please check them again.").showAndWait()
                                 print("The setting is inValid. Please check again.")
                             }
                         }
