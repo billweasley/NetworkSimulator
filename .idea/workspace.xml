@@ -2,109 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fdb3afe-5c30-435e-b20d-27c0d77b89c9" name="Default" comment="# 20:44 03/March/2018 [Test Required]&#10; Basic impl for grid network population">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGeneratorKt$main$sumModelFourProtocol$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGeneratorKt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGeneratorKt$main$cycleCoverConstructor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGeneratorKt$main$globalStarConstructor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGeneratorKt$main$simpleGlobalLineConstructor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGeneratorKt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3$$special$$inlined$apply$lambda$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$2$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$$special$$inlined$apply$lambda$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$$special$$inlined$apply$lambda$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$timesOfPreRunning$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$timesOfPreRunning$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$timesOfPreRunning$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5$2$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$7$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$7$5.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/META-INF/org.net.simulator_main.kotlin_module" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/org.net.simulator_main.kotlin_module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" afterPath="$PROJECT_DIR$/out/production/classes/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/model/shared/LocallyCoordinatedModelNode$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/SimulationGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/SimulationGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator$addNodeOnGraph$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator$addNodeOnGraph$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator$addNodeOnGraph$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator$addNodeOnGraph$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGeneratorKt$main$spanningSquarePopulation$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGeneratorKt$main$spanningSquarePopulation$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGeneratorKt.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/GridNetworkGeneratorKt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/MySingleNode.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/MySingleNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/PopulationProtocolGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/generator/concrete/ShapeConstructorGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$4.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion$build$population$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ConfigurationData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/FunctionSelectionChangeEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/FunctionSelectionChangeEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/HasStoppedNoTerminateEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/HasStoppedNoTerminateEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$countProperty$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$countProperty$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$stateProperty$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration$stateProperty$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/InitialInputConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/ModelSelectionChangeEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/ModelSelectionChangeEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorApp.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppKt.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppKt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$createAndSetSwingContent$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$resetSwingContent$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$4.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$$special$$inlined$apply$lambda$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$$special$$inlined$apply$lambda$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$$special$$inlined$apply$lambda$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$2$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$root$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$1.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$2.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView$runProcess$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/SimulatorAppView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/TerminateEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/TerminateEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/presentation/ui/TextFieldUpdateEvent.class" afterPath="$PROJECT_DIR$/out/production/classes/presentation/ui/TextFieldUpdateEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/org.net.simulator.iml" afterPath="$PROJECT_DIR$/.idea/modules/org.net.simulator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/org.net.simulator_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/org.net.simulator_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/org.net.simulator_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/org.net.simulator_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/population/gridNetworkConstruction/GridNetworkConstructingPopulation.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/model/shared/LocallyCoordinatedModelNode.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/SimulationGenerator.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/GridNetworkGenerator.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/PopulationProtocolGenerator.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/generator/concrete/ShapeConstructorGenerator.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/population/shapeConstruction/ShapeConstructingPopulationTest.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/population/shapeConstruction/ShapeConstructingPopulationTest.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/kotlin/utils/LocallyCoordinatedNodeTest.kt" afterPath="$PROJECT_DIR$/src/test/kotlin/utils/LocallyCoordinatedNodeTest.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -262,8 +160,8 @@
       <file leaf-file-name="SimulatorApp.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+            <state relative-caret-position="-7604">
+              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding>
                 <element signature="n#!!block;n#getInitialStateMapTemplateInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
                 <element signature="n#!!block;n#getSymbolInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
@@ -1377,6 +1275,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1162" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810867" sideWeight="0.24162163" order="6" side_tool="false" content_ui="tabs" />
@@ -1393,7 +1292,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30054054" sideWeight="0.85960263" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53709507" sideWeight="0.48054054" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26486486" sideWeight="0.74038464" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26486486" sideWeight="0.74038464" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24918918" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05837838" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1869,8 +1768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/presentation/ui/SimulatorApp.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="-7604">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
             <element signature="n#!!block;n#getInitialStateMapTemplateInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
             <element signature="n#!!block;n#getSymbolInternal#0;n#!!block;n#Companion#0;n#!!block;n#ConfigurationData#0" expanded="false" />
