@@ -4,7 +4,6 @@ import model.population.gridNetworkConstruction.GridNetworkConstructingPopulatio
 import model.population.gridNetworkConstruction.MarkedSet
 import model.shared.LocallyCoordinatedModelNode
 import model.shared.Port
-import org.graphstream.algorithm.Toolkit
 import org.graphstream.graph.Edge
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.AbstractGraph
@@ -14,23 +13,29 @@ import presentation.generator.GridNode
 import presentation.generator.SimulationGenerator
 import shared.GridNetworkConstructingFunctions
 
+
+
 class MySingleNode(graph: AbstractGraph, id: String) : SingleNode(graph, id)
 
 fun main(args: Array<String>) {
-
+   /* val f = File("out.txt")
+    f.createNewFile()
+    val fileOutputStream = FileOutputStream(f)
+    val printStream = PrintStream(fileOutputStream)
+    System.setOut(printStream)*/
     val spanningSquarePopulation = GridNetworkConstructingPopulation(interactFunction = {firstPair, secondPair -> GridNetworkConstructingFunctions.squareGridNetworkFunc(firstPair,secondPair)}
 
     , symbols = setOf("Lu", "q0", "q1", "Lr", "Ld", "Ll", "Lu"),
             initialStates = mapOf(Pair("q0", 25), Pair("Lu", 1))
     )
-    GridNetworkGenerator(spanningSquarePopulation).display()
+    GridNetworkGenerator(spanningSquarePopulation,fastRes = true,preExecutedSteps = 200000).display()
 }
 
 
 class GridNetworkGenerator(override var population: GridNetworkConstructingPopulation,
                            override val maxTimes: Long = 10000000,
                            override val fastRes: Boolean = false,
-                           override val preExecutedSteps: Long = 1000000,
+                           override val preExecutedSteps: Long = 0,
                            override val nameOfPopulation: String = "",
                            override val graph: SingleGraph = SingleGraph(nameOfPopulation),
                            private val styleSheet: String = "" +
@@ -67,13 +72,11 @@ class GridNetworkGenerator(override var population: GridNetworkConstructingPopul
         val down = graph.addNode<SingleNode>("$id | d")
         val left = graph.addNode<SingleNode>("$id | l")
         val right = graph.addNode<SingleNode>("$id | r")
-        println("addNode1")
         graph.setNodeFactory({ str, graph ->
             val res = GridNode(graph as AbstractGraph, str, x, y, up, down, left, right, degreeOfRotation)
             res.setAttribute("ui.class", "important")
             res
         })
-        println("addNode2")
         graph.addNode<GridNode>(id)
         graph.getNode<GridNode>(id)?.addAttribute("ui.label",state)
 
@@ -82,21 +85,21 @@ class GridNetworkGenerator(override var population: GridNetworkConstructingPopul
 
     @Synchronized
     override fun shouldTerminate(): Boolean {
-        return countOfSelectWithoutInteraction > terminateThreshold ||  count >= maxTimes
+        return population.nodes.size <= 1 || countOfSelectWithoutInteraction > terminateThreshold ||  countOfEffectiveSelect >= maxTimes
     }
 
     override fun display() {
-        graph.display(false)
-
         this.begin()
-        while (count < maxTimes) {
+        graph.display(false)
+        while (countOfEffectiveSelect < maxTimes) {
             this.nextEvents()
         }
     }
 
     override fun restart() {
         countOfSelectWithoutInteraction = 0
-        count = 0
+        countOfEffectiveSelect = 0
+        countOfTotalSelect = 0
         population = GridNetworkConstructingPopulation(population)
         graph.clear()
         graph.addAttribute("ui.stylesheet", styleSheet)
@@ -107,9 +110,7 @@ class GridNetworkGenerator(override var population: GridNetworkConstructingPopul
             while (setOfCoordinate.contains(pair))
                 pair = Pair(random.nextInt(numOfNode), random.nextInt(numOfNode))
             val theNode = population.nodes[i]
-            println("r1")
             addNodeOnGraph(theNode.index.toString(), pair.first.toDouble(), pair.second.toDouble(),theNode.rotationDegree,state = theNode.state.currentState)
-            println("r2")
         }
 
     }
@@ -117,25 +118,71 @@ class GridNetworkGenerator(override var population: GridNetworkConstructingPopul
     override fun begin() {
         if (fastRes) {
             for (i in 0..preExecutedSteps) {
-                population.interact()
+                val (res, firstPairOfNode, secondPairOfNode) = population.interact()
+                val isInteracted = res.first
+                val shouldActivate = res.second
+                countOfTotalSelect++
+                if (isInteracted) {
+                    countOfEffectiveSelect++
+                    countOfSelectWithoutInteraction = 0
+                    val firstModelNode = firstPairOfNode.first
+                    val secondModelNode = secondPairOfNode.first
+                    if (shouldActivate) {
+                        updateRotationInBatchForModel(secondModelNode,firstModelNode.rotationDegree)
+                    }
+                }else{
+                    countOfSelectWithoutInteraction++
+                }
+
+                /*if (population.groupOfNodes.keys.size<26){
+                    println("$i Size of values: ${population.groupOfNodes.keys.size}")
+                    println("------------------------")
+                    for (j in  population.groupOfNodes.keys){
+                        println("General Group id " + population.groupOfNodes[j]!!.groupID)
+                        val set = population.groupOfNodes[j]!!
+                        println("which are")
+                        for (node in set){
+                            println("belong to " + node.belongtoSet +" id " + node.index)
+                        }
+                    }
+                    println("------------------------")
+                }*/
             }
         }
-
-        for (group in population.groupOfNodes.values) {
-            initialConnectNodesInRepresentation(group)
+        for (group in population.groupOfNodes.keys) {
+            initialConnectNodesInRepresentation(population.groupOfNodes[group]!!)
         }
+    }
+    private fun updateRotationInBatchForModel(toMoveModelNode: LocallyCoordinatedModelNode,destinationDegree: Double) {
+        val set = dfsForUpdateRotationInBatchForModel(toMoveModelNode, mutableSetOf())
+        toMoveModelNode.rotationDegree = destinationDegree
+        for (node in set) {
+            node.rotationDegree = destinationDegree
+        }
+    }
+    private fun dfsForUpdateRotationInBatchForModel(node: LocallyCoordinatedModelNode, visited: MutableSet<LocallyCoordinatedModelNode>): MutableSet<LocallyCoordinatedModelNode> {
+        if(!visited.contains(node)){
+            visited.add(node)
+            val rightCentre = node.right
+            if (rightCentre != null) visited.addAll(dfsForUpdateRotationInBatchForModel(rightCentre,visited))
+            val leftCentre = node.left
+            if (leftCentre != null) visited.addAll(dfsForUpdateRotationInBatchForModel(leftCentre,visited))
+            val upCentre = node.up
+            if (upCentre != null) visited.addAll(dfsForUpdateRotationInBatchForModel(upCentre,visited))
+            val downCentre = node.down
+            if (downCentre != null) visited.addAll(dfsForUpdateRotationInBatchForModel(downCentre,visited))
+        }
+        return visited
     }
 
     private fun updateRotationInBatch(toMoveNode: GridNode, destinationDegree: Double) {
         val set = dfsForUpdateRotationInBatch(toMoveNode, mutableSetOf())
         toMoveNode.updateRotation(destinationDegree - toMoveNode.getRotation())
         population.nodes[toMoveNode.id.toInt()].rotationDegree = toMoveNode.getRotation()
-        val ori = Pair(Toolkit.nodePosition(toMoveNode)[0], Toolkit.nodePosition(toMoveNode)[1])
         for(node in set){
             if (node != toMoveNode){
                 node.updateRotation( destinationDegree - node.getRotation())
                 population.nodes[node.id.toInt()].rotationDegree = node.getRotation()
-
             }
         }
     }
@@ -226,8 +273,9 @@ class GridNetworkGenerator(override var population: GridNetworkConstructingPopul
         val (res, firstPairOfNode, secondPairOfNode) = population.interact()
         val isInteracted = res.first
         val shouldActivate = res.second
+        countOfTotalSelect++
         if (isInteracted) {
-            count++
+            countOfEffectiveSelect++
             countOfSelectWithoutInteraction = 0
             println("n1")
             val firstModelNode = firstPairOfNode.first

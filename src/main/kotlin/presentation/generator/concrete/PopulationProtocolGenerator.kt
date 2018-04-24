@@ -1,16 +1,12 @@
 package presentation.generator.concrete
 
 import model.population.populationProtocols.PopulationProtocol
-import model.population.populationProtocols.concrete.DancingProtocol
-import model.scheduler.RandomScheduler
-import model.shared.ModelNode
 import org.graphstream.algorithm.Toolkit
 import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
-import shared.PopulationProtocolFunctions
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridLayout
@@ -22,7 +18,7 @@ import kotlin.math.pow
 
 
 
-fun main(args: Array<String>) {
+/*fun main(args: Array<String>) {
     val protocol = DancingProtocol(
             initialStates = mapOf(Pair("L", 9), Pair("F", 6)), scheduler = RandomScheduler()
     )
@@ -39,7 +35,7 @@ fun main(args: Array<String>) {
             "Test"
     )
     populationProtocolGenerator.display()
-}
+}*/
 
 
 class PopulationProtocolGenerator(override var population: PopulationProtocol,
@@ -66,8 +62,9 @@ class PopulationProtocolGenerator(override var population: PopulationProtocol,
         addSink(graph)
     }
     override fun restart() {
-        count = 0
+        countOfEffectiveSelect = 0
         countOfSelectWithoutInteraction = 0
+        countOfTotalSelect = 0
         population = PopulationProtocol(population)
         graph.clear()
         graph.addAttribute("ui.stylesheet", styleSheet)
@@ -93,7 +90,7 @@ class PopulationProtocolGenerator(override var population: PopulationProtocol,
         frame.isVisible = true
 
         this.begin()
-        while (count < maxTimes){
+        while (countOfEffectiveSelect < maxTimes){
             this.nextEvents()
         }
         this.end()
@@ -102,7 +99,9 @@ class PopulationProtocolGenerator(override var population: PopulationProtocol,
     override fun begin() {
         if (fastRes){
             for(i in 0..preExecutedSteps){
-                population.interact()
+                val (isInteracted, _,_) = population.interact()
+                if (isInteracted) countOfEffectiveSelect++
+                countOfTotalSelect++
             }
         }
         val positions = HashSet<String>()
@@ -126,8 +125,9 @@ class PopulationProtocolGenerator(override var population: PopulationProtocol,
     @Synchronized
     override fun nextEvents(): Boolean {
         val (isInteracted, firstNode, secondNode) = population.interact()
+        countOfTotalSelect++
         if (isInteracted){
-            count ++
+            countOfEffectiveSelect ++
             countOfSelectWithoutInteraction = 0
             val firstNodeRep = graph.getNode<Node>(firstNode.index) as Node
             val secondNodeRep = graph.getNode<Node>(secondNode.index) as Node
@@ -225,7 +225,7 @@ class PopulationProtocolGenerator(override var population: PopulationProtocol,
 
     @Synchronized
     override fun shouldTerminate(): Boolean{
-        return countOfSelectWithoutInteraction > this.terminateThreshold || count >= maxTimes
+        return population.nodes.size <= 1 || countOfSelectWithoutInteraction > this.terminateThreshold || countOfEffectiveSelect >= maxTimes
     }
 
     private fun calculateUnitMove(origin: Pair<Double, Double>, destination: Pair<Double, Double>, unit: Double)

@@ -1,6 +1,5 @@
 package presentation.ui
 
-import javafx.application.Application
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.collections.FXCollections
 import javafx.embed.swing.SwingNode
@@ -39,9 +38,9 @@ import kotlin.reflect.full.*
 
 typealias Conf = ConfigurationData
 
-fun main(args: Array<String>) {
+/*fun main(args: Array<String>) {
     Application.launch(SimulatorApp::class.java, *args)
-}
+}*/
 
 class ConfigurationData {
     companion object {
@@ -276,14 +275,9 @@ class SimulatorAppView : View() {
 
     @Volatile
     private var generator = Conf.build()
-    init {
-        println("Max time "+generator.maxTimes)
-        println("Fast forward "+generator.preExecutedSteps)
-    }
+
     @Volatile
     private var shouldStop = false
-    @Volatile
-    private var effectiveInteractionCount = 0
 
     @Synchronized
     private fun runProcess(generator: SimulationGenerator) {
@@ -291,7 +285,6 @@ class SimulatorAppView : View() {
             while (!shouldStop && !generator.shouldTerminate()) {
                 if (!shouldStop) {
                     generator.nextEvents()
-                    effectiveInteractionCount++
                     fire(TextFieldUpdateEvent)
                 }
             }
@@ -360,17 +353,15 @@ class SimulatorAppView : View() {
 
     @Synchronized
     private fun resetGraphStates() {
-        effectiveInteractionCount = 0
         generator.restart()
-        generator.begin()
         resetSwingContent()
+        generator.begin()
     }
 
     @Synchronized
     private fun resetGenerator() {
-        effectiveInteractionCount = 0
-        generator.begin()
         resetSwingContent()
+        generator.begin()
     }
 
     init {
@@ -391,10 +382,8 @@ class SimulatorAppView : View() {
             vboxConstraints {
                 prefWidthProperty().bind(primaryStage.widthProperty().multiply(0.55))
             }
-            pane {
-                this += swingNode
-                createAndSetSwingContent()
-            }
+            this += swingNode
+            createAndSetSwingContent()
             hbox(5, Pos.BASELINE_CENTER) {
 
                 this += startBtn.apply {
@@ -437,19 +426,43 @@ class SimulatorAppView : View() {
 
             }
             hbox {
-                text {
-                    hboxConstraints {
-                        margin = Insets(0.0, 30.0, 0.0, 20.0)
+                //text {
+                    vboxConstraints {
+                        margin = Insets(0.0, 30.0, 0.0, 50.0)
                     }
-                    text = "Running: - \n\n"
-                    text += "Total number of Node: ${generator.population.nodes.size} \n\n"
-                    text += "Effective interaction times:  ${generator.count} \n\n"
-                    text += "Scheduler selection times: $effectiveInteractionCount\n\n"
-                    subscribe<TextFieldUpdateEvent> {
-                        text = "Running: ${generator.nameOfPopulation}\n\n"
-                        text += "Total number of Node: ${generator.population.nodes.size} \n\n"
-                        text += "Effective interaction times:  ${generator.count} \n\n"
-                        text += "Scheduler selection times: $effectiveInteractionCount\n\n"
+                vbox{
+                    text( "Running : - \n"){
+                        subscribe<TextFieldUpdateEvent> {
+                            text = "Running : ${generator.nameOfPopulation} \n"
+                        }
+                        tooltip("The name of loaded protocol. ")
+                    }
+                    text("Total number of Node : - \n"){
+                        subscribe<TextFieldUpdateEvent> {
+                           text = "Total number of Node : ${generator.population.nodes.size} \n"
+                        }
+                        tooltip("Total number of node in the loaded population.")
+                    }
+                    text("Effective selection times : - \n"){
+                        subscribe<TextFieldUpdateEvent> {
+                            text = "Effective selection times :  ${generator.countOfEffectiveSelect} \n"
+                        }
+                        tooltip("The counting of how many times \"Effective selection\" happens. " +
+                                "\"Effective selection\" : a selection change at least one state for the population"
+                        )
+                    }
+                    text("Scheduler selection times : - \n"){
+                        subscribe<TextFieldUpdateEvent> {
+                            text = "Scheduler selection times :  ${generator.countOfTotalSelect} \n"
+                        }
+                        tooltip("The counting of how many times that the scheduler took a selection")
+                    }
+                    text("Terminating Threshold for ineffective selection : - \n"){
+                        subscribe<TextFieldUpdateEvent> {
+                            text = "Terminating Threshold for ineffective selection : ${generator.terminateThreshold} \n"
+                        }
+                        tooltip(" The simulation process will " +
+                                "be terminated after the countOfEffectiveSelect of consistent ineffective section larger than the threshold.")
                     }
                 }
 
@@ -459,64 +472,62 @@ class SimulatorAppView : View() {
                         }
                         text = "Number of States distributed on nodes: - "
                         subscribe<TextFieldUpdateEvent> {
-                            text = "Number of Node in " + generator.population.statisticsMap.map { its -> " ${its.key}: ${its.value} " }.reduce(String::plus).removeSuffix("; ")
+                            text = "Number of Node in " + generator.population.statisticsMap.map { its -> "\n ${its.key} :  ${its.value} " }.reduce(String::plus).removeSuffix("; ")
                         }
                     }
 
-
-
-
             }
+
         }
         //UI Right Partition
         vbox {
             prefWidthProperty().bind(primaryStage.widthProperty().multiply(0.45))
-            this += applyBtn.apply {
-                vboxConstraints {
-                    margin = Insets(20.0, 0.0, 20.0, 20.0)
-                }
-                action {
-                    isDisable = true
-
-                    if (startBtn.text == "Start" || startBtn.text == "Restart"|| startBtn.text == "Continue") {
-                        Conf.initialState.clear()
-                        Conf.getInitialStateMapTemplate().forEach { it ->
-                            if (it.value > NUM_NOT_SPECIFIED){
-                                Conf.initialState[it.key] = it.value
-                            }
-                        }
-                        initialInputs.forEach{it ->
-                            if (it.count.isInt() && it.count.toInt() > 0) {
-                                Conf.initialState[it.state] = it.count.toInt()
-                            }
-                        }
-                        if (Conf.canBuild()) {
-                            generator = Conf.build()
-
-                            println("Max time "+generator.maxTimes)
-                            println("Fast forward "+generator.preExecutedSteps)
-
-                            resetGenerator()
-                            fire(TextFieldUpdateEvent)
-                            if (isFirstRun && startBtn.isDisabled) startBtn.isDisable = false
-                            if (startBtn.text == "Restart"|| startBtn.text == "Continue") startBtn.text = "Start"
-                        } else {
-                            print("The setting is inValid. Please check again.")
-                        }
-                    }
-                    isDisable = false
-                }
-            }
-            hbox(20) {
-                text("Model Type: ") {
-                    font = Font(20.0)
+            hbox(20){
+                this += applyBtn.apply {
                     hboxConstraints {
                         margin = Insets(20.0, 0.0, 0.0, 20.0)
+                    }
+                    action {
+                        isDisable = true
+
+                        if (startBtn.text == "Start" || startBtn.text == "Restart"|| startBtn.text == "Continue") {
+                            Conf.initialState.clear()
+                            Conf.getInitialStateMapTemplate().forEach { it ->
+                                if (it.value > NUM_NOT_SPECIFIED){
+                                    Conf.initialState[it.key] = it.value
+                                }
+                            }
+                            initialInputs.forEach{it ->
+                                if (it.count.isInt() && it.count.toInt() > 0) {
+                                    Conf.initialState[it.state] = it.count.toInt()
+                                }
+                            }
+                            if (Conf.canBuild()) {
+                                generator = Conf.build()
+
+                                println("Max time "+generator.maxTimes)
+                                println("Fast forward "+generator.preExecutedSteps)
+
+                                resetGenerator()
+                                fire(TextFieldUpdateEvent)
+                                if (isFirstRun && startBtn.isDisabled) startBtn.isDisable = false
+                                if (startBtn.text == "Restart"|| startBtn.text == "Continue") startBtn.text = "Start"
+                            } else {
+                                print("The setting is inValid. Please check again.")
+                            }
+                        }
+                        isDisable = false
+                    }
+                }
+                text("Model Type: ") {
+                    font = Font(12.0)
+                    hboxConstraints {
+                        margin = Insets(20.0, 0.0, 0.0, 0.0)
                     }
                 }
                 this += ComboBox<String>().apply {
                     hboxConstraints {
-                        margin = Insets(20.0, 0.0, 20.0, 20.0)
+                        margin = Insets(20.0, 0.0, 0.0, 5.0)
                     }
                     items = FXCollections.observableArrayList(
                             "Basic Population Protocol",
@@ -524,6 +535,7 @@ class SimulatorAppView : View() {
                             "Terminated Grid Network Constructor"
                     )
                     selectionModel.select(0)
+                    tooltip(items[selectionModel.selectedIndex])
                     Conf.clazzOfPopulation = when (selectionModel.selectedIndex) {
                         0 -> PopulationProtocol::class
                         1 -> ShapeConstructingPopulation::class
@@ -537,6 +549,7 @@ class SimulatorAppView : View() {
                             2 -> GridNetworkConstructingPopulation::class
                             else -> null
                         }
+                        tooltip(items[selectionModel.selectedIndex])
                         val functionMap = Conf.getInteractionMethodAndName(Conf.clazzOfPopulation).orEmpty().toList()
                         @Suppress("UNCHECKED_CAST")
                         when (Conf.clazzOfPopulation) {
@@ -550,27 +563,32 @@ class SimulatorAppView : View() {
                         fire(ModelSelectionChangeEvent)
                     }
                 }
-
-
             }
             hbox(20) {
+
+
+
+            /*}
+            hbox(20) {*/
                 text("Interaction Functions: ") {
-                    font = Font(20.0)
+                    font = Font(12.0)
                     hboxConstraints {
                         margin = Insets(20.0, 0.0, 0.0, 20.0)
                     }
                 }
                 this += ComboBox<String>().apply {
                     hboxConstraints {
-                        margin = Insets(20.0, 20.0, 20.0, 20.0)
+                        margin = Insets(20.0, 20.0, 0.0, 5.0)
                     }
                     var functionMap = Conf.getInteractionMethodAndName(Conf.clazzOfPopulation).orEmpty()
                     items = functionMap.keys.toList().observable()
                     selectionModel.select(0)
+                    tooltip(items[selectionModel.selectedIndex])
                     subscribe<ModelSelectionChangeEvent> {
                         functionMap = Conf.getInteractionMethodAndName(Conf.clazzOfPopulation).orEmpty()
                         items = functionMap.keys.toList().observable()
                         selectionModel.select(0)
+                        tooltip(items[selectionModel.selectedIndex])
                         @Suppress("UNCHECKED_CAST")
                         when (Conf.clazzOfPopulation) {
                             PopulationProtocol::class -> Conf.currentPopulationProtocolFunction = functionMap[items[selectionModel.selectedIndex]]
@@ -600,6 +618,7 @@ class SimulatorAppView : View() {
                                 GridNetworkConstructingPopulation::class -> Conf.currentGridNetworkFunction = functionMap[items[selectionModel.selectedIndex]]
                                         as KFunction<Triple<Boolean, Pair<String, String>, Boolean>>
                             }
+                            tooltip(items[selectionModel.selectedIndex])
                         }
                         fire(FunctionSelectionChangeEvent)
                     }
@@ -609,6 +628,7 @@ class SimulatorAppView : View() {
             val selected = SimpleBooleanProperty(false)
             hbox(20) {
                 text("Enable Pre-selections: ") {
+                    font = Font(12.0)
                     hboxConstraints {
                         margin = Insets(20.0, 0.0, 0.0, 20.0)
                     }
@@ -625,6 +645,7 @@ class SimulatorAppView : View() {
                 }
 
                 text("Pre-selection Times: "){
+                    font = Font(12.0)
                     hboxConstraints {
                         margin = Insets(20.0, 0.0, 0.0, 0.0)
                     }
@@ -657,6 +678,7 @@ class SimulatorAppView : View() {
             }
             hbox(20) {
                 text("Maximum times for interaction: ") {
+                    font = Font(12.0)
                     hboxConstraints {
                         margin = Insets(20.0, 0.0, 0.0, 20.0)
                     }
@@ -682,8 +704,8 @@ class SimulatorAppView : View() {
                 }
             }
 
-            text("Initial States") {
-                font = Font(20.0)
+            text("Initial States: ") {
+                font = Font(14.0)
                 vboxConstraints {
                     margin = Insets(0.0, 20.0, 0.0, 20.0)
                 }
@@ -729,13 +751,8 @@ class SimulatorAppView : View() {
                 }
                 initialStatesTableView.columnResizePolicy = TableView.CONSTRAINED_RESIZE_POLICY
             }
-
-
-
-
         }
     }
-
 }
 
 class InitialInputConfiguration(state: String, count: String = "0") {

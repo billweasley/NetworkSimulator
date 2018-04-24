@@ -117,7 +117,7 @@ class LocallyCoordinatedModelNode(x: Int = 0,
             if (hasConnectionWith(nodeA,nodeB)) return false
             if (nodeA.belongtoSet!= null && nodeA.belongtoSet == nodeB.belongtoSet){
                 if (Math.abs(portA.degree - nodeA.rotationDegree - (portB.degree - nodeB.rotationDegree)).toInt() % 360 != 180){
-                    System.err.println("REJECTED BECAUSE DEGREE DIFFERENCE IS NOT 180, the portA has degree ${portA.degree},the portB has degree ${portB.degree}")
+                    System.err.println("REJECTED BECAUSE DEGREE DIFFERENCE IS NOT 180, the portA has degree ${portA.degree} with rotation ${nodeA.rotationDegree},the portB has degree ${portB.degree} with rotation ${nodeB.rotationDegree}")
                     return false
                 }
                 nodeA.coordinate = Coordinate.of(0, 0)

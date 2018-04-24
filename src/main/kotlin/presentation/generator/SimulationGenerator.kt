@@ -17,7 +17,9 @@ abstract class SimulationGenerator : Generator, SourceBase() {
     @Volatile
     var countOfSelectWithoutInteraction = 0
     @Volatile
-    var count = 0
+    var countOfEffectiveSelect = 0
+    @Volatile
+    var countOfTotalSelect = 0
     abstract val graph: Graph
     abstract val population: Population
     abstract fun shouldTerminate(): Boolean

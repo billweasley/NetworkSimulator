@@ -62,8 +62,7 @@ class GridNetworkConstructingPopulation(private val scheduler: Scheduler = Rando
     }
     fun getIncreasedID(): Int{
         synchronized(this,{
-            increasedIDAllocator++
-            return increasedIDAllocator
+            return increasedIDAllocator++
         })
     }
 

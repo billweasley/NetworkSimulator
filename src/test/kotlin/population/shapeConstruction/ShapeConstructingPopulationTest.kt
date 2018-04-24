@@ -1,16 +1,16 @@
 package population.shapeConstruction
 
 import model.population.shapeConstruction.ShapeConstructingPopulation
-import org.junit.Test
 import model.scheduler.RandomScheduler
-import utils.InteractionFunctions
 import model.shared.ModelNode
+import org.junit.Test
+import shared.ShapeConstructionFunctions
 
 class ShapeConstructingPopulationTest {
     val simpleGlobalLineConstructor = ShapeConstructingPopulation(
             scheduler = RandomScheduler(),
             interactFunction = { nodeA, nodeB, map ->
-                InteractionFunctions.simpleGlobalLineFunc(nodeA, nodeB, map)
+                ShapeConstructionFunctions.globalStarFunc(nodeA, nodeB, map)
             },
             symbols = setOf("q0", "q1", "l", "w", "q2"),
             initialStates = mapOf(Pair("q0", 10))

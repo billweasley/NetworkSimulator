@@ -1,14 +1,12 @@
 package presentation.generator.concrete
 
 import model.population.shapeConstruction.ShapeConstructingPopulation
-import model.scheduler.RandomScheduler
 import org.graphstream.graph.Edge
 import org.graphstream.graph.Graph
 import org.graphstream.graph.Node
 import org.graphstream.graph.implementations.SingleGraph
 import org.graphstream.ui.view.Viewer
 import presentation.generator.SimulationGenerator
-import shared.ShapeConstructionFunctions
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridLayout
@@ -18,7 +16,7 @@ import javax.swing.JFrame
 import javax.swing.JPanel
 
 
-fun main(args: Array<String>) {
+/*fun main(args: Array<String>) {
     System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer")
     val simpleGlobalLineConstructor = ShapeConstructingPopulation(
             scheduler = RandomScheduler(),
@@ -58,7 +56,7 @@ fun main(args: Array<String>) {
 
    populationProtocolGenerator.display()
 
-}
+}*/
 
 class ShapeConstructorGenerator(override var population: ShapeConstructingPopulation,
                                 override val maxTimes: Long,
@@ -96,14 +94,15 @@ class ShapeConstructorGenerator(override var population: ShapeConstructingPopula
         frame.setLocationRelativeTo(null)
         frame.isVisible = true
         this.begin()
-        while (count < maxTimes){
+        while (countOfEffectiveSelect < maxTimes){
             this.nextEvents()
         }
     }
 
     override fun restart() {
-        count = 0
+        countOfEffectiveSelect = 0
         countOfSelectWithoutInteraction = 0
+        countOfTotalSelect = 0
         population = ShapeConstructingPopulation(population)
         graph.clear()
         graph.addAttribute("ui.stylesheet", styleSheet)
@@ -113,7 +112,9 @@ class ShapeConstructorGenerator(override var population: ShapeConstructingPopula
     override fun begin() {
         if (fastRes){
             for(i in 0..preExecutedSteps){
-                population.interact()
+                val (isInteracted, _,_) = population.interact()
+                countOfTotalSelect++
+                if (isInteracted) countOfEffectiveSelect++
             }
         }
         val positions = HashSet<String>()
@@ -149,9 +150,9 @@ class ShapeConstructorGenerator(override var population: ShapeConstructingPopula
     @Synchronized
     override fun nextEvents(): Boolean {
         val (isInteracted, firstNode, secondNode) = population.interact()
-
+        countOfTotalSelect++
         if (isInteracted){
-            count ++
+            countOfEffectiveSelect ++
             countOfSelectWithoutInteraction = 0
             val firstNodeRep = graph.getNode<Node>(firstNode.index) as Node
             val secondNodeRep = graph.getNode<Node>(secondNode.index) as Node
@@ -188,7 +189,9 @@ class ShapeConstructorGenerator(override var population: ShapeConstructingPopula
 
     @Synchronized
     override fun shouldTerminate(): Boolean{
-        return countOfSelectWithoutInteraction > terminateThreshold || count >= maxTimes
+        return population.nodes.size <= 1
+                || countOfSelectWithoutInteraction > terminateThreshold
+                || countOfEffectiveSelect >= maxTimes
     }
 
 
