@@ -45,7 +45,7 @@ class GridNetworkGenerator(override var population: GridNetworkConstructingPopul
                                    "node.marked {fill-color: red;}" +
                                    "edge.marked {fill-color: red;}") : SimulationGenerator() {
 
-    override val terminateThreshold: Int = 1000 * population.numOfNode()
+    override val terminateThreshold = 100000 * population.numOfNode()
     override val requireLayoutAlgorithm = false
 
     init {
