@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/billweasley/NetworkSimulator.svg?branch=Demo_version)](https://travis-ci.org/billweasley/NetworkSimulator)
+
 ### Directly run the programme:
 - Require Java Runtime 1.8
 - Click and run the file called "org.net.simulator-1.0-SNAPSHOT.jar" in root folder.
